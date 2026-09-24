@@ -4,7 +4,7 @@ Two static sites, no build step. Open any `.html` file directly in a browser.
 
 | Folder | What it is |
 |---|---|
-| `redesign/` | **New website** built from the client's revision notes (Website.docx): Home, About Us, Our Services, Developers, Contact Us. Unified Black & Gold identity, mobile-first. |
+| `redesign/` | **New website** built from the client's revision notes (Website.docx): Home, About Us, Our Services, Developers, Contact Us. Unified Black & Gold identity. Fixed header that turns solid on scroll, full-screen menu, page-transition curtain, scroll reveals, horizontal snap carousels and a bottom tab bar on phones (app-like). |
 | `clone/` | Replica of the current site at plus971re.odoo.com (Home, About, CEO's Message), kept for before/after comparison. |
 
 ## Redesign notes
