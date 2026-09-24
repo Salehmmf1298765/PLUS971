@@ -1,0 +1,18 @@
+/* Approximation of the current Odoo default theme used on plus971re.odoo.com */
+*{box-sizing:border-box}body{margin:0;font-family:Roboto,"Segoe UI",Arial,sans-serif;color:#212529;line-height:1.55;background:#fff}
+img{max-width:100%;display:block}a{color:#1f6fb2}.wrap{max-width:1140px;margin:0 auto;padding:0 16px}
+.hdr{border-bottom:1px solid #e6e6e6;background:#fff;position:sticky;top:0;z-index:5}.hdr-in{display:flex;align-items:center;gap:24px;min-height:76px;flex-wrap:wrap}
+.brand img{height:52px;width:auto}.menu{display:flex;gap:20px}.menu a{color:#333;text-decoration:none}.menu a.on{color:#1f6fb2;font-weight:600}
+.hdr-right{margin-left:auto;display:flex;align-items:center;gap:16px;font-size:14px;flex-wrap:wrap}
+.btn{display:inline-block;background:#b0906a;color:#fff;padding:9px 18px;border-radius:4px;text-decoration:none;font-size:15px}.btn-o{background:transparent;color:#fff;border:1px solid #fff}
+.hero{background:#2d2f33 linear-gradient(135deg,#444 0,#1e1f22 100%);color:#fff;padding:140px 0;text-align:center}.hero h1{font-size:54px;margin:0 0 10px}.hero p{font-size:20px;margin:0 0 30px}
+.sec{padding:64px 0}.sec.alt{background:#f5f5f5}.sec.dark{background:#222;color:#fff}.c{text-align:center}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.ph{background:#ddd;height:300px;display:flex;align-items:center;justify-content:center;color:#888}
+h2{font-size:32px;margin:0 0 16px}details{border:1px solid #ddd;border-radius:4px;margin:10px 0;padding:12px 16px}summary{cursor:pointer;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}.card{background:#fff;border:1px solid #e3e3e3;padding:20px;border-radius:4px}
+.logos{display:grid;grid-template-columns:repeat(6,1fr);gap:20px;align-items:center}.logos img{max-height:70px;margin:auto;object-fit:contain}
+.ftr{background:#f1f1f1;padding:50px 0 0;font-size:14px}.cols{display:grid;grid-template-columns:1fr 1.3fr 1.3fr;gap:30px}.cols a{display:block;margin:4px 0}.cols .btn{display:inline-block;color:#fff}
+.soc{display:flex;gap:8px}.soc a{width:32px;height:32px;border-radius:50%;background:#ccc;color:#333;text-align:center;line-height:32px;text-decoration:none}
+.copy{border-top:1px solid #ddd;padding:16px;margin-top:30px;font-size:13px;color:#666}
+.ceo{display:grid;grid-template-columns:1fr 2fr;gap:40px;align-items:start}
+@media(max-width:768px){.two,.cols,.ceo{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.logos{grid-template-columns:repeat(3,1fr)}.hero h1{font-size:34px}.menu{order:3;width:100%}}
