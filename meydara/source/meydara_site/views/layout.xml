@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+ <template id="layout" inherit_id="website.layout" name="Midara site identity" website_id="website.default_website">
+  <xpath expr="//html" position="attributes"><attribute name="class" add="meydara-new" separator=" "/></xpath>
+  <xpath expr="//t[@t-set='x_icon']" position="attributes"><attribute name="t-value">'/meydara_site/static/src/img/brand/meydara-grid.png'</attribute></xpath>
+ </template>
+ <template id="header_brand" inherit_id="website.option_header_brand_logo" name="Midara brand" website_id="website.default_website">
+  <xpath expr="//a" position="replace"><a href="/" t-attf-class="navbar-brand md-brand #{_link_class or ''}" aria-label="Midara home"><img src="/meydara_site/static/src/img/brand/meydara-grid.png" width="40" height="40" alt="Midara"/><span class="o_force_ltr">Mi<span>dara</span></span></a></xpath>
+ </template>
+ <template id="header_cta" inherit_id="website.header_call_to_action" name="Midara presentation" website_id="website.default_website">
+  <xpath expr="//a" position="attributes"><attribute name="href">/request-presentation</attribute></xpath>
+  <xpath expr="//a" position="replace"><a href="/request-presentation" class="oe_unremovable btn btn-primary btn_cta">Request a presentation</a></xpath>
+ </template>
+ <template id="header_language_icon" inherit_id="portal.language_selector" name="Midara language icon" priority="100" website_id="website.default_website">
+  <xpath expr="//button" position="attributes">
+   <attribute name="aria-label">Language</attribute>
+   <attribute name="title">Language</attribute>
+  </xpath>
+  <xpath expr="//button" position="inside"><i class="fa fa-language md-utility-icon" aria-hidden="true"/></xpath>
+ </template>
+ <template id="header_sign_in_icon" inherit_id="portal.placeholder_user_sign_in" name="Midara sign in icon" priority="100" active="False" website_id="website.default_website">
+  <xpath expr="//a" position="replace"><a t-attf-href="/web/login" t-attf-class="#{_link_class} md-icon-button" aria-label="Sign in" title="Sign in"><i class="fa fa-user-o" aria-hidden="true"/><span t-if="request.session.get('profile_session')" class="text-danger fa fa-circle"/></a></xpath>
+ </template>
+ <template id="footer" inherit_id="website.layout" name="Midara footer" priority="100" website_id="website.default_website">
+  <xpath expr="//div[hasclass('o_footer_copyright')]" position="replace"/>
+  <xpath expr="//div[@id='footer']" position="replace">
+   <div id="footer" class="oe_structure oe_structure_solo md-footer">
+    <section class="s_meydara_story pt64 pb32" data-snippet="s_meydara_story" data-name="Midara footer"><div class="container">
+     <div class="md-footer-grid"><div><a href="/" class="md-brand"><img src="/meydara_site/static/src/img/brand/meydara-grid.png" width="40" height="40" alt="Midara"/><span class="o_force_ltr">Mi<span>dara</span></span></a><p>Your field sales. Connected to Odoo.</p><a class="button button-primary" href="/request-presentation">Request a presentation</a></div>
+     <div><h2>Discover</h2><a href="/tour">Product tour</a><a href="/platform">Platform</a><a href="/features">Features</a><a href="/reports">Reports</a></div>
+     <div><h2>Explore</h2><a href="/solutions">Solutions</a><a href="/integrations/odoo">Odoo integration</a><a href="/ai">Midara assistant</a><a href="/pricing">Pricing</a></div>
+     <div><h2>Let's connect</h2><p>Tell us about your team and the way you work.</p><a href="/contact">Contact us</a></div></div>
+     <div class="md-footer-bottom"><span>© 2026 Midara. All rights reserved.</span><span>Connected field work.</span></div>
+    </div></section>
+   </div>
+  </xpath>
+ </template>
+ <template id="header_utilities" inherit_id="website.template_header_default" name="Midara header utilities" website_id="website.default_website">
+  <xpath expr="//t[@t-call='website.placeholder_header_text_element']" position="attributes"><attribute name="t-if">False</attribute></xpath>
+  <xpath expr="//t[@t-call='website.placeholder_header_search_box']" position="attributes"><attribute name="t-if">False</attribute></xpath>
+  <xpath expr="//t[@t-call='portal.placeholder_user_sign_in']" position="replace">
+   <li groups="base.group_public" class="nav-item o_no_autohide_item">
+    <a href="/web/login" class="o_nav_link_btn nav-link border md-icon-button" aria-label="Sign in" title="Sign in"><i class="fa fa-user-o" aria-hidden="true"/></a>
+   </li>
+  </xpath>
+  <xpath expr="//t[@t-call='portal.user_dropdown']" position="attributes">
+   <attribute name="_icon">True</attribute>
+   <attribute name="_user_name">False</attribute>
+   <attribute name="_no_caret">True</attribute>
+   <attribute name="_link_class.f">{{_additional_btn_color or 'nav-link'}} md-icon-button border-0</attribute>
+  </xpath>
+  <xpath expr="//t[@t-call='website.placeholder_header_call_to_action']" position="replace"/>
+ </template>
+ <template id="mobile_utilities" inherit_id="website.template_header_mobile" name="Midara mobile utilities" website_id="website.default_website">
+  <xpath expr="//t[@t-call='website.placeholder_header_text_element']" position="attributes"><attribute name="t-if">False</attribute></xpath>
+  <xpath expr="//t[@t-call='website.placeholder_header_search_box']" position="attributes"><attribute name="t-if">False</attribute></xpath>
+  <xpath expr="//t[@t-call='portal.placeholder_user_sign_in']" position="replace">
+   <li groups="base.group_public" class="nav-item o_no_autohide_item">
+    <a href="/web/login" class="nav-link o_nav_link_btn border md-icon-button" aria-label="Sign in" title="Sign in"><i class="fa fa-user-o" aria-hidden="true"/></a>
+   </li>
+  </xpath>
+  <xpath expr="//t[@t-call='website.header_call_to_action_large']" position="replace"/>
+ </template>
+</odoo>

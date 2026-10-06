@@ -1,0 +1,11 @@
+$o-theme-font-configs: map-merge($o-theme-font-configs, (
+    'IBM Plex Sans Arabic': ('family': ('IBM Plex Sans Arabic', 'Segoe UI', Tahoma, sans-serif)),
+    'Space Grotesk': ('family': ('Space Grotesk', 'IBM Plex Sans Arabic', sans-serif)),
+));
+$o-user-website-values: map-merge($o-user-website-values, o-map-omit((
+    'font': 'IBM Plex Sans Arabic',
+    'headings-font': 'IBM Plex Sans Arabic',
+    'navbar-font': 'IBM Plex Sans Arabic',
+    'buttons-font': 'IBM Plex Sans Arabic',
+    // -- hook --
+)));

@@ -1,0 +1,1346 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <data noupdate="1">
+  <template id="page_platform" name="Platform" website_id="website.default_website">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty md-v2 meydara-site mw-page">
+        <section class="s_meydara_story md-section mw-inner-hero pt96 pb112" data-snippet="s_meydara_story" data-name="Platform">
+          <div class="container">
+            <div class="md-split md-page-intro">
+              <div>
+                <p class="md-eyebrow">Enterprise platform architecture</p>
+    <h1>One platform runs the entire field.</h1>
+    <p class="md-lead">Midara brings the representative app, supervisor command center, management dashboards, synchronization engine, permissions and AI into one connected experience across mobile, tablet and desktop.</p>
+    <div class="md-actions">
+                  <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+                  <a href="/tour" class="button button-secondary">Take the product tour</a>
+                </div>
+              </div>
+              <div class="md-feature-stage">
+                <figure class="md-device">
+                  <img class="img-fluid" src="/meydara_site/static/src/img/product/reference/field-app.png" alt="Midara field application across the working day" loading="lazy"/>
+    </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Enterprise field operations">
+        <div class="container">
+          <div class="mw-rich-heading"><span>01</span><div><p class="md-eyebrow">END-TO-END OPERATIONS</p><h2>Enterprise operations from field to office</h2><p>Every layer serves a clear role without duplicating data or distracting the team.</p></div></div>
+          <div class="mw-rich-grid">
+            <article class="mw-rich-card"><i class="fa fa-mobile" aria-hidden="true"/><h3>Representative application</h3><p>Visits, customers, products, orders, collections, photos, tasks, maps and alerts in one app.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-map" aria-hidden="true"/><h3>Supervisor command center</h3><p>Live coverage, exceptions, team map, plan follow-up, reassignment and direct guidance.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-line-chart" aria-hidden="true"/><h3>Management dashboards</h3><p>Sales, collections, coverage, productivity, receivables and targets with practical filters.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-random" aria-hidden="true"/><h3>Workflow engine</h3><p>States, approvals, notifications and business rules connecting field execution to back-office operations.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-sitemap" aria-hidden="true"/><h3>Permissions and organization</h3><p>Access by company, territory, role and team, with data visibility aligned to responsibility.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-sliders" aria-hidden="true"/><h3>Configurable without complexity</h3><p>Forms, fields, tasks, checklists and indicators shaped around the organization’s operating model.</p></article>
+          </div>
+        </div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section mw-rich-section-alt pt112 pb112" data-snippet="s_meydara_story" data-name="Ready for real field work">
+        <div class="container">
+          <div class="mw-rich-heading"><span>02</span><div><p class="md-eyebrow">BUILT FOR REAL CONDITIONS</p><h2>Ready for real field work</h2><p>The field cannot wait for perfect connectivity, so the experience remains practical in demanding environments.</p></div></div>
+          <div class="mw-rich-grid">
+            <article class="mw-rich-card"><i class="fa fa-wifi" aria-hidden="true"/><h3>Offline work</h3><p>Essential data is stored locally, then synchronized automatically when the connection returns.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-refresh" aria-hidden="true"/><h3>Intelligent synchronization</h3><p>Queues, conflict handling, delivery status and automatic retries without losing field work.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-map-marker" aria-hidden="true"/><h3>Location context</h3><p>GPS, geofencing and timestamps connect the visit to the real place and improve record accuracy.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-camera" aria-hidden="true"/><h3>Photos and attachments</h3><p>Capture evidence and upload documents from the visit, order or customer workflow.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-barcode" aria-hidden="true"/><h3>Barcode and QR</h3><p>Scan products, assets and documents to reduce manual entry in the field.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-bell" aria-hidden="true"/><h3>Immediate alerts</h3><p>Notifications for visits, tasks, approvals, credit, collections and operational exceptions.</p></article>
+          </div>
+          <figure class="mw-rich-shot"><img class="img-fluid" src="/meydara_site/static/src/img/product/reference/hero.png" alt="Midara command center and mobile field application" loading="lazy"/></figure>
+        </div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Platform scale and flexibility">
+        <div class="container">
+          <div class="mw-rich-heading"><span>03</span><div><p class="md-eyebrow">READY TO SCALE</p><h2>Flexible enough for every market</h2><p>From a local company to a large distribution network, the platform supports organizational and commercial growth.</p></div></div>
+          <div class="mw-rich-grid">
+            <article class="mw-rich-card"><i class="fa fa-language" aria-hidden="true"/><h3>Multiple languages and currencies</h3><p>Menus, prices, currencies and taxes can be configured for each market.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-th-large" aria-hidden="true"/><h3>Multiple catalogs</h3><p>Products, assortments, prices and promotions can vary by territory, customer and channel.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-credit-card" aria-hidden="true"/><h3>Credit rules</h3><p>Limits, terms, order checks, risk alerts and approval paths.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-shield" aria-hidden="true"/><h3>Security and audit</h3><p>Activity history, access policies, transport encryption and tracking for sensitive changes.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-plug" aria-hidden="true"/><h3>Open integrations</h3><p>REST APIs, webhooks and a direct connection with Odoo and other business systems.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-expand" aria-hidden="true"/><h3>Operational scale</h3><p>Branches, teams, representatives, territories, distributors and sales channels in one operating base.</p></article>
+          </div>
+        </div>
+      </section>
+    <section class="s_meydara_story md-section mw-feature-block pt112 pb112 md-mint" data-snippet="s_meydara_story" data-name="Your next step">
+          <div class="container">
+            <div class="md-final">
+              <h2>Let's make this relevant to your team.</h2>
+              <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+  <template id="page_features" name="Features" website_id="website.default_website">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty md-v2 meydara-site mw-page">
+        <section class="s_meydara_story md-section mw-inner-hero pt96 pb112" data-snippet="s_meydara_story" data-name="Features">
+          <div class="container">
+            <div class="md-split md-page-intro">
+              <div>
+                <p class="md-eyebrow">Features</p>
+                <h1>More than 100 operational capabilities across one connected platform.</h1><p class="md-lead">Explore the capabilities that connect territory planning, customer work, sales, collection, distribution, retail execution, analytics and AI.</p><div class="md-actions">
+                  <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+                  <a href="/tour" class="button button-secondary">Take the product tour</a>
+                </div>
+              </div>
+              <div class="md-feature-stage">
+                <figure class="md-device">
+                  <img class="img-fluid" src="/meydara_site/static/src/img/product/reference/field-app.png" alt="Midara field platform capabilities on mobile" loading="lazy"/></figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 " data-snippet="s_meydara_story" data-name="Explore the workflows">
+          <div class="container">
+            <div class="md-link-grid md-feature-directory">
+              <a href="/features/customers">
+                <span>01</span>
+                <h3>Customers</h3>
+                <p>Know the customer before the conversation.</p>
+              </a>
+              <a href="/features/visits">
+                <span>02</span>
+                <h3>Visits and routes</h3>
+                <p>Give every stop a clear next step.</p>
+              </a>
+              <a href="/features/sales-documents">
+                <span>03</span>
+                <h3>Sales documents</h3>
+                <p>Move from the conversation to the right document.</p>
+              </a>
+              <a href="/features/collections">
+                <span>04</span>
+                <h3>Collections</h3>
+                <p>Keep the amount, customer and document together.</p>
+              </a>
+              <a href="/features/delivery">
+                <span>05</span>
+                <h3>Delivery and returns</h3>
+                <p>A handover with a clear business context.</p>
+              </a>
+              <a href="/features/offline">
+                <span>06</span>
+                <h3>Offline and synchronization</h3>
+                <p>Stay clear about the status of your work.</p>
+              </a>
+              <a href="/features/commercial-policies">
+                <span>07</span>
+                <h3>Commercial policies</h3>
+                <p>Keep the sale within your business rules.</p>
+              </a>
+              <a href="/features/management">
+                <span>08</span>
+                <h3>Team follow-up</h3>
+                <p>Connect field activity with the next decision.</p>
+              </a>
+              <a href="/features/tracking-attendance">
+                <span>09</span>
+                <h3>Tracking and attendance</h3>
+                <p>Make location part of an agreed working process.</p>
+              </a>
+              <a href="/features/notifications">
+                <span>10</span>
+                <h3>Notifications</h3>
+                <p>Keep the next update connected to its context.</p>
+              </a>
+            </div>
+          </div>
+        </section>
+      <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Planning and coverage capabilities">
+        <div class="container"><div class="mw-rich-heading"><span>01</span><div><p class="md-eyebrow">PLAN AND COVER</p><h2>Build a productive field plan</h2><p>Connect territories, routes, visits, attendance and offline work in one daily operating flow.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-map" aria-hidden="true"/><h3>Territory Management</h3><p>Territories, teams, organizational hierarchy and coverage maps.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-random" aria-hidden="true"/><h3>Route Optimization</h3><p>Multi-stop planning and nearby-visit recommendations.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-calendar" aria-hidden="true"/><h3>Visit Planning</h3><p>Recurring and ad-hoc visits, tasks and segment-based frequency.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-map-marker" aria-hidden="true"/><h3>Geo Attendance</h3><p>Check-in, check-out, location and timestamps.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-car" aria-hidden="true"/><h3>Mileage and Trips</h3><p>Distance, trips, driving time and movement history.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-wifi" aria-hidden="true"/><h3>Offline Mobile</h3><p>Work and synchronize during weak or unavailable connectivity.</p></article>
+        </div></div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section mw-rich-section-alt pt112 pb112" data-snippet="s_meydara_story" data-name="Sales and customer capabilities">
+        <div class="container"><div class="mw-rich-heading"><span>02</span><div><p class="md-eyebrow">SELL AND GROW</p><h2>Put the customer and commercial context together</h2><p>Give representatives the customer, catalog, price, credit and collection information needed at the moment of decision.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-address-book" aria-hidden="true"/><h3>Mobile CRM</h3><p>A 360° customer profile and complete relationship history.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-shopping-cart" aria-hidden="true"/><h3>Order Capture</h3><p>Catalog, prices, discounts, promotions and order templates.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-credit-card" aria-hidden="true"/><h3>Credit Control</h3><p>Credit limits, receivables, alerts and approval paths.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-money" aria-hidden="true"/><h3>Collections</h3><p>Collection, promises to pay, matching and receipts.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-sliders" aria-hidden="true"/><h3>Commercial Policies</h3><p>Customer and channel rules for pricing, promotions and approval.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-shopping-bag" aria-hidden="true"/><h3>eB2B</h3><p>A self-ordering channel for retailers and customers by access.</p></article>
+        </div></div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Execution and distribution capabilities">
+        <div class="container"><div class="mw-rich-heading"><span>03</span><div><p class="md-eyebrow">EXECUTE AND DISTRIBUTE</p><h2>Measure retail execution and physical movement</h2><p>Track what happens inside the store and across distributor and vehicle operations.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-check-square-o" aria-hidden="true"/><h3>Retail Audits</h3><p>Surveys, inventory, prices, competitors and photos.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-columns" aria-hidden="true"/><h3>Planogram and OSA</h3><p>Shelf compliance, availability, out-of-stock and share of shelf.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-archive" aria-hidden="true"/><h3>POSM and Assets</h3><p>Assets, promotional materials, handover, transfer and maintenance.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-sitemap" aria-hidden="true"/><h3>Distributor Management</h3><p>Distributors, primary and secondary sales, inventory and claims.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-truck" aria-hidden="true"/><h3>Van Sales</h3><p>Loading, vehicle inventory, direct sales and reconciliation.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-reply" aria-hidden="true"/><h3>Returns and POD</h3><p>Returns, photos, reasons, signatures and proof of delivery.</p></article>
+        </div></div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section mw-rich-section-alt pt112 pb112" data-snippet="s_meydara_story" data-name="Intelligence and management capabilities">
+        <div class="container"><div class="mw-rich-heading"><span>04</span><div><p class="md-eyebrow">MANAGE AND AUTOMATE</p><h2>Turn field activity into decisions and next actions</h2><p>Connect goals, reports, alerts, AI and Odoo in one management context.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-bullseye" aria-hidden="true"/><h3>Targets and Incentives</h3><p>Targets by team, product and territory with progress indicators.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-magic" aria-hidden="true"/><h3>AI Agents</h3><p>Scheduling, route, order, collection and execution agents.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-microphone" aria-hidden="true"/><h3>Voice Assistant</h3><p>Arabic voice queries, commands and field notes.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-tachometer" aria-hidden="true"/><h3>Dashboards</h3><p>Executive views, KPIs, drill-down and maps.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-table" aria-hidden="true"/><h3>Report Builder</h3><p>Custom and scheduled reports with export.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-bell" aria-hidden="true"/><h3>Alerts and Workflow</h3><p>Alerts, rules, approvals and automation.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-link" aria-hidden="true"/><h3>Odoo Integration</h3><p>Customers, products, prices, inventory, sales and accounting.</p></article>
+        </div></div>
+      </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 md-mint" data-snippet="s_meydara_story" data-name="Your next step">
+          <div class="container">
+            <div class="md-final">
+              <h2>Let's make this relevant to your team.</h2>
+              <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+  <template id="page_reports" name="Reports" website_id="website.default_website">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty md-v2 meydara-site mw-page">
+        <section class="s_meydara_story md-section mw-inner-hero pt96 pb112" data-snippet="s_meydara_story" data-name="Reports">
+          <div class="container">
+            <div class="md-split md-page-intro">
+              <div>
+                <p class="md-eyebrow">Insights &amp; Analytics</p><h1>From “what happened?” to “what should we do now?”</h1><p class="md-lead">Midara dashboards connect sales, coverage, collections, receivables, inventory and execution across company, territory, team, representative, customer and product.</p><div class="md-actions">
+                  <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+                  <a href="/tour" class="button button-secondary">Take the product tour</a>
+                </div>
+              </div>
+              <div class="md-feature-stage">
+                <figure class="md-device">
+                  <img class="img-fluid" src="/meydara_site/static/src/img/product/reference/mobile-reports.png" alt="Midara mobile reports and analytics" loading="lazy"/></figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt96 pb96 my-diagonal-accent" data-snippet="s_meydara_story" data-name="Odoo performance dashboards">
+          <div class="container">
+            <div class="md-heading-row">
+              <div>
+                <p class="md-eyebrow">THE MANAGEMENT VIEW IN ODOO</p>
+                <h2>From field activity<br/>to a clearer business picture.</h2>
+              </div>
+              <div>
+                <p>Review sales, invoiced amounts, collections and orders in one dashboard. Change the reporting period, refine the filters and move between charts and detailed tables.</p>
+                <a href="/reports" class="md-text-link">Explore reports and dashboards</a>
+              </div>
+            </div>
+            <figure class="my-web-screen mb-0">
+              <img class="img-fluid" src="/meydara_site/static/src/img/product/odoo-performance.png" alt="Midara Odoo performance dashboard showing sales, invoices and collections" loading="lazy"/>
+            </figure>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Management dashboards">
+        <div class="container"><div class="mw-rich-heading"><span>01</span><div><p class="md-eyebrow">ROLE-BASED DASHBOARDS</p><h2>Dashboards for executives and supervisors</h2><p>Each user starts with the indicators needed to make a decision.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-tachometer" aria-hidden="true"/><h3>Executive overview</h3><p>Sales, collections, visits, coverage and targets in one view.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-users" aria-hidden="true"/><h3>Team performance</h3><p>Representative ranking, productivity, productive visits and average basket.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-map" aria-hidden="true"/><h3>Coverage dashboard</h3><p>Planned versus completed coverage by territory, segment and frequency.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-money" aria-hidden="true"/><h3>Receivables</h3><p>Total receivables, overdue balances, aging, promises to pay and collection performance.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-truck" aria-hidden="true"/><h3>Distribution</h3><p>Distributor and vehicle inventory, primary and secondary sales, returns and reconciliation.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-shopping-basket" aria-hidden="true"/><h3>Retail execution</h3><p>Availability, out-of-stock, planogram, promotions and Perfect Store score.</p></article>
+        </div><div class="mw-report-gallery">
+          <figure><img class="img-fluid" src="/meydara_site/static/src/img/product/reference/report-overview.jpg" alt="Midara executive overview report" loading="lazy"/><figcaption>Executive overview</figcaption></figure>
+          <figure><img class="img-fluid" src="/meydara_site/static/src/img/product/reference/report-team.jpg" alt="Midara team performance report" loading="lazy"/><figcaption>Team performance</figcaption></figure>
+          <figure><img class="img-fluid" src="/meydara_site/static/src/img/product/reference/report-coverage.jpg" alt="Midara coverage analytics report" loading="lazy"/><figcaption>Coverage analytics</figcaption></figure>
+          <figure><img class="img-fluid" src="/meydara_site/static/src/img/product/reference/report-receivables.jpg" alt="Midara receivables report" loading="lazy"/><figcaption>Receivables and collections</figcaption></figure>
+        </div></div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section mw-rich-section-alt pt112 pb112" data-snippet="s_meydara_story" data-name="Deep report analysis">
+        <div class="container"><div class="mw-rich-heading"><span>02</span><div><p class="md-eyebrow">DEEP ANALYSIS</p><h2>Detailed and configurable analysis</h2><p>Move from a total indicator to the accounts, visits and products that shaped the result.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-level-down" aria-hidden="true"/><h3>Drill-down</h3><p>From company to branch, territory, representative, customer and document.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-filter" aria-hidden="true"/><h3>Dynamic filters</h3><p>Date, company, channel, territory, team, product, customer and status.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-calendar" aria-hidden="true"/><h3>Time comparisons</h3><p>Daily, weekly, monthly, year-on-year and plan comparisons.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-table" aria-hidden="true"/><h3>Custom report builder</h3><p>Combine indicators and dimensions for each department’s needs.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-picture-o" aria-hidden="true"/><h3>Photo galleries</h3><p>Filter field images by campaign, store, territory and task.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-globe" aria-hidden="true"/><h3>Performance maps</h3><p>Heatmaps, point maps and bubble sizes for geographic insight.</p></article>
+        </div></div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Scheduled reporting">
+        <div class="container"><div class="mw-rich-heading"><span>03</span><div><p class="md-eyebrow">PROACTIVE REPORTING</p><h2>Reports that come to you</h2><p>Do not make managers chase the data; let the data reach them automatically.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-clock-o" aria-hidden="true"/><h3>Scheduled reports</h3><p>Send periodic reports to management or branches on a defined schedule.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-bell" aria-hidden="true"/><h3>KPI alerts</h3><p>Notify when an indicator falls or exceeds a defined risk threshold.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-sun-o" aria-hidden="true"/><h3>Daily digest</h3><p>End-of-day summary of completed, missed and exceptional activity.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-commenting" aria-hidden="true"/><h3>AI narrative</h3><p>Automatically explain important changes and their possible causes.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-download" aria-hidden="true"/><h3>Export</h3><p>Excel, PDF or CSV according to the scenario and permission.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-history" aria-hidden="true"/><h3>Audit trail</h3><p>Return to the movements and changes that feed each number.</p></article>
+        </div></div>
+      </section>
+    <section class="s_meydara_story md-section mw-feature-block pt112 pb112 md-mint" data-snippet="s_meydara_story" data-name="Your next step">
+          <div class="container">
+            <div class="md-final">
+              <h2>Let's make this relevant to your team.</h2>
+              <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+  <template id="page_ai" name="Midara assistant" website_id="website.default_website">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty md-v2 meydara-site mw-page">
+        <section class="s_meydara_story md-section mw-inner-hero pt96 pb112" data-snippet="s_meydara_story" data-name="Midara assistant">
+          <div class="container">
+            <div class="md-split md-page-intro">
+              <div>
+                <p class="md-eyebrow">Midara AI + Voice</p><h1>Intelligence that understands the field—and a voice assistant that works with the team.</h1><p class="md-lead">Midara goes beyond displaying data. AI reads it, explains it, recommends the next step and lets users speak to the system for a faster answer or action.</p><div class="md-actions">
+                  <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+                  <a href="/tour" class="button button-secondary">Take the product tour</a>
+                </div>
+              </div>
+              <div class="md-feature-stage"><figure class="md-device"><img class="img-fluid" src="/meydara_site/static/src/img/product/reference/meydara-ai.png" alt="Midara AI and Arabic voice assistant" loading="lazy"/></figure></div></div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Midara voice assistant">
+        <div class="container"><div class="mw-rich-heading"><span>01</span><div><p class="md-eyebrow">VOICE ASSISTANT</p><h2>The Midara voice assistant</h2><p>A natural interface that makes data faster to reach than searching through menus.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-microphone" aria-hidden="true"/><h3>Ask with your voice</h3><p>Ask about today’s collections or overdue customers in your territory.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-bolt" aria-hidden="true"/><h3>Voice commands</h3><p>Open a customer, create a note, register a follow-up or start an available action.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-commenting-o" aria-hidden="true"/><h3>Speech-to-Text</h3><p>Turn field notes into structured text inside the visit.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-info-circle" aria-hidden="true"/><h3>Pre-visit summary</h3><p>Recent order, balance, open issue and opportunity in one immediate summary.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-file-text" aria-hidden="true"/><h3>Post-visit summary</h3><p>Turn notes, photos and visit results into a reviewable brief.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-lock" aria-hidden="true"/><h3>Permission-aware answers</h3><p>The assistant answers only from data the user is allowed to access.</p></article>
+        </div></div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section mw-rich-section-alt pt112 pb112" data-snippet="s_meydara_story" data-name="AI agents">
+        <div class="container"><div class="mw-rich-heading"><span>02</span><div><p class="md-eyebrow">SPECIALIZED AI AGENTS</p><h2>AI agents for sales and execution</h2><p>Specialized agents turn commercial goals into practical recommendations.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-calendar" aria-hidden="true"/><h3>Scheduling Agent</h3><p>Ranks whom to visit and when based on opportunities, targets and constraints.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-map-o" aria-hidden="true"/><h3>Route Agent</h3><p>Suggests a route that reduces travel and increases productive visits.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-shopping-cart" aria-hidden="true"/><h3>Order Agent</h3><p>Suggests a suitable basket, missing products, cross-sell and upsell.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-money" aria-hidden="true"/><h3>Collection Agent</h3><p>Prioritizes collection by amount, lateness and likelihood of payment.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-check-square-o" aria-hidden="true"/><h3>Execution Agent</h3><p>Finds incomplete visits or tasks and recommends corrective action.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-user-secret" aria-hidden="true"/><h3>Manager Copilot</h3><p>Explains performance changes and surfaces the customers or products behind them.</p></article>
+        </div></div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="AI analytics and prediction">
+        <div class="container"><div class="mw-rich-heading"><span>03</span><div><p class="md-eyebrow">PREDICTIVE INTELLIGENCE</p><h2>Intelligent analytics and prediction</h2><p>Extract the signal that matters from a large volume of field data.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-line-chart" aria-hidden="true"/><h3>Forecasting</h3><p>Forecast sales and collections from history, seasonality and patterns.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-exclamation-circle" aria-hidden="true"/><h3>Anomaly Detection</h3><p>Detect unusual activity in an order, visit, discount, distance or collection.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-user-times" aria-hidden="true"/><h3>Churn risk</h3><p>Identify customers at risk of stopping or reducing purchases.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-star" aria-hidden="true"/><h3>Opportunity scoring</h3><p>Rank opportunities and customers by growth or closing likelihood.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-camera-retro" aria-hidden="true"/><h3>Visual AI</h3><p>Analyze shelf and display photos for product presence or planogram compliance.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-newspaper-o" aria-hidden="true"/><h3>Automated reports</h3><p>Create understandable daily and weekly executive summaries.</p></article>
+        </div></div>
+      </section>
+    <section class="s_meydara_story md-section mw-feature-block pt112 pb112 md-mint" data-snippet="s_meydara_story" data-name="Your next step">
+          <div class="container">
+            <div class="md-final">
+              <h2>Let's make this relevant to your team.</h2>
+              <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+  <template id="page_integrations" name="Integrations" website_id="website.default_website">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty md-v2 meydara-site mw-page">
+        <section class="s_meydara_story md-section mw-inner-hero pt96 pb112" data-snippet="s_meydara_story" data-name="Integrations">
+          <div class="container">
+            <div class="md-split md-page-intro">
+              <div>
+                <p class="md-eyebrow">Connected Enterprise</p><h1>Midara does not live on an island—it works inside your business ecosystem.</h1><p class="md-lead">A native Odoo connection plus APIs and webhooks links customers, products, prices, inventory, orders and collections with back-office systems and other channels.</p><div class="md-actions">
+                  <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+                  <a href="/tour" class="button button-secondary">Take the product tour</a>
+                </div>
+              </div>
+              <figure class="mw-rich-shot"><img class="img-fluid" src="/meydara_site/static/src/img/product/reference/about.png" alt="Midara connected enterprise architecture" loading="lazy"/></figure></div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Odoo integration scope">
+        <div class="container"><div class="mw-rich-heading"><span>01</span><div><p class="md-eyebrow">ODOO NATIVE</p><h2>Make the field app an extension of Odoo</h2><p>Keep field work inside the same business context instead of creating a disconnected system.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-address-book" aria-hidden="true"/><h3>Customers and contacts</h3><p>Synchronize account details, branches and addresses.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-tags" aria-hidden="true"/><h3>Products and prices</h3><p>Catalogs, units, price lists, discounts and availability.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-shopping-cart" aria-hidden="true"/><h3>Sales</h3><p>Move field orders into the back-office sales cycle.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-cubes" aria-hidden="true"/><h3>Inventory</h3><p>Read availability and track movements and returns for the intended workflow.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-money" aria-hidden="true"/><h3>Accounting and collections</h3><p>Receivables, invoices, payments and matching status according to access.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-users" aria-hidden="true"/><h3>Users and permissions</h3><p>Connect identity, teams, companies and territories with the organization structure.</p></article>
+        </div></div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section mw-rich-section-alt pt112 pb112" data-snippet="s_meydara_story" data-name="Integration hub">
+        <div class="container"><div class="mw-rich-heading"><span>02</span><div><p class="md-eyebrow">INTEGRATION HUB</p><h2>Connect the services that complete the journey</h2><p>Bring maps, communication, payments, analytics and field hardware into the operating flow.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-map" aria-hidden="true"/><h3>Maps and navigation</h3><p>Maps, directions, geolocation and route planning.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-comments" aria-hidden="true"/><h3>Messaging</h3><p>Alerts and channels such as WhatsApp according to organization settings.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-credit-card" aria-hidden="true"/><h3>Payments</h3><p>Payment gateways or electronic collection methods by country and provider.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-database" aria-hidden="true"/><h3>BI and data</h3><p>Send data to warehouses or analytics tools when required.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-print" aria-hidden="true"/><h3>Printers and scanners</h3><p>Mobile printers, barcode and QR for sales and distribution scenarios.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-id-badge" aria-hidden="true"/><h3>Identity</h3><p>SSO and enterprise access policies when connected to an external identity provider.</p></article>
+        </div></div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Integration operations">
+        <div class="container"><div class="mw-rich-heading"><span>03</span><div><p class="md-eyebrow">RELIABLE OPERATIONS</p><h2>Integration you can operate with confidence</h2><p>Good integration is not only data movement; it includes monitoring, error handling and governance.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-key" aria-hidden="true"/><h3>API keys and OAuth</h3><p>Secure authentication choices suited to each integration type.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-bell-o" aria-hidden="true"/><h3>Webhooks</h3><p>Send events when an order, payment or status update is created.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-tasks" aria-hidden="true"/><h3>Queues</h3><p>Manage deferred operations and retries when the network fails.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-list-alt" aria-hidden="true"/><h3>Logs</h3><p>A clear record of synchronization requests, results and errors.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-clone" aria-hidden="true"/><h3>Idempotency</h3><p>Reduce duplicate operations when requests are retried.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-exchange" aria-hidden="true"/><h3>Mapping rules</h3><p>Map fields and values between Midara and other systems without losing business meaning.</p></article>
+        </div></div>
+      </section>
+    <section class="s_meydara_story md-section mw-feature-block pt112 pb112 " data-snippet="s_meydara_story" data-name="Explore Odoo">
+          <div class="container">
+            <a href="/integrations/odoo" class="button button-primary">Understand the Odoo connection</a>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 md-mint" data-snippet="s_meydara_story" data-name="Your next step">
+          <div class="container">
+            <div class="md-final">
+              <h2>Let's make this relevant to your team.</h2>
+              <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+  <template id="page_integrations_odoo" name="Odoo integration" website_id="website.default_website">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty md-v2 meydara-site mw-page">
+        <section class="s_meydara_story md-section mw-inner-hero pt96 pb112" data-snippet="s_meydara_story" data-name="Odoo integration">
+          <div class="container">
+            <div class="md-split md-page-intro">
+              <div>
+                <p class="md-eyebrow">Odoo integration</p>
+                <h1>Your field workflow, in the same business context.</h1>
+                <p class="md-lead">Connect the application experience to the Odoo environment your business uses. Begin with your version, modules, customer data and the documents your team works with.</p>
+                <div class="md-actions">
+                  <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+                  <a href="/tour" class="button button-secondary">Take the product tour</a>
+                </div>
+              </div>
+              <div class="md-feature-stage">
+                <figure class="md-device">
+                  <img class="img-fluid" src="/meydara_site/static/src/img/product/reference/about.png" alt="Midara connected to Odoo business records" loading="lazy"/></figure>
+              </div>
+            </div>
+          </div>
+        </section>
+      <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Odoo connected records">
+        <div class="container"><div class="mw-rich-heading"><span>01</span><div><p class="md-eyebrow">CONNECTED RECORDS</p><h2>One data cycle across field and office</h2><p>Prepare the records and permissions that keep the customer journey consistent.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-address-book" aria-hidden="true"/><h3>Customer context</h3><p>Accounts, branches, contacts, assignments and territory access.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-tags" aria-hidden="true"/><h3>Commercial data</h3><p>Products, units, price lists, discounts and customer terms.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-shopping-cart" aria-hidden="true"/><h3>Sales documents</h3><p>Orders, invoices, deliveries and returns in their business states.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-money" aria-hidden="true"/><h3>Receivables and collection</h3><p>Balances, due invoices, payments and matching according to permission.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-refresh" aria-hidden="true"/><h3>Synchronization status</h3><p>Know what is queued, sent, accepted or needs attention.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-shield" aria-hidden="true"/><h3>Scoped access</h3><p>Companies, teams, roles and territories define what each user sees.</p></article>
+        </div></div>
+      </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 " data-snippet="s_meydara_story" data-name="How it works">
+          <div class="container">
+            <div class="md-link-grid">
+              <article id="step-0">
+                <span>01</span>
+                <h2>Map the working process</h2>
+                <p>Identify which actions begin in the field and which need office review or approval.</p>
+              </article>
+              <article id="step-1">
+                <span>02</span>
+                <h2>Prepare the data and access</h2>
+                <p>Review company scope, users, customer assignments, products and commercial settings.</p>
+              </article>
+              <article id="step-2">
+                <span>03</span>
+                <h2>Verify a complete scenario</h2>
+                <p>Walk through a representative workflow and review the resulting records and states before rollout.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 md-mint" data-snippet="s_meydara_story" data-name="Your next step">
+          <div class="container">
+            <div class="md-final">
+              <h2>Let's make this relevant to your team.</h2>
+              <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+  <template id="page_solutions" name="Solutions" website_id="website.default_website">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty md-v2 meydara-site mw-page">
+        <section class="s_meydara_story md-section mw-inner-hero pt96 pb112" data-snippet="s_meydara_story" data-name="Solutions">
+          <div class="container">
+            <div class="md-split md-page-intro">
+              <div>
+                <p class="md-eyebrow">Industry Playbooks</p><h1>One platform—with workflows shaped for every industry.</h1><p class="md-lead">Midara adapts to sales, distribution and execution scenarios across industries, with forms, indicators and rules that reflect each product and channel.</p><div class="md-actions">
+                  <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+                  <a href="/tour" class="button button-secondary">Take the product tour</a>
+                </div>
+              </div>
+              <div class="md-feature-stage">
+                <figure class="md-device">
+                  <img class="img-fluid" src="/meydara_site/static/src/img/product/reference/field-app.png" alt="Midara field application for different industries" loading="lazy"/></figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="FMCG and food industries">
+        <div class="container"><div class="mw-rich-heading"><span>01</span><div><p class="md-eyebrow">FMCG · FOOD AND BEVERAGE</p><h2>Fast distribution and competitive shelf execution</h2><p>Support high visit volumes, rapid distribution and competition for shelf presence.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-th-large" aria-hidden="true"/><h3>Perfect Store</h3><p>Planogram, on-shelf availability, share of shelf and promotions.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-truck" aria-hidden="true"/><h3>DSD and Van Sales</h3><p>Vehicle loading, direct sales and route reconciliation.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-sitemap" aria-hidden="true"/><h3>Distributors</h3><p>Primary and secondary sales plus channel inventory.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-bullhorn" aria-hidden="true"/><h3>Promotion execution</h3><p>Measure campaign execution inside the store.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-reply" aria-hidden="true"/><h3>Returns</h3><p>Returns, damage and expiry handling.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-magic" aria-hidden="true"/><h3>AI order</h3><p>Suggest a basket based on the store and purchase history.</p></article>
+        </div></div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section mw-rich-section-alt pt112 pb112" data-snippet="s_meydara_story" data-name="Pharma industry">
+        <div class="container"><div class="mw-rich-heading"><span>02</span><div><p class="md-eyebrow">PHARMA AND MEDICAL SUPPLIES</p><h2>Precise coverage for accounts, products and follow-up</h2><p>Structure field coverage around account type, priority and compliance needs.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-calendar" aria-hidden="true"/><h3>Visit planning</h3><p>Recurring visits by account type and priority.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-flask" aria-hidden="true"/><h3>Samples and materials</h3><p>Track educational materials or samples according to company policy.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-address-book" aria-hidden="true"/><h3>Deep CRM</h3><p>Interaction history, interests and opportunities.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-cubes" aria-hidden="true"/><h3>Inventory and availability</h3><p>Record product availability and channel notes.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-wpforms" aria-hidden="true"/><h3>Surveys</h3><p>Configurable field forms and assessments.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-shield" aria-hidden="true"/><h3>Compliance</h3><p>Checklists, permissions and an audit trail.</p></article>
+        </div></div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Construction and equipment">
+        <div class="container"><div class="mw-rich-heading"><span>03</span><div><p class="md-eyebrow">CONSTRUCTION · EQUIPMENT · SPARE PARTS</p><h2>B2B sales across wide territories</h2><p>Support special pricing, credit control and opportunity-led selling.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-map" aria-hidden="true"/><h3>Territory sales</h3><p>Maps, priority accounts and long-distance coverage.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-tags" aria-hidden="true"/><h3>Price lists</h3><p>Pricing by customer, project and territory.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-briefcase" aria-hidden="true"/><h3>Opportunities and projects</h3><p>Follow an opportunity through to the order.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-credit-card" aria-hidden="true"/><h3>Credit control</h3><p>Limits, validation and approval paths.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-users" aria-hidden="true"/><h3>Dealer network</h3><p>Manage distributors, dealers and partners.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-bullseye" aria-hidden="true"/><h3>Targets</h3><p>Targets by product, territory and account.</p></article>
+        </div></div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section mw-rich-section-alt pt112 pb112" data-snippet="s_meydara_story" data-name="Wholesale distribution">
+        <div class="container"><div class="mw-rich-heading"><span>04</span><div><p class="md-eyebrow">WHOLESALE AND MULTI-CHANNEL DISTRIBUTION</p><h2>Connect office, distributor, representative and customer</h2><p>Keep commercial movement and inventory visible across channels.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-shopping-cart" aria-hidden="true"/><h3>B2B orders</h3><p>Field orders and self-ordering.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-cubes" aria-hidden="true"/><h3>Inventory</h3><p>Stock and availability by location.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-money" aria-hidden="true"/><h3>Collections</h3><p>Collections, receivables and promises to pay.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-calculator" aria-hidden="true"/><h3>Route accounting</h3><p>Route and vehicle reconciliation.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-reply" aria-hidden="true"/><h3>Returns and POD</h3><p>Returns and proof of delivery.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-bar-chart" aria-hidden="true"/><h3>Channel analytics</h3><p>Performance visibility across channels and territories.</p></article>
+        </div></div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Field sales and services">
+        <div class="container"><div class="mw-rich-heading"><span>05</span><div><p class="md-eyebrow">FIELD SALES AND SERVICES</p><h2>Manage the day outside the office</h2><p>Coordinate appointments, tasks and customer assets even without product distribution.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-calendar-check-o" aria-hidden="true"/><h3>Appointments</h3><p>Scheduling and task planning.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-map-marker" aria-hidden="true"/><h3>Geo check-in</h3><p>A visit verified by place and time.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-wpforms" aria-hidden="true"/><h3>Forms</h3><p>Inspection, handover and assessment forms.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-archive" aria-hidden="true"/><h3>Assets</h3><p>Customer-site assets and movement history.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-pencil" aria-hidden="true"/><h3>Signatures</h3><p>Signature and proof of completion.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-magic" aria-hidden="true"/><h3>AI summary</h3><p>Summarize the visit and identify the next follow-up.</p></article>
+        </div></div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section mw-rich-section-alt pt112 pb112" data-snippet="s_meydara_story" data-name="Configurable industries">
+        <div class="container"><div class="mw-rich-heading"><span>06</span><div><p class="md-eyebrow">CONFIGURABLE INDUSTRIES</p><h2>Adapt the platform to your market</h2><p>Forms, indicators and workflows can be shaped for many field-sales models.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-diamond" aria-hidden="true"/><h3>Beauty and personal care</h3><p>Merchandising, promotions and photos.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-leaf" aria-hidden="true"/><h3>Agriculture and inputs</h3><p>Wide geographic coverage and dealer networks.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-car" aria-hidden="true"/><h3>Automotive and parts</h3><p>Large catalogs and multiple price structures.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-industry" aria-hidden="true"/><h3>Cleaning and chemicals</h3><p>B2B distribution and direct store delivery.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-signal" aria-hidden="true"/><h3>Telecommunications</h3><p>Point-of-sale visits and campaign execution.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-briefcase" aria-hidden="true"/><h3>Any field-sales network</h3><p>Configurable forms, indicators and workflows.</p></article>
+        </div></div>
+      </section>
+    <section class="s_meydara_story md-section mw-feature-block pt112 pb112 md-mint" data-snippet="s_meydara_story" data-name="Your next step">
+          <div class="container">
+            <div class="md-final">
+              <h2>Let's make this relevant to your team.</h2>
+              <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+  <template id="page_pricing" name="Pricing" website_id="website.default_website">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty md-v2 meydara-site mw-page">
+        <section class="s_meydara_story md-section mw-inner-hero pt96 pb112" data-snippet="s_meydara_story" data-name="Pricing">
+          <div class="container">
+            <div class="md-split md-page-intro">
+              <div>
+                <p class="md-eyebrow">Pricing</p>
+                <h1>A proposal shaped around your field team.</h1>
+                <p class="md-lead">Tell us about your team, the workflows you want to connect and your Odoo environment. We use those details to define a clear scope and a tailored proposal.</p>
+                <div class="md-actions">
+                  <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+                  <a href="/tour" class="button button-secondary">Take the product tour</a>
+                </div>
+              </div>
+              <div class="md-type-art">
+                <span>Mi<span>dara</span></span>
+                <div class="md-art-rule"/>
+                <p>Connected field work.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 " data-snippet="s_meydara_story" data-name="How it works">
+          <div class="container">
+            <div class="md-link-grid">
+              <article id="step-0">
+                <span>01</span>
+                <h2>Team and roles</h2>
+                <p>The number of users and the access each role needs.</p>
+              </article>
+              <article id="step-1">
+                <span>02</span>
+                <h2>Workflows and connection</h2>
+                <p>The field scenarios, business documents and Odoo requirements in scope.</p>
+              </article>
+              <article id="step-2">
+                <span>03</span>
+                <h2>Preparation and activation</h2>
+                <p>The data preparation, configuration and rollout support your team needs.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 md-mint" data-snippet="s_meydara_story" data-name="Your next step">
+          <div class="container">
+            <div class="md-final">
+              <h2>Let's make this relevant to your team.</h2>
+              <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+  <template id="page_tour" name="Product tour" website_id="website.default_website">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty md-v2 meydara-site mw-page">
+        <section class="s_meydara_story md-section mw-inner-hero pt96 pb112" data-snippet="s_meydara_story" data-name="Product tour">
+          <div class="container">
+            <div class="md-split md-page-intro">
+              <div>
+                <p class="md-eyebrow">Product tour</p>
+                <h1>Follow a day in the field.</h1>
+                <p class="md-lead">Explore real screens from the Midara application. Start with the daily route, open the customer context and finish with the report center.</p>
+                <div class="md-actions">
+                  <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+                  <a href="/platform" class="button button-secondary">Explore the platform</a>
+                </div>
+              </div>
+              <div class="md-feature-stage">
+                <figure class="md-device">
+                  <img class="img-fluid" src="/meydara_site/static/src/img/product/reference/field-app.png" alt="Midara field application overview" loading="lazy"/></figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 " data-snippet="s_meydara_story" data-name="Explore a field day">
+          <div class="container">
+            <p class="md-eyebrow">SEE HOW THE DAY FLOWS</p>
+            <h2>Start with the next useful action.</h2>
+            <div class="md-tour" data-md-tour="">
+              <div class="md-tour-options">
+                <button type="button" class="md-tour-step is-active" data-md-step="0" aria-pressed="true">
+                  <b>01</b>
+                  <span>Prepare your day<small>See the next customer and the remaining stops.</small></span>
+                </button>
+                <button type="button" class="md-tour-step" data-md-step="1" aria-pressed="false">
+                  <b>02</b>
+                  <span>Understand the customer<small>Open the customer context before the conversation.</small></span>
+                </button>
+                <button type="button" class="md-tour-step" data-md-step="2" aria-pressed="false">
+                  <b>03</b>
+                  <span>Review the results<small>Choose the report that answers your question.</small></span>
+                </button>
+                <a href="/features" class="md-text-link">Explore all features</a>
+              </div>
+              <div class="md-tour-screen">
+                <div data-md-panel="0">
+                  <figure class="md-device">
+                    <img class="img-fluid" src="/meydara_site/static/src/img/product/reference/visits.png" alt="Midara daily visits and route" loading="lazy"/></figure>
+                </div>
+                <div data-md-panel="1">
+                  <figure class="md-device">
+                    <img class="img-fluid" src="/meydara_site/static/src/img/product/reference/customers.png" alt="Midara customer 360 context" loading="lazy"/></figure>
+                </div>
+                <div data-md-panel="2">
+                  <figure class="md-device">
+                    <img class="img-fluid" src="/meydara_site/static/src/img/product/reference/mobile-reports.png" alt="Midara mobile reports" loading="lazy"/></figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 md-mint" data-snippet="s_meydara_story" data-name="Your next step">
+          <div class="container">
+            <div class="md-final">
+              <h2>Let's make this relevant to your team.</h2>
+              <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+  <template id="page_features_customers" name="Customers" website_id="website.default_website">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty md-v2 meydara-site mw-page">
+        <section class="s_meydara_story md-section mw-inner-hero pt96 pb112" data-snippet="s_meydara_story" data-name="Customers">
+          <div class="container">
+            <div class="md-split md-page-intro">
+              <div>
+                <p class="md-eyebrow">Mobile CRM · Customer 360</p><h1>Everything you know about the customer—in the representative’s pocket.</h1><p class="md-lead">Relationship history, people, locations, sales, visits, receivables, promotions, notes and opportunities come together in one profile that makes every visit better prepared and more consistent.</p><div class="md-actions">
+                  <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+                  <a href="/tour" class="button button-secondary">Take the product tour</a>
+                </div>
+              </div>
+              <div class="md-feature-stage">
+                <figure class="md-device">
+                  <img class="img-fluid" src="/meydara_site/static/src/img/product/reference/customers.png" alt="Midara customer 360 profile on mobile" loading="lazy"/></figure>
+              </div>
+            </div>
+          </div>
+        </section>
+      <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Customer 360 profile">
+        <div class="container"><div class="mw-rich-heading"><span>01</span><div><p class="md-eyebrow">CUSTOMER 360</p><h2>A complete customer profile</h2><p>The representative does not need to call the office to understand the customer before the meeting.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-map-marker" aria-hidden="true"/><h3>Details and branches</h3><p>Addresses, GPS locations, branches, contacts, channel and account type.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-calendar-check-o" aria-hidden="true"/><h3>Visit history</h3><p>Every check-in with its notes, photos, results and next tasks.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-shopping-cart" aria-hidden="true"/><h3>Order history</h3><p>Previous orders, recurring products, average basket and most recent purchase.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-file-text-o" aria-hidden="true"/><h3>Invoices and receivables</h3><p>Amounts due, overdue balances, payment terms and credit limits.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-money" aria-hidden="true"/><h3>Collections</h3><p>Previous payments, schedules, promises to pay, cheques and other collection methods.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-paperclip" aria-hidden="true"/><h3>Files and attachments</h3><p>Contracts, photos, documents and signatures linked to the account.</p></article>
+        </div></div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section mw-rich-section-alt pt112 pb112" data-snippet="s_meydara_story" data-name="Customer growth and opportunities">
+        <div class="container"><div class="mw-rich-heading"><span>02</span><div><p class="md-eyebrow">GROWTH AND OPPORTUNITIES</p><h2>Turn customer knowledge into a clear growth plan</h2><p>Move from customer insight to consistent follow-up and measurable opportunities.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-user-plus" aria-hidden="true"/><h3>Leads</h3><p>Capture potential customers from the field, map or company campaigns.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-briefcase" aria-hidden="true"/><h3>Opportunities</h3><p>Expected value, stage, closing probability, competitor, product and next activity.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-check-square-o" aria-hidden="true"/><h3>Onboarding</h3><p>Checklists for creating a new customer and validating documents and data.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-filter" aria-hidden="true"/><h3>Segmentation</h3><p>Classify by channel, size, potential, industry, territory or behavior.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-star" aria-hidden="true"/><h3>Account scoring</h3><p>A configurable priority score that guides the team’s time.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-pause-circle-o" aria-hidden="true"/><h3>Dormant accounts</h3><p>Find inactive customers and create automated recovery tasks.</p></article>
+        </div></div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Field relationship service">
+        <div class="container"><div class="mw-rich-heading"><span>03</span><div><p class="md-eyebrow">FIELD RELATIONSHIP SERVICE</p><h2>Serve the customer relationship in the field</h2><p>The representative sees the full picture and can resolve more customer needs immediately.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-comments-o" aria-hidden="true"/><h3>Service requests and notes</h3><p>Register a complaint or request and follow its status.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-calendar" aria-hidden="true"/><h3>Appointments and follow-ups</h3><p>Schedule the next call or visit and connect it to a clear reason.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-bell-o" aria-hidden="true"/><h3>Customer alerts</h3><p>Due amount, opportunity, open issue, purchase decline or overdue visit.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-clock-o" aria-hidden="true"/><h3>Communication timeline</h3><p>Notes, calls, messages and summaries in one unified timeline.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-users" aria-hidden="true"/><h3>Internal collaboration</h3><p>Comments and mentions between the representative, supervisor and operations team.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-smile-o" aria-hidden="true"/><h3>Customer satisfaction</h3><p>A quick survey or rating after delivery, a visit or service.</p></article>
+        </div></div>
+      </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 " data-snippet="s_meydara_story" data-name="Prepare this workflow">
+          <div class="container">
+            <div class="md-heading-row">
+              <h2>See it in your working context.</h2>
+              <p>A tailored presentation reviews the customer data, user permissions, document states and connection requirements relevant to this workflow.</p>
+            </div>
+            <div class="md-related">
+              <a href="/integrations/odoo">Odoo integration</a>
+              <a href="/features">All features</a>
+              <a href="/reports">Reports</a>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 md-mint" data-snippet="s_meydara_story" data-name="Your next step">
+          <div class="container">
+            <div class="md-final">
+              <h2>Let's make this relevant to your team.</h2>
+              <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+  <template id="page_features_visits" name="Visits and routes" website_id="website.default_website">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty md-v2 meydara-site mw-page">
+        <section class="s_meydara_story md-section mw-inner-hero pt96 pb112" data-snippet="s_meydara_story" data-name="Visits and routes">
+          <div class="container">
+            <div class="md-split md-page-intro">
+              <div>
+                <p class="md-eyebrow">Retail Execution · Territory Intelligence</p><h1>Cover more of the market—and make every visit measurable.</h1><p class="md-lead">Plan territories, routes and visits on one map, then guide each representative through tasks, audits, photos, shelf execution and the proof required at every stop.</p><div class="md-actions">
+                  <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+                  <a href="/tour" class="button button-secondary">Take the product tour</a>
+                </div>
+              </div>
+              <div class="md-feature-stage">
+                <figure class="md-device">
+                  <img class="img-fluid" src="/meydara_site/static/src/img/product/reference/visits.png" alt="Midara planned visits and daily route" loading="lazy"/></figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt96 pb96 md-mint my-diagonal-band" data-snippet="s_meydara_story" data-name="Customer map and route planning">
+          <div class="container">
+            <div class="md-heading-row">
+              <div>
+                <p class="md-eyebrow">CUSTOMER MAP &amp; ROUTE PLANNING</p>
+                <h2>See your coverage.<br/>Plan the next visit.</h2>
+              </div>
+              <div>
+                <p>View customers on the map, narrow your selection by region, route or team, and move from geographic coverage to route planning.</p>
+                <a href="/features/visits" class="md-text-link">Explore visits and routes</a>
+              </div>
+            </div>
+            <figure class="my-web-screen mb-0">
+              <img class="img-fluid" src="/meydara_site/static/src/img/product/tracking-map.png" alt="Midara customer map with route, region and team filters" loading="lazy"/>
+            </figure>
+          </div>
+        </section>
+      <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Visit execution">
+        <div class="container"><div class="mw-rich-heading"><span>01</span><div><p class="md-eyebrow">VISIT EXECUTION</p><h2>Manage the visit step by step</h2><p>Define what must be completed for each customer or channel and let the app guide the representative.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-list-ul" aria-hidden="true"/><h3>Configurable activity plans</h3><p>A different task list for each visit type, customer and campaign.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-map-marker" aria-hidden="true"/><h3>Check-in and check-out</h3><p>Visit time, location and duration with optional geofence rules.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-wpforms" aria-hidden="true"/><h3>Surveys and forms</h3><p>Dynamic forms, conditional fields, assessment questions and notes.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-camera" aria-hidden="true"/><h3>Before-and-after photos</h3><p>Visual evidence for execution, promotions, shelves, signage or faults.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-bolt" aria-hidden="true"/><h3>Immediate tasks</h3><p>Add an urgent task or follow-up without disrupting the planned visit schedule.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-pencil" aria-hidden="true"/><h3>Customer signature</h3><p>Confirm execution, receipt or agreement directly from the device.</p></article>
+        </div><figure class="mw-rich-shot mw-rich-shot-phone"><img class="img-fluid" src="/meydara_site/static/src/img/product/reference/visit.png" alt="Midara visit execution checklist" loading="lazy"/></figure></div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section mw-rich-section-alt pt112 pb112" data-snippet="s_meydara_story" data-name="Perfect store execution">
+        <div class="container"><div class="mw-rich-heading"><span>02</span><div><p class="md-eyebrow">RETAIL EXECUTION</p><h2>Retail execution and Perfect Store</h2><p>Measure execution quality inside the point of sale—not simply whether a visit occurred.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-cubes" aria-hidden="true"/><h3>On-shelf availability</h3><p>Record available products, gaps and out-of-stock points.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-area-chart" aria-hidden="true"/><h3>Share of Shelf</h3><p>Measure shelf share and facings against competing products.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-columns" aria-hidden="true"/><h3>Planogram compliance</h3><p>Compare actual shelf execution with the required display plan.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-tag" aria-hidden="true"/><h3>Price audit</h3><p>Capture the actual selling price and compare it with the target or competitor.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-bullhorn" aria-hidden="true"/><h3>Promotion execution</h3><p>Confirm the promotion, materials, price, quantity and duration.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-eye" aria-hidden="true"/><h3>Competitor monitoring</h3><p>Prices, new products, promotions, photos and competitive notes from the field.</p></article>
+        </div></div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Assets and merchandising">
+        <div class="container"><div class="mw-rich-heading"><span>03</span><div><p class="md-eyebrow">ASSETS AND MERCHANDISING</p><h2>Track assets and marketing materials</h2><p>Know what the company owns inside stores and customer locations.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-archive" aria-hidden="true"/><h3>Asset management</h3><p>Coolers, shelves, stands, devices or equipment with serial number and condition.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-picture-o" aria-hidden="true"/><h3>POSM tracking</h3><p>Distribute and follow marketing materials inside points of sale.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-exchange" aria-hidden="true"/><h3>Asset transfer</h3><p>Receive, hand over and move assets between locations with a movement history.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-wrench" aria-hidden="true"/><h3>Maintenance and notes</h3><p>Record a fault or maintenance need and link it to the asset and customer.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-check-square" aria-hidden="true"/><h3>Field inventory</h3><p>Audit the quantity and condition of assets or products at the location.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-star-half-o" aria-hidden="true"/><h3>Execution score</h3><p>A unified scorecard turns dozens of tasks into a comparable performance score.</p></article>
+        </div><figure class="mw-rich-shot mw-rich-shot-phone"><img class="img-fluid" src="/meydara_site/static/src/img/product/reference/scorecard.png" alt="Midara retail execution scorecard" loading="lazy"/></figure></div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section mw-rich-section-alt pt112 pb112" data-snippet="s_meydara_story" data-name="Territory and route planning">
+        <div class="container"><div class="mw-rich-heading"><span>04</span><div><p class="md-eyebrow">TERRITORY AND ROUTES</p><h2>Plan territories and routes</h2><p>Turn a customer list into a geographic plan that can be executed and measured.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-map" aria-hidden="true"/><h3>Territory mapping</h3><p>Divide cities, territories and sectors and assign them to teams and representatives.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-calendar" aria-hidden="true"/><h3>Beat planning</h3><p>Recurring plans by weekday or by the required visit cycle.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-random" aria-hidden="true"/><h3>Multi-stop optimization</h3><p>Order visits to reduce distance and time and increase possible stops.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-location-arrow" aria-hidden="true"/><h3>Nearby customer suggestions</h3><p>Show customers and opportunities close to the current route to use available time.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-sort-amount-desc" aria-hidden="true"/><h3>Visit priority</h3><p>Rank accounts by value, delay, opportunity, expected order or management direction.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-fire" aria-hidden="true"/><h3>Heatmaps</h3><p>See strengths, weaknesses, coverage and sales geographically.</p></article>
+        </div><figure class="mw-rich-shot mw-rich-shot-phone"><img class="img-fluid" src="/meydara_site/static/src/img/product/reference/route-map.png" alt="Midara route map and customer coverage" loading="lazy"/></figure></div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Live route monitoring">
+        <div class="container"><div class="mw-rich-heading"><span>05</span><div><p class="md-eyebrow">LIVE MONITORING</p><h2>Execute and monitor in real time</h2><p>Know whether the plan is being followed and where intervention is needed.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-users" aria-hidden="true"/><h3>Team location</h3><p>View movement during working hours according to organization policy.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-road" aria-hidden="true"/><h3>Route compliance</h3><p>Compare completed visits with the plan and flag deviations.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-crosshairs" aria-hidden="true"/><h3>Geofence</h3><p>Prevent or warn about check-in outside the customer’s defined area.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-clock-o" aria-hidden="true"/><h3>Visit duration</h3><p>Arrival, start, finish and time spent with the customer.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-car" aria-hidden="true"/><h3>Distance and mileage</h3><p>Distance traveled, trip history and reimbursement records when required.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-refresh" aria-hidden="true"/><h3>Replanning</h3><p>Reorder the day when a visit is canceled or an urgent priority appears.</p></article>
+        </div></div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section mw-rich-section-alt pt112 pb112" data-snippet="s_meydara_story" data-name="Coverage intelligence">
+        <div class="container"><div class="mw-rich-heading"><span>06</span><div><p class="md-eyebrow">COVERAGE INTELLIGENCE</p><h2>Connect geography with business results</h2><p>Move beyond location tracking to understand productive coverage and market gaps.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-search" aria-hidden="true"/><h3>White Space Analysis</h3><p>Find territories or segments that are not receiving enough coverage.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-star" aria-hidden="true"/><h3>Potential scoring</h3><p>Classify customers by potential, size and behavior.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-check-circle" aria-hidden="true"/><h3>Productive visit</h3><p>Measure whether a visit converts into an order, collection or execution result.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-repeat" aria-hidden="true"/><h3>Visit frequency</h3><p>Compare actual frequency with what each customer segment requires.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-magic" aria-hidden="true"/><h3>Schedule suggestions</h3><p>AI suggests whom to visit and when based on goals and priority.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-exclamation-triangle" aria-hidden="true"/><h3>Exception alerts</h3><p>Notify supervisors about missed visits, delays or weak productivity in a territory.</p></article>
+        </div></div>
+      </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 " data-snippet="s_meydara_story" data-name="Prepare this workflow">
+          <div class="container">
+            <div class="md-heading-row">
+              <h2>See it in your working context.</h2>
+              <p>A tailored presentation reviews the customer data, user permissions, document states and connection requirements relevant to this workflow.</p>
+            </div>
+            <div class="md-related">
+              <a href="/integrations/odoo">Odoo integration</a>
+              <a href="/features">All features</a>
+              <a href="/reports">Reports</a>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 md-mint" data-snippet="s_meydara_story" data-name="Your next step">
+          <div class="container">
+            <div class="md-final">
+              <h2>Let's make this relevant to your team.</h2>
+              <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+  <template id="page_features_sales_documents" name="Sales documents" website_id="website.default_website">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty md-v2 meydara-site mw-page">
+        <section class="s_meydara_story md-section mw-inner-hero pt96 pb112" data-snippet="s_meydara_story" data-name="Sales documents">
+          <div class="container">
+            <div class="md-split md-page-intro">
+              <div>
+                <p class="md-eyebrow">Sales Force Automation</p><h1>From opportunity to order—inside the same visit.</h1><p class="md-lead">Turn every visit into a real sales opportunity. Midara puts the customer, product, price, promotion, balance and intelligent recommendation in the representative’s hands at the moment of decision.</p><div class="md-actions">
+                  <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+                  <a href="/tour" class="button button-secondary">Take the product tour</a>
+                </div>
+              </div>
+              <div class="md-feature-stage">
+                <figure class="md-device">
+                  <img class="img-fluid" src="/meydara_site/static/src/img/product/reference/order.png" alt="Midara mobile order capture interface" loading="lazy"/></figure>
+              </div>
+            </div>
+          </div>
+        </section>
+      <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Professional order capture">
+        <div class="container">
+          <div class="mw-rich-heading"><span>01</span><div><p class="md-eyebrow">ORDER CAPTURE</p><h2>Professional order capture</h2><p>A field ordering experience that supports complex commercial rules without slowing the representative down.</p></div></div>
+          <div class="mw-rich-grid">
+            <article class="mw-rich-card"><i class="fa fa-th" aria-hidden="true"/><h3>Rich product catalog</h3><p>Images, units of measure, barcodes, alternatives, attributes and stock availability.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-tags" aria-hidden="true"/><h3>Price lists</h3><p>Customer, channel, territory, season and contract-specific pricing.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-gift" aria-hidden="true"/><h3>Discounts and promotions</h3><p>Promotions, bundles, free goods, quantity thresholds and automatic discount rules.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-list-alt" aria-hidden="true"/><h3>Order templates</h3><p>Ready-made assortments for stores or segments to speed up recurring orders.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-repeat" aria-hidden="true"/><h3>Reorder</h3><p>Copy a previous order or suggest the customer’s usual products from purchase history.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-barcode" aria-hidden="true"/><h3>Fast barcode entry</h3><p>Add products by scanning and reduce input errors during busy visits.</p></article>
+          </div>
+          <figure class="mw-rich-shot mw-rich-shot-phone"><img class="img-fluid" src="/meydara_site/static/src/img/product/reference/products.png" alt="Midara product catalog on mobile" loading="lazy"/></figure>
+        </div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section mw-rich-section-alt pt112 pb112" data-snippet="s_meydara_story" data-name="Data guided selling">
+        <div class="container">
+          <div class="mw-rich-heading"><span>02</span><div><p class="md-eyebrow">GUIDED SELLING</p><h2>Sell with customer intelligence</h2><p>Before the conversation starts, the representative knows what deserves attention for this customer.</p></div></div>
+          <div class="mw-rich-grid">
+            <article class="mw-rich-card"><i class="fa fa-history" aria-hidden="true"/><h3>Customer purchase profile</h3><p>Recent orders, recurring products, average basket, frequency and behavior changes.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-lightbulb-o" aria-hidden="true"/><h3>Next Best Offer</h3><p>Recommend the most relevant offer or product for the customer and current context.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-level-up" aria-hidden="true"/><h3>Cross-sell and Upsell</h3><p>Suggest complementary products or higher-value sizes during order creation.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-bullseye" aria-hidden="true"/><h3>Targets and indicators</h3><p>Daily and monthly targets, achievement gaps, productive visits and average basket value.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-briefcase" aria-hidden="true"/><h3>Opportunities and follow-up</h3><p>Track stage, expected value, next activity and notes linked to the customer.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-arrow-down" aria-hidden="true"/><h3>Purchase decline alerts</h3><p>Identify customers or products with declining activity and guide timely intervention.</p></article>
+          </div>
+        </div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Order to collection">
+        <div class="container">
+          <div class="mw-rich-heading"><span>03</span><div><p class="md-eyebrow">ORDER TO CASH</p><h2>From order to collection</h2><p>The sale does not end at confirmation. Midara connects the order with credit, invoices and collection.</p></div></div>
+          <div class="mw-rich-grid">
+            <article class="mw-rich-card"><i class="fa fa-check-circle" aria-hidden="true"/><h3>Credit validation</h3><p>Check credit limits, receivables and terms before confirming the order.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-random" aria-hidden="true"/><h3>Approval paths</h3><p>Route discount or credit exceptions to the right responsible person.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-pencil-square-o" aria-hidden="true"/><h3>Signature and acknowledgment</h3><p>Capture customer approval or delivery evidence with a digital signature or attachment.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-file-text-o" aria-hidden="true"/><h3>Invoices and documents</h3><p>View, send or print documents according to the connected back-office workflow.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-money" aria-hidden="true"/><h3>Multiple collection methods</h3><p>Cash, transfer, cheque, payment gateway or custom methods based on company policy.</p></article>
+            <article class="mw-rich-card"><i class="fa fa-link" aria-hidden="true"/><h3>Direct Odoo connection</h3><p>Send orders and update customer, inventory and balance status within one data cycle.</p></article>
+          </div>
+        </div>
+      </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 " data-snippet="s_meydara_story" data-name="Prepare this workflow">
+          <div class="container">
+            <div class="md-heading-row">
+              <h2>See it in your working context.</h2>
+              <p>A tailored presentation reviews the customer data, user permissions, document states and connection requirements relevant to this workflow.</p>
+            </div>
+            <div class="md-related">
+              <a href="/integrations/odoo">Odoo integration</a>
+              <a href="/features">All features</a>
+              <a href="/reports">Reports</a>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 md-mint" data-snippet="s_meydara_story" data-name="Your next step">
+          <div class="container">
+            <div class="md-final">
+              <h2>Let's make this relevant to your team.</h2>
+              <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+  <template id="page_features_collections" name="Collections" website_id="website.default_website">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty md-v2 meydara-site mw-page">
+        <section class="s_meydara_story md-section mw-inner-hero pt96 pb112" data-snippet="s_meydara_story" data-name="Collections">
+          <div class="container">
+            <div class="md-split md-page-intro">
+              <div>
+                <p class="md-eyebrow">Collections</p>
+                <h1>Put every payment in its complete customer context.</h1><p class="md-lead">Bring receivables, overdue invoices, promises to pay, collection methods and matching status into one field workflow connected to the customer.</p><div class="md-actions">
+                  <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+                  <a href="/tour" class="button button-secondary">Take the product tour</a>
+                </div>
+              </div>
+              <div class="md-feature-stage">
+                <figure class="md-device">
+                  <img class="img-fluid" src="/meydara_site/static/src/img/product/reference/payment.png" alt="Midara collection and customer payment interface" loading="lazy"/></figure>
+              </div>
+            </div>
+          </div>
+        </section>
+      <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Field collection capabilities"><div class="container"><div class="mw-rich-heading"><span>01</span><div><p class="md-eyebrow">FIELD COLLECTION</p><h2>From amount due to a matched receipt</h2><p>Keep the invoice, customer, collection method and evidence together.</p></div></div><div class="mw-rich-grid">
+        <article class="mw-rich-card"><i class="fa fa-file-text-o" aria-hidden="true"/><h3>Due invoices</h3><p>View outstanding and overdue documents according to account access.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-calendar" aria-hidden="true"/><h3>Promise to pay</h3><p>Record a promised date, amount and follow-up activity.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-money" aria-hidden="true"/><h3>Multiple payment methods</h3><p>Cash, transfer, cheque, gateway or configured company methods.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-link" aria-hidden="true"/><h3>Matching</h3><p>Connect the payment with the customer and original accounting document.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-print" aria-hidden="true"/><h3>Receipts and evidence</h3><p>Issue a receipt and retain the transaction evidence required by the workflow.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-sort-amount-desc" aria-hidden="true"/><h3>Collection priorities</h3><p>Rank follow-up by amount, lateness and payment likelihood.</p></article>
+      </div></div></section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 " data-snippet="s_meydara_story" data-name="Prepare this workflow">
+          <div class="container">
+            <div class="md-heading-row">
+              <h2>See it in your working context.</h2>
+              <p>A tailored presentation reviews the customer data, user permissions, document states and connection requirements relevant to this workflow.</p>
+            </div>
+            <div class="md-related">
+              <a href="/integrations/odoo">Odoo integration</a>
+              <a href="/features">All features</a>
+              <a href="/reports">Reports</a>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 md-mint" data-snippet="s_meydara_story" data-name="Your next step">
+          <div class="container">
+            <div class="md-final">
+              <h2>Let's make this relevant to your team.</h2>
+              <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+  <template id="page_features_delivery" name="Delivery and returns" website_id="website.default_website">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty md-v2 meydara-site mw-page">
+        <section class="s_meydara_story md-section mw-inner-hero pt96 pb112" data-snippet="s_meydara_story" data-name="Delivery and returns">
+          <div class="container">
+            <div class="md-split md-page-intro">
+              <div>
+                <p class="md-eyebrow">DMS · DSD · Van Sales</p><h1>From distributor and warehouse to store—complete visibility of every movement.</h1><p class="md-lead">Midara supports modern distribution: primary and secondary sales, distributor and vehicle stock, loading, direct sales, collections, returns, proof of delivery and end-of-day reconciliation.</p><div class="md-actions">
+                  <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+                  <a href="/tour" class="button button-secondary">Take the product tour</a>
+                </div>
+              </div>
+              <div class="md-feature-stage">
+                <figure class="md-device">
+                  <img class="img-fluid" src="/meydara_site/static/src/img/product/reference/field-app.png" alt="Midara van sales and distribution application" loading="lazy"/></figure>
+              </div>
+            </div>
+          </div>
+        </section>
+      <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Distributor network">
+        <div class="container"><div class="mw-rich-heading"><span>01</span><div><p class="md-eyebrow">DISTRIBUTOR MANAGEMENT</p><h2>Manage the distributor network</h2><p>One view of inventory, orders and commercial movement across the channel.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"/><h3>Primary sales</h3><p>Company-to-distributor orders with supply and receipt status.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-exchange" aria-hidden="true"/><h3>Secondary sales</h3><p>Distributor sales to retailers and customers within the same data network.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-cubes" aria-hidden="true"/><h3>Distributor inventory</h3><p>Current, slow-moving and near-out-of-stock quantities and product movements.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-balance-scale" aria-hidden="true"/><h3>Claims and settlements</h3><p>Track claims, discounts and settlements related to promotions or returns.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-bullseye" aria-hidden="true"/><h3>Channel targets</h3><p>Targets by distributor, territory, category and product with actual comparison.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-shopping-bag" aria-hidden="true"/><h3>B2B ordering portal</h3><p>Let retailers and partners order and view catalogs and promotions according to access.</p></article>
+        </div></div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section mw-rich-section-alt pt112 pb112" data-snippet="s_meydara_story" data-name="Van sales and route accounting">
+        <div class="container"><div class="mw-rich-heading"><span>02</span><div><p class="md-eyebrow">VAN SALES</p><h2>Van sales and route accounting</h2><p>Manage the vehicle’s day from loading to reconciliation without paper gaps.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-truck" aria-hidden="true"/><h3>Vehicle loading</h3><p>Record warehouse quantities and assign them to the representative or driver.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-cube" aria-hidden="true"/><h3>Live vehicle inventory</h3><p>Know the balance after every sale, return or transfer.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-shopping-cart" aria-hidden="true"/><h3>Direct sales</h3><p>Create an invoice or order and deliver immediately from carried inventory.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-print" aria-hidden="true"/><h3>Printing and receipts</h3><p>Issue a field document or receipt and link it to the transaction.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-money" aria-hidden="true"/><h3>Field collection</h3><p>Record payment against the invoice and customer with transaction evidence.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-calculator" aria-hidden="true"/><h3>End-of-day reconciliation</h3><p>Match cash, sales, returns, remaining stock and vehicle movements.</p></article>
+        </div><figure class="mw-rich-shot mw-rich-shot-phone"><img class="img-fluid" src="/meydara_site/static/src/img/product/reference/payment.png" alt="Midara field collection and payment interface" loading="lazy"/></figure></div>
+      </section>
+      <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Delivery and returns operations">
+        <div class="container"><div class="mw-rich-heading"><span>03</span><div><p class="md-eyebrow">DELIVERY AND RETURNS</p><h2>Complete the cycle with auditable proof</h2><p>Connect the order to delivery and returns with a complete, reviewable record.</p></div></div><div class="mw-rich-grid">
+          <article class="mw-rich-card"><i class="fa fa-check-square-o" aria-hidden="true"/><h3>Proof of delivery</h3><p>Signature, photo, location and delivery time.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-reply" aria-hidden="true"/><h3>Return management</h3><p>Reason, condition, quantity, photos and connection to the original document.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-exclamation-circle" aria-hidden="true"/><h3>Damaged or expired goods</h3><p>Dedicated condition classes and a separate handling flow.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-adjust" aria-hidden="true"/><h3>Partial delivery</h3><p>Support actual delivered, remaining and rejected quantities.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-truck" aria-hidden="true"/><h3>Shipment status</h3><p>Planned, loaded, out for delivery, completed, partial or failed with a reason.</p></article>
+          <article class="mw-rich-card"><i class="fa fa-exclamation-triangle" aria-hidden="true"/><h3>Exception alerts</h3><p>Stock shortages, credit overruns, failed deliveries or reconciliation differences.</p></article>
+        </div></div>
+      </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 " data-snippet="s_meydara_story" data-name="Prepare this workflow">
+          <div class="container">
+            <div class="md-heading-row">
+              <h2>See it in your working context.</h2>
+              <p>A tailored presentation reviews the customer data, user permissions, document states and connection requirements relevant to this workflow.</p>
+            </div>
+            <div class="md-related">
+              <a href="/integrations/odoo">Odoo integration</a>
+              <a href="/features">All features</a>
+              <a href="/reports">Reports</a>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 md-mint" data-snippet="s_meydara_story" data-name="Your next step">
+          <div class="container">
+            <div class="md-final">
+              <h2>Let's make this relevant to your team.</h2>
+              <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+  <template id="page_features_offline" name="Offline and synchronization" website_id="website.default_website">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty md-v2 meydara-site mw-page">
+        <section class="s_meydara_story md-section mw-inner-hero pt96 pb112" data-snippet="s_meydara_story" data-name="Offline and synchronization">
+          <div class="container">
+            <div class="md-split md-page-intro">
+              <div>
+                <p class="md-eyebrow">Offline and synchronization</p>
+                <h1>Keep the field working when the network cannot.</h1><p class="md-lead">Store the essential data needed for the day, continue supported operations offline and make synchronization status clear when the connection returns.</p><div class="md-actions">
+                  <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+                  <a href="/tour" class="button button-secondary">Take the product tour</a>
+                </div>
+              </div>
+              <div class="md-feature-stage">
+                <figure class="md-device">
+                  <img class="img-fluid" src="/meydara_site/static/src/img/product/reference/field-app.png" alt="Midara offline field application" loading="lazy"/></figure>
+              </div>
+            </div>
+          </div>
+        </section>
+      <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Offline and synchronization capabilities"><div class="container"><div class="mw-rich-heading"><span>01</span><div><p class="md-eyebrow">OFFLINE-FIRST</p><h2>A practical workflow in difficult connectivity</h2><p>Make saving, queueing, retry and final status understandable to every user.</p></div></div><div class="mw-rich-grid">
+        <article class="mw-rich-card"><i class="fa fa-download" aria-hidden="true"/><h3>Prepared local data</h3><p>Keep the customers, products, route and documents required for supported work.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-save" aria-hidden="true"/><h3>Local saving</h3><p>Save supported field activity without losing the working context.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-tasks" aria-hidden="true"/><h3>Synchronization queues</h3><p>Track operations waiting to be sent in a clear order.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-refresh" aria-hidden="true"/><h3>Automatic retry</h3><p>Resume synchronization when connectivity becomes available.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-exchange" aria-hidden="true"/><h3>Conflict handling</h3><p>Surface operations that need review instead of silently losing data.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-check-circle" aria-hidden="true"/><h3>Visible delivery status</h3><p>Know what is saved locally, queued, synchronized or needs attention.</p></article>
+      </div></div></section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 " data-snippet="s_meydara_story" data-name="Prepare this workflow">
+          <div class="container">
+            <div class="md-heading-row">
+              <h2>See it in your working context.</h2>
+              <p>A tailored presentation reviews the customer data, user permissions, document states and connection requirements relevant to this workflow.</p>
+            </div>
+            <div class="md-related">
+              <a href="/integrations/odoo">Odoo integration</a>
+              <a href="/features">All features</a>
+              <a href="/reports">Reports</a>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 md-mint" data-snippet="s_meydara_story" data-name="Your next step">
+          <div class="container">
+            <div class="md-final">
+              <h2>Let's make this relevant to your team.</h2>
+              <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+  <template id="page_features_commercial_policies" name="Commercial policies" website_id="website.default_website">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty md-v2 meydara-site mw-page">
+        <section class="s_meydara_story md-section mw-inner-hero pt96 pb112" data-snippet="s_meydara_story" data-name="Commercial policies">
+          <div class="container">
+            <div class="md-split md-page-intro">
+              <div>
+                <p class="md-eyebrow">Commercial policies</p>
+                <h1>Keep every field sale inside your commercial rules.</h1><p class="md-lead">Apply customer and channel pricing, promotions, credit limits, quantity rules and approval paths without slowing the representative down.</p><div class="md-actions">
+                  <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+                  <a href="/tour" class="button button-secondary">Take the product tour</a>
+                </div>
+              </div>
+              <div class="md-feature-stage">
+                <figure class="md-device">
+                  <img class="img-fluid" src="/meydara_site/static/src/img/product/reference/products.png" alt="Midara product catalog and commercial rules" loading="lazy"/></figure>
+              </div>
+            </div>
+          </div>
+        </section>
+      <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Commercial policy capabilities"><div class="container"><div class="mw-rich-heading"><span>01</span><div><p class="md-eyebrow">COMMERCIAL CONTROL</p><h2>Flexible rules with controlled decisions</h2><p>Give the field team the right offer while keeping exceptions visible and approved.</p></div></div><div class="mw-rich-grid">
+        <article class="mw-rich-card"><i class="fa fa-tags" aria-hidden="true"/><h3>Customer price lists</h3><p>Pricing by customer, channel, territory, season and contract.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-gift" aria-hidden="true"/><h3>Promotions and bundles</h3><p>Free goods, quantity thresholds and configured promotional rules.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-percent" aria-hidden="true"/><h3>Discount control</h3><p>Automatic discounts and limits for representative discretion.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-credit-card" aria-hidden="true"/><h3>Credit validation</h3><p>Check limits, terms and receivables before confirming an order.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-random" aria-hidden="true"/><h3>Approval paths</h3><p>Route credit or discount exceptions to the right responsible person.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-th-large" aria-hidden="true"/><h3>Assortment rules</h3><p>Catalogs and products that vary by territory, customer and sales channel.</p></article>
+      </div></div></section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 " data-snippet="s_meydara_story" data-name="Prepare this workflow">
+          <div class="container">
+            <div class="md-heading-row">
+              <h2>See it in your working context.</h2>
+              <p>A tailored presentation reviews the customer data, user permissions, document states and connection requirements relevant to this workflow.</p>
+            </div>
+            <div class="md-related">
+              <a href="/integrations/odoo">Odoo integration</a>
+              <a href="/features">All features</a>
+              <a href="/reports">Reports</a>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 md-mint" data-snippet="s_meydara_story" data-name="Your next step">
+          <div class="container">
+            <div class="md-final">
+              <h2>Let's make this relevant to your team.</h2>
+              <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+  <template id="page_features_management" name="Team follow-up" website_id="website.default_website">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty md-v2 meydara-site mw-page">
+        <section class="s_meydara_story md-section mw-inner-hero pt96 pb112" data-snippet="s_meydara_story" data-name="Team follow-up">
+          <div class="container">
+            <div class="md-split md-page-intro">
+              <div>
+                <p class="md-eyebrow">Team follow-up</p>
+                <h1>Know where the team needs your attention now.</h1><p class="md-lead">Bring plans, coverage, productive visits, target gaps and exceptions into a management view that leads to the next action.</p><div class="md-actions">
+                  <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+                  <a href="/tour" class="button button-secondary">Take the product tour</a>
+                </div>
+              </div>
+              <div class="md-feature-stage">
+                <figure class="md-device">
+                  <img class="img-fluid" src="/meydara_site/static/src/img/product/reference/scorecard.png" alt="Midara representative performance scorecard" loading="lazy"/></figure>
+              </div>
+            </div>
+          </div>
+        </section>
+      <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Team management capabilities"><div class="container"><div class="mw-rich-heading"><span>01</span><div><p class="md-eyebrow">TEAM MANAGEMENT</p><h2>Turn field activity into focused supervision</h2><p>See performance, gaps and exceptions at the level where action can be taken.</p></div></div><div class="mw-rich-grid">
+        <article class="mw-rich-card"><i class="fa fa-users" aria-hidden="true"/><h3>Team performance</h3><p>Representative ranking, productivity and average basket value.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-map" aria-hidden="true"/><h3>Coverage</h3><p>Planned versus completed visits by territory and segment.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-check-circle" aria-hidden="true"/><h3>Productive visits</h3><p>Measure conversion to an order, collection or execution result.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-bullseye" aria-hidden="true"/><h3>Targets and gaps</h3><p>Daily and monthly progress by team, product and territory.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-exclamation-triangle" aria-hidden="true"/><h3>Exception management</h3><p>Missed visits, delays, weak productivity and overdue follow-up.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-comments" aria-hidden="true"/><h3>Direct guidance</h3><p>Reassign work, add tasks and keep the next action visible to the representative.</p></article>
+      </div></div></section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 " data-snippet="s_meydara_story" data-name="Prepare this workflow">
+          <div class="container">
+            <div class="md-heading-row">
+              <h2>See it in your working context.</h2>
+              <p>A tailored presentation reviews the customer data, user permissions, document states and connection requirements relevant to this workflow.</p>
+            </div>
+            <div class="md-related">
+              <a href="/integrations/odoo">Odoo integration</a>
+              <a href="/features">All features</a>
+              <a href="/reports">Reports</a>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 md-mint" data-snippet="s_meydara_story" data-name="Your next step">
+          <div class="container">
+            <div class="md-final">
+              <h2>Let's make this relevant to your team.</h2>
+              <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+  <template id="page_features_tracking_attendance" name="Tracking and attendance" website_id="website.default_website">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty md-v2 meydara-site mw-page">
+        <section class="s_meydara_story md-section mw-inner-hero pt96 pb112" data-snippet="s_meydara_story" data-name="Tracking and attendance">
+          <div class="container">
+            <div class="md-split md-page-intro">
+              <div>
+                <p class="md-eyebrow">Tracking and attendance</p>
+                <h1>Connect place, time and route compliance to the working day.</h1><p class="md-lead">Use GPS, geofencing, check-in, visit duration, trip distance and route comparison within the organization’s agreed working policy.</p><div class="md-actions">
+                  <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+                  <a href="/tour" class="button button-secondary">Take the product tour</a>
+                </div>
+              </div>
+              <div class="md-feature-stage">
+                <figure class="md-device">
+                  <img class="img-fluid" src="/meydara_site/static/src/img/product/reference/route-map.png" alt="Midara route tracking and attendance map" loading="lazy"/></figure>
+              </div>
+            </div>
+          </div>
+        </section>
+      <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Tracking and attendance capabilities"><div class="container"><div class="mw-rich-heading"><span>01</span><div><p class="md-eyebrow">LOCATION CONTEXT</p><h2>Verify work without losing the business purpose</h2><p>Location supports the visit record, route plan and operational follow-up.</p></div></div><div class="mw-rich-grid">
+        <article class="mw-rich-card"><i class="fa fa-sign-in" aria-hidden="true"/><h3>Check-in and check-out</h3><p>Capture start, finish, location and visit duration.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-crosshairs" aria-hidden="true"/><h3>Geofence</h3><p>Warn or prevent check-in outside the customer’s defined area.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-map-marker" aria-hidden="true"/><h3>Team location</h3><p>View movement during working hours according to organization policy.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-road" aria-hidden="true"/><h3>Route compliance</h3><p>Compare executed visits with the plan and identify deviations.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-car" aria-hidden="true"/><h3>Mileage and trips</h3><p>Distance traveled, driving time and trip history.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-refresh" aria-hidden="true"/><h3>Day replanning</h3><p>Reorder stops when a visit is canceled or an urgent priority appears.</p></article>
+      </div></div></section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 " data-snippet="s_meydara_story" data-name="Prepare this workflow">
+          <div class="container">
+            <div class="md-heading-row">
+              <h2>See it in your working context.</h2>
+              <p>A tailored presentation reviews the customer data, user permissions, document states and connection requirements relevant to this workflow.</p>
+            </div>
+            <div class="md-related">
+              <a href="/integrations/odoo">Odoo integration</a>
+              <a href="/features">All features</a>
+              <a href="/reports">Reports</a>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 md-mint" data-snippet="s_meydara_story" data-name="Your next step">
+          <div class="container">
+            <div class="md-final">
+              <h2>Let's make this relevant to your team.</h2>
+              <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+  <template id="page_features_notifications" name="Notifications" website_id="website.default_website">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty md-v2 meydara-site mw-page">
+        <section class="s_meydara_story md-section mw-inner-hero pt96 pb112" data-snippet="s_meydara_story" data-name="Notifications">
+          <div class="container">
+            <div class="md-split md-page-intro">
+              <div>
+                <p class="md-eyebrow">Notifications</p>
+                <h1>Bring the next update to the person who can act on it.</h1><p class="md-lead">Connect visits, tasks, approvals, credit, collections, synchronization and exceptions to clear, contextual notifications.</p><div class="md-actions">
+                  <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+                  <a href="/tour" class="button button-secondary">Take the product tour</a>
+                </div>
+              </div>
+              <div class="md-feature-stage">
+                <figure class="md-device">
+                  <img class="img-fluid" src="/meydara_site/static/src/img/product/reference/mobile-reports.png" alt="Midara alerts and follow-up on mobile" loading="lazy"/></figure>
+              </div>
+            </div>
+          </div>
+        </section>
+      <section class="s_meydara_story md-section mw-rich-section pt112 pb112" data-snippet="s_meydara_story" data-name="Notification capabilities"><div class="container"><div class="mw-rich-heading"><span>01</span><div><p class="md-eyebrow">ALERTS AND WORKFLOW</p><h2>Make each notification lead to an action</h2><p>Keep alerts tied to the customer, visit, document or process that created them.</p></div></div><div class="mw-rich-grid">
+        <article class="mw-rich-card"><i class="fa fa-calendar" aria-hidden="true"/><h3>Visit alerts</h3><p>Upcoming, missed, delayed or rescheduled visits.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-tasks" aria-hidden="true"/><h3>Task reminders</h3><p>Due work, urgent actions and incomplete execution.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-check-square-o" aria-hidden="true"/><h3>Approval updates</h3><p>Discount, credit and document decisions requiring attention.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-credit-card" aria-hidden="true"/><h3>Credit and collection</h3><p>Overdue balances, promises to pay and collection priorities.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-refresh" aria-hidden="true"/><h3>Synchronization status</h3><p>Queued, sent, failed or retried field operations.</p></article>
+        <article class="mw-rich-card"><i class="fa fa-exclamation-triangle" aria-hidden="true"/><h3>Operational exceptions</h3><p>Stock shortages, failed delivery, route deviation or reconciliation differences.</p></article>
+      </div></div></section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 " data-snippet="s_meydara_story" data-name="Prepare this workflow">
+          <div class="container">
+            <div class="md-heading-row">
+              <h2>See it in your working context.</h2>
+              <p>A tailored presentation reviews the customer data, user permissions, document states and connection requirements relevant to this workflow.</p>
+            </div>
+            <div class="md-related">
+              <a href="/integrations/odoo">Odoo integration</a>
+              <a href="/features">All features</a>
+              <a href="/reports">Reports</a>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 md-mint" data-snippet="s_meydara_story" data-name="Your next step">
+          <div class="container">
+            <div class="md-final">
+              <h2>Let's make this relevant to your team.</h2>
+              <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+</data>
+</odoo>

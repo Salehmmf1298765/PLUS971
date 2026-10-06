@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <data noupdate="1"><template id="page_request_presentation" name="Your next step" website_id="website.default_website">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty md-v2 mw-page">
+        <section class="s_meydara_story md-section mw-inner-hero pt96 pb112" data-snippet="s_meydara_story" data-name="Your next step">
+          <div class="container md-split">
+            <div>
+              <p class="md-eyebrow">Your next step</p>
+              <h1>Let's see Midara in your working context.</h1>
+              <p class="md-lead">Tell us about your field team and what you want to improve. We will focus the presentation on the workflows that matter to your business.</p>
+              <div class="md-related"><a href="/tour">Product tour</a><a href="/integrations/odoo">Odoo integration</a></div>
+            </div>
+            <div class="s_website_form md-form" data-vcss="001" data-snippet="s_website_form" data-name="Presentation request">
+              <form action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-pre-fill="true" data-model_name="crm.lead" data-success-mode="redirect" data-success-page="/meydara/thank-you">
+                <div class="s_website_form_rows row s_col_no_bgcolor">
+                  <div class="s_website_form_field s_website_form_dnone col-12" data-name="Field"><input type="hidden" class="s_website_form_input" name="name" value="Midara presentation request"/></div>
+                  <div class="s_website_form_field col-12 col-md-6 s_website_form_required" data-name="Field" data-type="char">
+                    <label class="s_website_form_label" for="request_presentation_contact_name"><span class="s_website_form_label_content">Name</span><span class="s_website_form_mark"> *</span></label>
+                    <input class="form-control s_website_form_input" id="request_presentation_contact_name" name="contact_name" type="text" data-fill-with="name" required="required"/>
+                  </div>
+                  <div class="s_website_form_field col-12 col-md-6 s_website_form_required" data-name="Field" data-type="char">
+                    <label class="s_website_form_label" for="request_presentation_partner_name"><span class="s_website_form_label_content">Company</span><span class="s_website_form_mark"> *</span></label>
+                    <input class="form-control s_website_form_input" id="request_presentation_partner_name" name="partner_name" type="text" data-fill-with="commercial_company_name" required="required"/>
+                  </div>
+                  <div class="s_website_form_field col-12 col-md-6 s_website_form_required" data-name="Field" data-type="email">
+                    <label class="s_website_form_label" for="request_presentation_email_from"><span class="s_website_form_label_content">Work email</span><span class="s_website_form_mark"> *</span></label>
+                    <input class="form-control s_website_form_input" id="request_presentation_email_from" name="email_from" type="email" data-fill-with="email" required="required"/>
+                  </div>
+                  <div class="s_website_form_field col-12 col-md-6 s_website_form_required" data-name="Field" data-type="tel">
+                    <label class="s_website_form_label" for="request_presentation_phone"><span class="s_website_form_label_content">Phone number</span><span class="s_website_form_mark"> *</span></label>
+                    <input class="form-control s_website_form_input" id="request_presentation_phone" name="phone" type="tel" data-fill-with="phone" required="required"/>
+                  </div>
+                  <div class="s_website_form_field s_website_form_custom col-12 col-md-6" data-name="Field" data-type="selection">
+                    <label class="s_website_form_label" for="request_presentation_team"><span class="s_website_form_label_content">Field team size</span></label>
+                    <select class="form-select s_website_form_input" id="request_presentation_team" name="Field team size"><option value="">Select a range</option><option>1–10</option><option>11–50</option><option>51–200</option><option>200+</option></select>
+                  </div>
+                  <div class="s_website_form_field s_website_form_custom col-12 col-md-6 s_website_form_required" data-name="Field" data-type="selection">
+                    <label class="s_website_form_label" for="request_presentation_sector"><span class="s_website_form_label_content">Sector</span><span class="s_website_form_mark"> *</span></label>
+                    <select class="form-select s_website_form_input" id="request_presentation_sector" name="Sector" required="required"><option value="">Select your sector</option><option>Consumer goods and distribution</option><option>Pharmaceutical and healthcare</option><option>Retail and merchandising</option><option>Industrial sales and services</option><option>Other field operations</option></select>
+                  </div>
+                  <div class="s_website_form_field col-12" data-name="Field" data-type="text">
+                    <label class="s_website_form_label" for="request_presentation_description"><span class="s_website_form_label_content">What processes would you like to manage?</span></label>
+                    <textarea class="form-control s_website_form_input" name="description" id="request_presentation_description" rows="4" placeholder="For example: visits, orders, collections, van sales and reports"/>
+                  </div>
+                  <div class="s_website_form_submit col-12"><a role="button" href="#" class="button button-primary s_website_form_send">Send your request</a><span id="s_website_form_result"/></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+
+  <template id="page_contact" name="Contact Midara" website_id="website.default_website">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty md-v2 mw-page">
+        <section class="s_meydara_story md-section mw-inner-hero pt96 pb112" data-snippet="s_meydara_story" data-name="Contact Midara">
+          <div class="container md-split">
+            <div>
+              <p class="md-eyebrow">Contact Midara</p>
+              <h1>Let's talk about your team.</h1>
+              <p class="md-lead">Have a question about Midara, your workflow or the Odoo connection? Send us the details so we can help you find the right next step.</p>
+              <div class="md-related"><a href="/tour">Product tour</a><a href="/integrations/odoo">Odoo integration</a></div>
+            </div>
+            <div class="s_website_form md-form" data-vcss="001" data-snippet="s_website_form" data-name="Presentation request">
+              <form action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-pre-fill="true" data-model_name="crm.lead" data-success-mode="redirect" data-success-page="/meydara/thank-you">
+                <div class="s_website_form_rows row s_col_no_bgcolor">
+                  <div class="s_website_form_field s_website_form_dnone col-12" data-name="Field"><input type="hidden" class="s_website_form_input" name="name" value="Midara presentation request"/></div>
+                  <div class="s_website_form_field col-12 col-md-6 s_website_form_required" data-name="Field" data-type="char">
+                    <label class="s_website_form_label" for="contact_contact_name"><span class="s_website_form_label_content">Name</span><span class="s_website_form_mark"> *</span></label>
+                    <input class="form-control s_website_form_input" id="contact_contact_name" name="contact_name" type="text" data-fill-with="name" required="required"/>
+                  </div>
+                  <div class="s_website_form_field col-12 col-md-6 s_website_form_required" data-name="Field" data-type="char">
+                    <label class="s_website_form_label" for="contact_partner_name"><span class="s_website_form_label_content">Company</span><span class="s_website_form_mark"> *</span></label>
+                    <input class="form-control s_website_form_input" id="contact_partner_name" name="partner_name" type="text" data-fill-with="commercial_company_name" required="required"/>
+                  </div>
+                  <div class="s_website_form_field col-12 col-md-6 s_website_form_required" data-name="Field" data-type="email">
+                    <label class="s_website_form_label" for="contact_email_from"><span class="s_website_form_label_content">Work email</span><span class="s_website_form_mark"> *</span></label>
+                    <input class="form-control s_website_form_input" id="contact_email_from" name="email_from" type="email" data-fill-with="email" required="required"/>
+                  </div>
+                  <div class="s_website_form_field col-12 col-md-6 s_website_form_required" data-name="Field" data-type="tel">
+                    <label class="s_website_form_label" for="contact_phone"><span class="s_website_form_label_content">Phone number</span><span class="s_website_form_mark"> *</span></label>
+                    <input class="form-control s_website_form_input" id="contact_phone" name="phone" type="tel" data-fill-with="phone" required="required"/>
+                  </div>
+                  <div class="s_website_form_field s_website_form_custom col-12 col-md-6" data-name="Field" data-type="selection">
+                    <label class="s_website_form_label" for="contact_team"><span class="s_website_form_label_content">Field team size</span></label>
+                    <select class="form-select s_website_form_input" id="contact_team" name="Field team size"><option value="">Select a range</option><option>1–10</option><option>11–50</option><option>51–200</option><option>200+</option></select>
+                  </div>
+                  <div class="s_website_form_field s_website_form_custom col-12 col-md-6 s_website_form_required" data-name="Field" data-type="selection">
+                    <label class="s_website_form_label" for="contact_sector"><span class="s_website_form_label_content">Sector</span><span class="s_website_form_mark"> *</span></label>
+                    <select class="form-select s_website_form_input" id="contact_sector" name="Sector" required="required"><option value="">Select your sector</option><option>Consumer goods and distribution</option><option>Pharmaceutical and healthcare</option><option>Retail and merchandising</option><option>Industrial sales and services</option><option>Other field operations</option></select>
+                  </div>
+                  <div class="s_website_form_field col-12" data-name="Field" data-type="text">
+                    <label class="s_website_form_label" for="contact_description"><span class="s_website_form_label_content">What processes would you like to manage?</span></label>
+                    <textarea class="form-control s_website_form_input" name="description" id="contact_description" rows="4" placeholder="For example: visits, orders, collections, van sales and reports"/>
+                  </div>
+                  <div class="s_website_form_submit col-12"><a role="button" href="#" class="button button-primary s_website_form_send">Send your request</a><span id="s_website_form_result"/></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+
+  <template id="page_thank_you" name="Request received" website_id="website.default_website">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty md-v2 mw-page">
+        <section class="s_meydara_story md-section md-mint pt96 pb96" data-snippet="s_meydara_story" data-name="Request received">
+          <div class="container md-thanks">
+            <p class="md-eyebrow">Request received</p>
+            <h1>Thank you. Let's take the next step.</h1>
+            <p class="md-lead mx-auto">Your request has reached the Midara team. We will review the information and get in touch.</p>
+            <a href="/" class="button button-primary">Return to home</a>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+</data></odoo>

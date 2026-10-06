@@ -1,0 +1,412 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <data noupdate="1"><template id="homepage" name="Midara Homepage" website_id="website.default_website">
+    <t t-call="website.layout">
+      <div id="wrap" class="oe_structure oe_empty meydara-site md-v2 mw-page mw-home">
+        <section class="s_meydara_story mw-hero pt96 pb128" data-snippet="s_meydara_story" data-name="Midara connected field day">
+<div class="container position-relative"><div class="row align-items-center gy-5">
+<div class="col-lg-6 col-xl-7"><span class="mw-eyebrow mw-eyebrow-light">Field Sales · Distribution · Retail Execution · AI</span>
+<h1 class="display-2 mt-4 mb-4">The whole field. In one intelligent platform.</h1>
+<p class="lead mw-hero-copy mb-5">Midara manages the full sales and execution cycle—from territories and visits to customers, orders, collections, distribution, shelf execution and reports—with AI and an Arabic voice assistant at the heart of the experience.</p>
+<div class="d-flex flex-wrap gap-3"><a class="btn btn-light mw-btn-light" href="/request-presentation">Request a presentation <i class="fa fa-arrow-right ms-2" aria-hidden="true"/></a><a class="btn mw-btn-ghost" href="/tour">Take the product tour</a></div>
+<div class="mw-built-for d-flex flex-wrap align-items-center gap-3 mt-5"><span>Designed for:</span><span><i class="fa fa-briefcase me-1" aria-hidden="true"/>Field sales</span><span><i class="fa fa-truck me-1" aria-hidden="true"/>Distribution</span><span><i class="fa fa-shopping-basket me-1" aria-hidden="true"/>Retail execution</span><span><i class="fa fa-users me-1" aria-hidden="true"/>Supervisors and managers</span></div></div>
+<div class="col-lg-6 col-xl-5"><div class="mw-dashboard-card">
+<div class="d-flex justify-content-between align-items-center mb-4"><div><span class="mw-card-kicker">Your field day, in one place</span><h2 class="h5 mb-0 mt-1">The next step is clear</h2></div><span class="mw-status"><span class="mw-status-dot"/>From the application</span></div>
+<figure class="my-hero-screen mb-0"><img src="/meydara_site/static/src/img/product/home-overview.png" class="img-fluid" loading="eager" fetchpriority="high" alt="Midara daily route and next customer"/></figure>
+<div class="mw-activity-list">
+<a class="mw-activity-item my-activity-link" href="/features/customers"><span class="mw-activity-icon mw-icon-yellow"><i class="fa fa-address-card-o" aria-hidden="true"/></span><span><strong>Know the customer before the visit</strong><small>Customer details and the work that follows</small></span><i class="fa fa-chevron-right" aria-hidden="true"/></a>
+<a class="mw-activity-item my-activity-link" href="/reports"><span class="mw-activity-icon mw-icon-green"><i class="fa fa-line-chart" aria-hidden="true"/></span><span><strong>Keep the results in view</strong><small>Reports in the context of your work</small></span><i class="fa fa-chevron-right" aria-hidden="true"/></a>
+<a class="mw-inline-link" href="/tour">Explore the complete tour</a>
+</div></div></div></div></div></section>
+        <section class="s_meydara_story mw-audience-strip pt0 pb32" data-snippet="s_meydara_story" data-name="Connected field value">
+          <div class="container">
+            <div class="mw-audience-grid">
+              <div>
+                <span class="mw-audience-icon">
+                  <i class="fa fa-wifi" aria-hidden="true"/>
+                </span>
+                <strong>Offline-first</strong>
+                <small>Keep working when connectivity is weak</small>
+              </div>
+              <div>
+                <span class="mw-audience-icon">
+                  <i class="fa fa-refresh" aria-hidden="true"/>
+                </span>
+                <strong>Connected to Odoo</strong>
+                <small>Customers, products, sales, inventory and accounting</small>
+              </div>
+              <div>
+                <span class="mw-audience-icon">
+                  <i class="fa fa-mobile" aria-hidden="true"/>
+                </span>
+                <strong>Built for every device</strong>
+                <small>Mobile, tablet and desktop</small>
+              </div>
+              <div>
+                <span class="mw-audience-icon">
+                  <i class="fa fa-microphone" aria-hidden="true"/>
+                </span>
+                <strong>AI and voice assistant</strong>
+                <small>Ask, summarize, recommend and act</small>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story mw-module-section pt112 pb112" data-snippet="s_meydara_story" data-name="Midara workflows">
+          <div class="container">
+            <div class="row align-items-end gy-4 mb-5">
+              <div class="col-lg-8">
+                <span class="mw-label mw-label-blue">An integrated operating system for the field</span>
+                <h2 class="display-5 mt-4 mb-3">More than a sales app. A complete operating system for work outside the office.</h2>
+                <p class="mw-section-intro mb-0">Midara combines field sales, distribution and retail execution in one Arabic experience powered by AI.</p>
+              </div>
+              <div class="col-lg-4 text-lg-end">
+                <a class="mw-inline-link" href="/features">Explore all capabilities <i class="fa fa-arrow-right ms-1" aria-hidden="true"/></a>
+              </div>
+            </div>
+            <div class="mw-module-grid">
+              <a class="mw-module-card" href="/features/customers">
+                <span>
+                  <i class="fa fa-address-book" aria-hidden="true"/>
+                </span>
+                <h3>Mobile CRM</h3>
+                <p>A 360° customer profile with history, balances, opportunities and the next action.</p>
+              </a>
+              <a class="mw-module-card" href="/features/visits">
+                <span>
+                  <i class="fa fa-map-marker" aria-hidden="true"/>
+                </span>
+                <h3>Routes and visits</h3>
+                <p>Territories, recurring visits, multiple stops, nearby customers and clear daily plans.</p>
+              </a>
+              <a class="mw-module-card" href="/features/sales-documents">
+                <span>
+                  <i class="fa fa-file-text-o" aria-hidden="true"/>
+                </span>
+                <h3>Order capture</h3>
+                <p>Catalogs, price lists, promotions, discounts, templates and barcode entry.</p>
+              </a>
+              <a class="mw-module-card" href="/features/collections">
+                <span>
+                  <i class="fa fa-money" aria-hidden="true"/>
+                </span>
+                <h3>Collections</h3>
+                <p>Due invoices, promises to pay, matching, receipts and multiple payment methods.</p>
+              </a>
+              <a class="mw-module-card" href="/features/delivery">
+                <span>
+                  <i class="fa fa-truck" aria-hidden="true"/>
+                </span>
+                <h3>Delivery and returns</h3>
+                <p>Quantities, reasons, photos, signatures, proof of delivery and daily settlement.</p>
+              </a>
+              <a class="mw-module-card" href="/features/offline">
+                <span>
+                  <i class="fa fa-refresh" aria-hidden="true"/>
+                </span>
+                <h3>Offline mobile</h3>
+                <p>Save essential work locally and synchronize automatically when connection returns.</p>
+              </a>
+              <a class="mw-module-card" href="/features/commercial-policies">
+                <span>
+                  <i class="fa fa-sliders" aria-hidden="true"/>
+                </span>
+                <h3>Commercial policies</h3>
+                <p>Credit limits, customer pricing, promotions and approval paths.</p>
+              </a>
+              <a class="mw-module-card" href="/features/management">
+                <span>
+                  <i class="fa fa-line-chart" aria-hidden="true"/>
+                </span>
+                <h3>Targets and dashboards</h3>
+                <p>Sales, collections, coverage, productivity, receivables and target progress.</p>
+              </a>
+              <a class="mw-module-card" href="/features/tracking-attendance">
+                <span>
+                  <i class="fa fa-crosshairs" aria-hidden="true"/>
+                </span>
+                <h3>Geo attendance</h3>
+                <p>Check-in, check-out, GPS, geofencing, timestamps, mileage and trip history.</p>
+              </a>
+              <a class="mw-module-card" href="/features/notifications">
+                <span>
+                  <i class="fa fa-bell-o" aria-hidden="true"/>
+                </span>
+                <h3>Alerts and workflow</h3>
+                <p>Visits, tasks, approvals, credit, collections and operational exceptions.</p>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 " data-snippet="s_meydara_story" data-name="Explore a field day">
+          <div class="container">
+            <p class="md-eyebrow">SEE HOW THE DAY FLOWS</p>
+            <h2>Start with the next useful action.</h2>
+            <div class="md-tour" data-md-tour="">
+              <div class="md-tour-options">
+                <button type="button" class="md-tour-step is-active" data-md-step="0" aria-pressed="true">
+                  <b>01</b>
+                  <span>Prepare your day<small>See the next customer and the remaining stops.</small></span>
+                </button>
+                <button type="button" class="md-tour-step" data-md-step="1" aria-pressed="false">
+                  <b>02</b>
+                  <span>Understand the customer<small>Open the customer context before the conversation.</small></span>
+                </button>
+                <button type="button" class="md-tour-step" data-md-step="2" aria-pressed="false">
+                  <b>03</b>
+                  <span>Review the results<small>Choose the report that answers your question.</small></span>
+                </button>
+                <a href="/tour" class="md-text-link">Explore the complete tour <i class="fa fa-arrow-circle-o-right" aria-hidden="true"/></a>
+              </div>
+              <div class="md-tour-screen">
+                <div data-md-panel="0">
+                  <figure class="md-device">
+                    <img class="img-fluid" src="/meydara_site/static/src/img/product/reference/visits.png" alt="Midara daily visits and route" loading="lazy"/>
+                  </figure>
+                </div>
+                <div data-md-panel="1">
+                  <figure class="md-device">
+                    <img class="img-fluid" src="/meydara_site/static/src/img/product/reference/customers.png" alt="Midara customer 360 context" loading="lazy"/>
+                  </figure>
+                </div>
+                <div data-md-panel="2">
+                  <figure class="md-device">
+                    <img class="img-fluid" src="/meydara_site/static/src/img/product/reference/mobile-reports.png" alt="Midara mobile reports" loading="lazy"/>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 " data-snippet="s_meydara_story" data-name="CUSTOMER CONTEXT">
+          <div class="container">
+            <div class="md-split md-reverse">
+              <div class="md-copy">
+                <p class="md-eyebrow">CUSTOMER CONTEXT</p>
+                <h2>Walk into the visit informed.</h2>
+                <p class="md-lead">Keep customer details close to the visit. Review the information available to your account, then continue into the relevant sales or collection workflow.</p>
+                <a class="md-text-link" href="/features/customers">Explore this workflow <i class="fa fa-arrow-circle-o-right" aria-hidden="true"/></a>
+              </div>
+              <div class="md-feature-stage">
+                <figure class="md-device">
+                  <img class="img-fluid" src="/meydara_site/static/src/img/product/customer-context.png" alt="Midara application interface" loading="lazy"/>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt96 pb96 md-mint my-diagonal-band" data-snippet="s_meydara_story" data-name="Customer map and route planning">
+          <div class="container">
+            <div class="md-heading-row">
+              <div>
+                <p class="md-eyebrow">CUSTOMER MAP &amp; ROUTE PLANNING</p>
+                <h2>See your coverage.<br/>Plan the next visit.</h2>
+              </div>
+              <div>
+                <p>View customers on the map, narrow your selection by region, route or team, and move from geographic coverage to route planning.</p>
+                <a href="/features/visits" class="md-text-link">Explore visits and routes</a>
+              </div>
+            </div>
+            <figure class="my-web-screen mb-0">
+              <img class="img-fluid" src="/meydara_site/static/src/img/product/tracking-map.png" alt="Midara customer map with route, region and team filters" loading="lazy"/>
+            </figure>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 md-paper mw-feature-tint my-diagonal-band" data-snippet="s_meydara_story" data-name="OFFLINE &amp; SYNC">
+          <div class="container">
+            <div class="md-split ">
+              <div class="md-copy">
+                <p class="md-eyebrow">OFFLINE &amp; SYNC</p>
+                <h2>Know what is saved. Know what is shared.</h2>
+                <p class="md-lead">Follow the status of locally saved work and its synchronization. Offline availability depends on the operation and the data prepared for your team.</p>
+                <a class="md-text-link" href="/features/offline">Explore this workflow <i class="fa fa-arrow-circle-o-right" aria-hidden="true"/></a>
+              </div>
+              <div class="md-feature-stage">
+                <figure class="md-device">
+                  <img class="img-fluid" src="/meydara_site/static/src/img/product/home-overview.png" alt="Midara application interface" loading="lazy"/>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 " data-snippet="s_meydara_story" data-name="COLLECTIONS">
+          <div class="container">
+            <div class="md-split md-reverse">
+              <div class="md-copy">
+                <p class="md-eyebrow">COLLECTIONS</p>
+                <h2>Put the payment in its customer context.</h2>
+                <p class="md-lead">Bring due invoices and collection activity into the field conversation, with document actions governed by your permissions and accounting workflow.</p>
+                <a class="md-text-link" href="/features/collections">Explore this workflow <i class="fa fa-arrow-circle-o-right" aria-hidden="true"/></a>
+              </div>
+              <div class="md-feature-stage">
+                <figure class="md-device">
+                  <img class="img-fluid" src="/meydara_site/static/src/img/product/customer-context.png" alt="Midara application interface" loading="lazy"/>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 md-paper mw-feature-tint" data-snippet="s_meydara_story" data-name="DELIVERY &amp; RETURNS">
+          <div class="container">
+            <div class="md-split ">
+              <div class="md-copy">
+                <p class="md-eyebrow">DELIVERY &amp; RETURNS</p>
+                <h2>Keep the handover part of the story.</h2>
+                <p class="md-lead">Connect the customer visit with the delivery steps your business enables. Review quantities and document status before moving to the next stop.</p>
+                <a class="md-text-link" href="/features/delivery">Explore this workflow <i class="fa fa-arrow-circle-o-right" aria-hidden="true"/></a>
+              </div>
+              <div class="md-feature-stage">
+                <figure class="md-device">
+                  <img class="img-fluid" src="/meydara_site/static/src/img/product/home-overview.png" alt="Midara application interface" loading="lazy"/>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 " data-snippet="s_meydara_story" data-name="REPORTS &amp; FOLLOW-UP">
+          <div class="container">
+            <div class="md-split md-reverse">
+              <div class="md-copy">
+                <p class="md-eyebrow">REPORTS &amp; FOLLOW-UP</p>
+                <h2>A clearer answer to: how are we doing?</h2>
+                <p class="md-lead">Move from a broad question to a focused report. Explore the reports available to your role and keep the customer, period and activity in context.</p>
+                <a class="md-text-link" href="/reports">Explore this workflow <i class="fa fa-arrow-circle-o-right" aria-hidden="true"/></a>
+              </div>
+              <div class="md-feature-stage">
+                <figure class="md-device">
+                  <img class="img-fluid" src="/meydara_site/static/src/img/product/reports-center.png" alt="Midara application interface" loading="lazy"/>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 md-dark my-diagonal-band my-diagonal-reverse" data-snippet="s_meydara_story" data-name="Midara assistant">
+          <div class="container">
+            <div class="md-split">
+              <div>
+                <p class="md-eyebrow">MIDARA ASSISTANT</p>
+                <h2>Keep the question close to the work.</h2>
+                <p class="md-lead">Explore an assistant experience alongside your customer and field workflows. Review the available capabilities and how access is configured for your business.</p>
+                <a href="/ai" class="button button-secondary">Meet the assistant</a>
+              </div>
+              <div class="md-type-art">
+                <span>Mi<span>dara</span></span>
+                <p>Context. Questions. Next steps.</p>
+                <div class="md-art-rule"/>
+                <small>Explore the capabilities for your team</small>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 " data-snippet="s_meydara_story" data-name="Teams and sectors">
+          <div class="container">
+            <p class="md-eyebrow">BUILT AROUND YOUR BUSINESS</p>
+            <h2>Different teams. A shared customer journey.</h2>
+            <div class="md-link-grid">
+              <a href="/solutions#distribution">
+                <span>01</span>
+                <h3>Distribution</h3>
+                <p>Connect repeat visits, product conversations and collection follow-up.</p>
+              </a>
+              <a href="/solutions#field-sales">
+                <span>02</span>
+                <h3>Field sales</h3>
+                <p>Bring customer context and the next action into each visit.</p>
+              </a>
+              <a href="/solutions#operations">
+                <span>03</span>
+                <h3>Sales operations</h3>
+                <p>Connect field activity with the records your business follows.</p>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 md-mint my-diagonal-band" data-snippet="s_meydara_story" data-name="Odoo integration">
+          <div class="container">
+            <div class="md-split">
+              <div>
+                <p class="md-eyebrow">MIDARA + ODOO</p>
+                <h2>The field is part of your business system.</h2>
+                <p class="md-lead">Customers, products and business documents need a shared context. Discover what the connection covers, how access is scoped and what your team needs to prepare.</p>
+                <a href="/integrations/odoo" class="md-text-link">Understand the Odoo connection <i class="fa fa-arrow-circle-o-right" aria-hidden="true"/></a>
+              </div>
+              <div class="md-integration-art">
+                <strong>Midara</strong>
+                <div class="md-connection">
+                  <i/>
+                  <i/>
+                  <i/>
+                </div>
+                <strong>Odoo</strong>
+                <span>Customer context</span>
+                <span>Business documents</span>
+                <span>Follow-up</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt96 pb96 my-diagonal-accent" data-snippet="s_meydara_story" data-name="Odoo performance dashboards">
+          <div class="container">
+            <div class="md-heading-row">
+              <div>
+                <p class="md-eyebrow">THE MANAGEMENT VIEW IN ODOO</p>
+                <h2>From field activity<br/>to a clearer business picture.</h2>
+              </div>
+              <div>
+                <p>Review sales, invoiced amounts, collections and orders in one dashboard. Change the reporting period, refine the filters and move between charts and detailed tables.</p>
+                <a href="/reports" class="md-text-link">Explore reports and dashboards</a>
+              </div>
+            </div>
+            <figure class="my-web-screen mb-0">
+              <img class="img-fluid" src="/meydara_site/static/src/img/product/odoo-performance.png" alt="Midara Odoo performance dashboard showing sales, invoices and collections" loading="lazy"/>
+            </figure>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 md-paper mw-feature-tint" data-snippet="s_meydara_story" data-name="Frequently asked questions">
+          <div class="container">
+            <p class="md-eyebrow">QUESTIONS, ANSWERED</p>
+            <div class="md-split md-faq-layout">
+              <h2>Before you take<br/>the next step.</h2>
+              <div class="md-faq">
+                <details>
+                  <summary>Does Midara work with Odoo?</summary>
+                  <p>Midara is designed around field workflows connected to Odoo. The presentation covers your version, installed modules, data and access requirements.</p>
+                </details>
+                <details>
+                  <summary>Can my team work without a connection?</summary>
+                  <p>Offline behavior varies by operation and prepared data. We review saving, synchronization and operations that require a connection for your workflow.</p>
+                </details>
+                <details>
+                  <summary>Is the application available in Arabic?</summary>
+                  <p>The product tour shows the Arabic application. We review your language and device requirements during setup.</p>
+                </details>
+                <details>
+                  <summary>How is pricing determined?</summary>
+                  <p>The scope depends on your users, business workflows and integration needs. Request a proposal built around those requirements.</p>
+                </details>
+                <details>
+                  <summary>What should I prepare for a presentation?</summary>
+                  <p>Tell us about your field team, Odoo environment and the workflow you want to improve. We use that context to focus the presentation.</p>
+                </details>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="s_meydara_story md-section mw-feature-block pt112 pb112 md-mint" data-snippet="s_meydara_story" data-name="Your next step">
+          <div class="container">
+            <div class="md-final">
+              <div>
+                <p class="md-eyebrow">LET'S TALK ABOUT YOUR FIELD TEAM</p>
+                <h2>See what a connected day<br/>could look like for your team.</h2>
+              </div>
+              <div class="md-actions">
+                <a href="/request-presentation" class="button button-primary">Request a presentation</a>
+                <a href="/tour" class="button button-secondary">Take the product tour</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </t>
+  </template>
+</data></odoo>

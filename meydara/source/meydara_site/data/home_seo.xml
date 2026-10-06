@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+ <record id="homepage" model="ir.ui.view">
+  <field name="website_meta_title">Midara | Your field sales, connected to Odoo</field>
+  <field name="website_meta_description">Connect customer context, visits, sales, collections and delivery in one clear working day with Midara.</field>
+ </record>
+</odoo>
