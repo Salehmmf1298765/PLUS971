@@ -1,0 +1,1203 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ميدارا — منصة المبيعات الميدانية والتوزيع المرتبطة بـ Odoo</title>
+<meta name="description" content="ميدارا منصة عربية واحدة لإدارة المبيعات الميدانية والتوزيع وتنفيذ منافذ البيع: الزيارات والعملاء والطلبات والتحصيل والتقارير، مع ذكاء اصطناعي ومساعد صوتي عربي وتكامل مباشر مع Odoo.">
+<meta name="theme-color" content="#022c25">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:title" content="ميدارا — الميدان كله في منصة واحدة ذكية">
+<meta property="og:description" content="زيارات، طلبات، تحصيل، توزيع وتقارير في تجربة عربية واحدة مرتبطة بـ Odoo.">
+<meta property="og:image" content="assets/img/icon-512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon-192.png">
+<link rel="apple-touch-icon" href="assets/img/icon-192.png">
+<link rel="preload" href="assets/fonts/IBMPlexSansArabic-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/IBMPlexSansArabic-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/img/home-overview.webp" as="image" type="image/webp">
+<style>
+/* ===== Fonts (self-hosted, from the Midara module) ===== */
+@font-face{font-family:"Plex Arabic";src:url(assets/fonts/IBMPlexSansArabic-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Plex Arabic";src:url(assets/fonts/IBMPlexSansArabic-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Plex Arabic";src:url(assets/fonts/IBMPlexSansArabic-SemiBold.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Plex Arabic";src:url(assets/fonts/IBMPlexSansArabic-Bold.woff2) format("woff2");font-weight:700 800;font-display:swap}
+@font-face{font-family:"Space Grotesk";src:url(assets/fonts/SpaceGrotesk-Variable.woff2) format("woff2");font-weight:300 700;font-display:swap}
+
+/* ===== Tokens — sampled from the Midara mark ===== */
+:root{
+  --aqua:#02d9bc;
+  --green-400:#04b79a;
+  --green-500:#028e72;
+  --green-600:#01755d;
+  --green-700:#014a3d;
+  --green-800:#023a30;
+  --green-900:#022c25;
+  --green-950:#011c18;
+  --amber:#f3ad2a;
+  --amber-soft:#fff4dc;
+  --ink:#0c2621;
+  --copy:#46605a;
+  --muted:#6d817c;
+  --line:#dbe8e3;
+  --line-strong:#c5d9d2;
+  --paper:#f5f9f7;
+  --mint:#e3f6ef;
+  --white:#fff;
+  --danger:#d9534f;
+  --brand-gradient:linear-gradient(180deg,var(--aqua) 0%,var(--green-400) 40%,var(--green-600) 100%);
+  --r-sm:10px;--r-md:16px;--r-lg:24px;--r-xl:36px;
+  --shadow-sm:0 1px 2px rgba(2,44,37,.06),0 4px 14px rgba(2,44,37,.06);
+  --shadow-md:0 2px 6px rgba(2,44,37,.05),0 18px 44px rgba(2,44,37,.10);
+  --shadow-lg:0 30px 80px rgba(1,28,24,.28);
+  --ease:cubic-bezier(.2,.75,.25,1);
+  --container:1240px;
+  --gutter:clamp(16px,4vw,40px);
+  --font:"Plex Arabic","Segoe UI",Tahoma,system-ui,sans-serif;
+  --font-num:"Space Grotesk","Plex Arabic",system-ui,sans-serif;
+  --header-h:72px;
+}
+
+/* ===== Base ===== */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 16px);-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--font);font-size:17px;line-height:1.75;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+h1,h2,h3,h4,p{margin:0}
+h1,h2,h3{line-height:1.25;letter-spacing:-.01em;font-weight:700;text-wrap:balance}
+p{text-wrap:pretty}
+ul{margin:0;padding:0;list-style:none}
+.num,.ltr{font-family:var(--font-num);direction:ltr;unicode-bidi:isolate;font-feature-settings:"tnum"}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;inset-inline-start:16px;top:-60px;z-index:100;background:var(--amber);color:var(--green-900);padding:10px 16px;border-radius:10px;font-weight:700}
+.skip:focus{top:12px}
+.container{width:100%;max-width:var(--container);margin-inline:auto;padding-inline:var(--gutter)}
+.icon{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* ===== Type helpers ===== */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.84rem;font-weight:600;color:var(--green-600);letter-spacing:0}
+.eyebrow::before{content:"";width:22px;height:2px;border-radius:2px;background:var(--amber)}
+.section-title{font-size:clamp(1.75rem,1.1rem + 2.4vw,2.9rem);margin-top:14px}
+.section-lead{margin-top:16px;font-size:clamp(1rem,.95rem + .25vw,1.15rem);color:var(--copy);max-width:640px}
+.section-head{max-width:760px;margin-bottom:clamp(36px,5vw,64px)}
+.section-head.center{margin-inline:auto;text-align:center}
+.section-head.center .section-lead{margin-inline:auto}
+.section{padding-block:clamp(72px,10vw,128px)}
+.hl{color:var(--green-500)}
+.hl-amber{position:relative;isolation:isolate;white-space:nowrap}
+.hl-amber::after{content:"";position:absolute;inset-inline:-4px;bottom:.08em;height:.28em;background:var(--amber);opacity:.85;border-radius:4px;z-index:-1;transform-origin:right;transform:scaleX(0);transition:transform 1s var(--ease) .4s}
+.is-in .hl-amber::after,.hero .hl-amber::after{transform:scaleX(1)}
+
+/* ===== Buttons ===== */
+.btn{--bg:var(--green-600);--fg:#fff;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:12px 22px;border-radius:12px;border:1px solid transparent;background:var(--bg);color:var(--fg);font-weight:700;font-size:1rem;line-height:1.2;cursor:pointer;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background-color .2s,border-color .2s;white-space:nowrap}
+.btn .icon{font-size:1.1em;transition:transform .25s var(--ease)}
+.btn:hover .icon{transform:translateX(-4px)}
+.btn-amber{--bg:var(--amber);--fg:var(--green-900);box-shadow:0 10px 26px rgba(243,173,42,.28)}
+.btn-amber:hover{--bg:#ffc04a;transform:translateY(-1px);box-shadow:0 14px 32px rgba(243,173,42,.36)}
+.btn-green:hover{--bg:var(--green-700);transform:translateY(-1px)}
+.btn-ghost-light{--bg:rgba(255,255,255,.06);--fg:#fff;border-color:rgba(255,255,255,.22)}
+.btn-ghost-light:hover{--bg:rgba(255,255,255,.12);border-color:rgba(255,255,255,.4)}
+.btn-ghost{--bg:transparent;--fg:var(--green-700);border-color:var(--line-strong)}
+.btn-ghost:hover{border-color:var(--green-500);--bg:var(--mint)}
+.btn-sm{min-height:42px;padding:9px 16px;font-size:.92rem;border-radius:10px}
+.link-arrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--green-600)}
+.link-arrow .icon{transition:transform .25s var(--ease)}
+.link-arrow:hover .icon{transform:translateX(-4px)}
+
+/* ===== Header ===== */
+.site-header{position:fixed;inset-inline:0;top:0;z-index:50;height:var(--header-h);display:flex;align-items:center;color:#fff;transition:background-color .35s,box-shadow .35s,color .35s,height .35s}
+.site-header.is-solid{background:rgba(255,255,255,.92);color:var(--ink);box-shadow:0 1px 0 var(--line),0 10px 30px rgba(2,44,37,.06);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);--header-h:64px}
+.header-inner{display:flex;align-items:center;gap:28px;width:100%}
+.brand{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:1.45rem;letter-spacing:-.01em}
+.brand img{width:36px;height:36px}
+.brand .latin{font-family:var(--font-num);font-size:.72rem;font-weight:600;letter-spacing:.14em;opacity:.6;text-transform:uppercase;margin-top:4px}
+.brand-text{display:flex;flex-direction:column;line-height:1}
+.nav{display:flex;gap:2px;margin-inline-start:auto}
+.nav a{padding:8px 12px;border-radius:9px;font-size:.95rem;font-weight:500;opacity:.88;transition:background-color .2s,opacity .2s}
+.nav a:hover{opacity:1;background:rgba(255,255,255,.1)}
+.is-solid .nav a:hover{background:var(--mint)}
+.nav a[aria-current="true"]{opacity:1;font-weight:700}
+.header-cta{display:flex;align-items:center;gap:10px}
+.menu-btn{display:none;width:44px;height:44px;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:transparent;align-items:center;justify-content:center;font-size:22px;cursor:pointer;color:inherit}
+.is-solid .menu-btn{border-color:var(--line-strong)}
+.site-header .btn-header{--bg:var(--amber);--fg:var(--green-900)}
+.drawer{position:fixed;inset:0;z-index:60;display:none}
+.drawer.open{display:block}
+.drawer-backdrop{position:absolute;inset:0;background:rgba(1,28,24,.55);animation:fade .25s ease}
+.drawer-panel{position:absolute;inset-block:10px;inset-inline-end:10px;width:min(360px,calc(100% - 20px));background:#fff;border-radius:24px;padding:18px;display:flex;flex-direction:column;gap:6px;box-shadow:var(--shadow-lg);animation:slide-in .35s var(--ease)}
+.drawer-top{display:flex;justify-content:space-between;align-items:center;padding-bottom:12px;margin-bottom:6px;border-bottom:1px solid var(--line)}
+.drawer-panel nav a{display:flex;justify-content:space-between;align-items:center;padding:14px 12px;border-radius:12px;font-weight:600;font-size:1.05rem}
+.drawer-panel nav a:hover{background:var(--mint)}
+.drawer-panel .btn{margin-top:auto}
+.close-btn{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:22px;cursor:pointer}
+@keyframes fade{from{opacity:0}}
+@keyframes slide-in{from{opacity:0;transform:translateX(-24px)}}
+
+/* ===== Hero ===== */
+.hero{position:relative;isolation:isolate;overflow:hidden;color:#fff;background:var(--green-900);padding-top:calc(var(--header-h) + clamp(40px,7vw,88px));padding-bottom:clamp(64px,8vw,104px)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:
+  radial-gradient(900px 520px at 18% 30%,rgba(2,217,188,.22),transparent 60%),
+  radial-gradient(700px 500px at 95% 110%,rgba(243,173,42,.10),transparent 60%),
+  linear-gradient(180deg,var(--green-900),var(--green-950))}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.5;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 80% 70% at 50% 40%,#000 30%,transparent 80%);-webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 40%,#000 30%,transparent 80%)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(32px,5vw,72px);align-items:center}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 6px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);font-size:.86rem;color:rgba(255,255,255,.88)}
+.pill b{background:var(--amber);color:var(--green-900);border-radius:999px;padding:2px 10px;font-size:.78rem}
+.hero h1{font-size:clamp(2.3rem,1.3rem + 4.2vw,4.5rem);line-height:1.12;margin-top:22px;letter-spacing:-.02em}
+.hero h1 .grad{background:linear-gradient(90deg,var(--aqua),#7ff0dc);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-lead{margin-top:22px;font-size:clamp(1.02rem,.95rem + .35vw,1.22rem);color:rgba(255,255,255,.76);max-width:600px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero-checks{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:34px;font-size:.92rem;color:rgba(255,255,255,.75)}
+.hero-checks li{display:inline-flex;align-items:center;gap:8px}
+.hero-checks .icon{color:var(--aqua);font-size:1.1rem;stroke-width:2.4}
+
+.hero-visual{position:relative;display:flex;justify-content:center;min-height:560px}
+.phone{position:relative;width:min(300px,72vw);aspect-ratio:720/1520;padding:9px;border-radius:46px;background:linear-gradient(145deg,#25433d,#0a1a17 40%,#13302a);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.12),var(--shadow-lg)}
+.phone::before{content:"";position:absolute;top:17px;left:50%;width:84px;height:22px;transform:translateX(-50%);background:#06110f;border-radius:20px;z-index:2}
+.phone-screen{position:relative;width:100%;height:100%;border-radius:38px;overflow:hidden;background:#f3f7f6}
+.phone-screen img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.hero .phone-main{z-index:2;animation:float 7s ease-in-out infinite}
+.hero .phone-back{position:absolute;z-index:1;width:min(250px,58vw);top:56px;inset-inline-start:2%;transform:rotate(-7deg);opacity:.5;filter:saturate(.7)}
+.glow-ring{position:absolute;z-index:0;width:460px;height:460px;top:50%;left:50%;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(2,217,188,.35),transparent 65%);filter:blur(10px)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+.float-card{position:absolute;z-index:3;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.96);color:var(--ink);box-shadow:0 18px 40px rgba(1,28,24,.35);font-size:.85rem;line-height:1.4;max-width:250px;animation:float 8s ease-in-out infinite}
+.float-card small{display:block;color:var(--muted);font-size:.76rem}
+.float-card strong{font-weight:700}
+.float-card .badge-ic{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;font-size:19px;flex:none}
+.fc-1{top:11%;inset-inline-end:-4%;animation-delay:-2s}
+.fc-2{bottom:22%;inset-inline-start:-6%;animation-delay:-4s}
+.fc-3{bottom:3%;inset-inline-end:2%;animation-delay:-6s}
+.bg-mint{background:var(--mint);color:var(--green-600)}
+.bg-amber{background:var(--amber-soft);color:#b47900}
+.bg-green{background:var(--green-600);color:#fff}
+.live-dot{width:9px;height:9px;border-radius:50%;background:var(--green-400);box-shadow:0 0 0 0 rgba(4,183,154,.5);animation:pulse 2s infinite;flex:none}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(4,183,154,0)}100%{box-shadow:0 0 0 0 rgba(4,183,154,0)}}
+
+/* ===== Facts strip ===== */
+.facts{position:relative;z-index:2;margin-top:clamp(-56px,-4vw,-40px)}
+.facts-grid{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-md);overflow:hidden}
+.fact{padding:26px 26px 24px;border-inline-start:1px solid var(--line)}
+.fact:first-child{border-inline-start:0}
+.fact .num{display:block;font-size:clamp(2rem,1.5rem + 1.4vw,2.7rem);font-weight:600;line-height:1;color:var(--green-700);letter-spacing:-.02em}
+.fact .num em{font-style:normal;color:var(--amber)}
+.fact p{margin-top:10px;font-size:.92rem;color:var(--copy);line-height:1.6}
+.fact .fact-ic{font-size:2.1rem;color:var(--green-600);margin-bottom:2px}
+
+/* ===== Before / After ===== */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.compare-col{border-radius:var(--r-lg);padding:clamp(24px,3vw,36px);border:1px solid var(--line)}
+.compare-col h3{display:flex;align-items:center;gap:12px;font-size:1.2rem;margin-bottom:22px}
+.compare-col h3 .tag{font-size:.78rem;font-weight:600;padding:4px 10px;border-radius:999px}
+.compare-col li{display:flex;gap:14px;align-items:flex-start;padding-block:14px;border-top:1px solid var(--line);color:var(--copy)}
+.compare-col li:first-child{border-top:0;padding-top:0}
+.compare-col li .icon{margin-top:5px;font-size:1.05rem;stroke-width:2.4}
+.compare-before{background:var(--paper)}
+.compare-before .tag{background:#f8e4e3;color:#a33c38}
+.compare-before li .icon{color:#c2554f}
+.compare-after{background:var(--green-900);color:#fff;border-color:var(--green-800);position:relative;overflow:hidden}
+.compare-after::before{content:"";position:absolute;width:340px;height:340px;inset-inline-end:-120px;top:-140px;border-radius:50%;background:radial-gradient(circle,rgba(2,217,188,.28),transparent 65%)}
+.compare-after .tag{background:rgba(2,217,188,.16);color:var(--aqua)}
+.compare-after li{color:rgba(255,255,255,.82);border-color:rgba(255,255,255,.1)}
+.compare-after li strong{color:#fff}
+.compare-after li .icon{color:var(--aqua)}
+
+/* ===== Day story (sticky scroll) ===== */
+.day{background:var(--paper);border-block:1px solid var(--line)}
+.day-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px)}
+.day-steps{counter-reset:step}
+.day-step{min-height:62vh;display:flex;flex-direction:column;justify-content:center;padding-block:24px;opacity:.35;transition:opacity .5s var(--ease)}
+.day-step.is-active{opacity:1}
+.day-step:first-child{min-height:46vh;justify-content:flex-start}
+.day-step:last-child{min-height:50vh}
+.day-time{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;padding:6px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:.85rem;font-weight:600;color:var(--green-600)}
+.day-time .num{font-weight:600}
+.day-step h3{font-size:clamp(1.45rem,1.1rem + 1.2vw,2.05rem);margin-top:18px}
+.day-step p{margin-top:12px;color:var(--copy);font-size:1.06rem;max-width:480px}
+.day-step .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:.85rem;color:var(--copy)}
+.chip .icon{color:var(--green-500)}
+.day-progress{display:flex;gap:6px;margin-top:22px}
+.day-progress i{height:4px;flex:1;border-radius:4px;background:var(--line)}
+.day-progress i.on{background:var(--green-500)}
+.day-sticky{position:sticky;top:calc(var(--header-h) + 24px);height:calc(100vh - var(--header-h) - 48px);max-height:760px;display:flex;align-items:center;justify-content:center}
+.day-stage{position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+.day-stage::before{content:"";position:absolute;width:78%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(2,217,188,.22),rgba(2,217,188,0) 68%)}
+.day-stage::after{content:"";position:absolute;width:62%;aspect-ratio:1;border-radius:50%;border:1px dashed var(--line-strong);animation:spin 60s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.day-stage .phone{width:auto;height:min(92%,640px);z-index:1}
+.day-stage .phone-screen img{position:absolute;inset:0;opacity:0;transform:scale(1.02);transition:opacity .55s var(--ease),transform .7s var(--ease)}
+.day-stage .phone-screen img.on{opacity:1;transform:none}
+.day-inline{display:none}
+
+/* ===== Bento platform ===== */
+.bento{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{position:relative;overflow:hidden;border-radius:var(--r-lg);background:#fff;border:1px solid var(--line);padding:26px;transition:border-color .3s,box-shadow .35s var(--ease),transform .35s var(--ease)}
+.card::before{content:"";position:absolute;inset:0;opacity:0;transition:opacity .3s;background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),rgba(2,217,188,.12),transparent 45%);pointer-events:none}
+.card:hover{border-color:var(--line-strong);box-shadow:var(--shadow-md);transform:translateY(-3px)}
+.card:hover::before{opacity:1}
+.card .card-ic{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;font-size:22px;background:var(--mint);color:var(--green-600);margin-bottom:18px}
+.card h3{font-size:1.12rem}
+.card p{margin-top:8px;color:var(--copy);font-size:.95rem;line-height:1.7}
+.card-xl{grid-column:span 2;grid-row:span 2;display:flex;flex-direction:column;padding:30px 30px 0;background:linear-gradient(180deg,#fff 0%,var(--paper) 100%)}
+.card-xl h3{font-size:1.45rem}
+.card-xl p{font-size:1.02rem;max-width:420px}
+.card-xl .card-media{margin-top:auto;padding-top:28px;display:flex;justify-content:center}
+.card-xl .card-media .phone{width:min(250px,60%);aspect-ratio:auto;height:330px;border-radius:40px 40px 0 0;padding:8px 8px 0}
+.card-xl .card-media .phone-screen{border-radius:32px 32px 0 0}
+.card-xl .card-media .phone::before{display:none}
+.card-xl.dark{background:var(--green-900);border-color:var(--green-800);color:#fff}
+.card-xl.dark p{color:rgba(255,255,255,.72)}
+.card-xl.dark .card-ic{background:rgba(2,217,188,.14);color:var(--aqua)}
+.card-xl.dark::before{background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),rgba(2,217,188,.18),transparent 45%)}
+.list-checks{display:grid;gap:8px;margin-top:16px}
+.list-checks li{display:flex;gap:10px;align-items:center;font-size:.94rem}
+.list-checks .icon{color:var(--green-500);stroke-width:2.4}
+.dark .list-checks .icon{color:var(--aqua)}
+.bento-foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:28px;padding:20px 24px;border-radius:var(--r-md);background:var(--mint)}
+.bento-foot p{color:var(--green-700);font-weight:600}
+
+/* ===== Roles tabs ===== */
+.roles{background:var(--green-900);color:#fff;position:relative;overflow:hidden}
+.roles::before{content:"";position:absolute;inset:auto -10% -40% auto;width:900px;height:600px;background:radial-gradient(closest-side,rgba(2,217,188,.16),transparent);pointer-events:none}
+.roles .eyebrow{color:var(--aqua)}
+.roles .section-lead{color:rgba(255,255,255,.7)}
+.tabs{display:inline-flex;gap:4px;padding:5px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);margin-bottom:36px;flex-wrap:wrap}
+.tab{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:10px;border:0;background:transparent;color:rgba(255,255,255,.72);font-weight:600;cursor:pointer;transition:background-color .25s,color .25s}
+.tab:hover{color:#fff}
+.tab[aria-selected="true"]{background:#fff;color:var(--green-800)}
+.tab .icon{font-size:1.1rem}
+.tab-panel{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,64px);align-items:center}
+.tab-panel[hidden]{display:none}
+.tab-panel.entering{animation:panel-in .5s var(--ease)}
+@keyframes panel-in{from{opacity:0;transform:translateY(12px)}}
+.tab-panel h3{font-size:clamp(1.5rem,1.2rem + 1vw,2rem)}
+.tab-panel > div > p{margin-top:14px;color:rgba(255,255,255,.72)}
+.tab-panel ul{margin-top:24px;display:grid;gap:14px}
+.tab-panel li{display:flex;gap:14px;align-items:flex-start}
+.tab-panel li .bullet{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:rgba(2,217,188,.14);color:var(--aqua);flex:none;font-size:15px;margin-top:2px}
+.tab-panel li strong{display:block}
+.tab-panel li span{color:rgba(255,255,255,.66);font-size:.94rem}
+.browser{border-radius:16px;overflow:hidden;background:#fff;box-shadow:var(--shadow-lg);border:1px solid rgba(255,255,255,.12)}
+.browser-bar{display:flex;align-items:center;gap:7px;height:34px;padding-inline:14px;background:#eef3f1;border-bottom:1px solid var(--line);direction:ltr}
+.browser-bar i{width:10px;height:10px;border-radius:50%;background:#cfd9d5}
+.browser-bar span{margin-inline:auto;font-family:var(--font-num);font-size:.72rem;color:var(--muted);background:#fff;padding:3px 14px;border-radius:6px;border:1px solid var(--line)}
+.role-phone{display:flex;justify-content:center}
+.role-phone .phone{width:min(280px,70vw)}
+
+/* ===== Reliability ===== */
+.reli-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:center}
+.reli-media{position:relative;border-radius:var(--r-xl);overflow:hidden;background:#eef4f1}
+.reli-media img{width:100%;aspect-ratio:16/11;object-fit:cover}
+.reli-media figcaption{position:absolute;inset-inline:16px;bottom:16px;display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:14px;background:rgba(255,255,255,.94);box-shadow:var(--shadow-sm);font-size:.9rem;font-weight:600}
+.feature-list{display:grid;grid-template-columns:1fr 1fr;gap:28px 32px}
+.feature-list li .fl-ic{font-size:24px;color:var(--green-600);margin-bottom:10px}
+.feature-list h3{font-size:1.05rem}
+.feature-list p{font-size:.93rem;color:var(--copy);margin-top:4px;line-height:1.7}
+
+/* ===== AI ===== */
+.ai{background:var(--green-950);color:#fff;position:relative;overflow:hidden}
+.ai::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 500px at 85% 20%,rgba(2,217,188,.16),transparent 60%),radial-gradient(600px 400px at 0% 100%,rgba(243,173,42,.08),transparent 60%);pointer-events:none}
+.ai .eyebrow{color:var(--aqua)}
+.ai .section-lead{color:rgba(255,255,255,.7)}
+.ai-grid{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:center}
+.chat{border-radius:var(--r-lg);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding:20px;backdrop-filter:blur(6px)}
+.chat-head{display:flex;align-items:center;gap:12px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.08)}
+.chat-head img{width:36px;height:36px}
+.chat-head strong{display:block;font-size:.98rem}
+.chat-head small{color:rgba(255,255,255,.55);font-size:.8rem}
+.chat-head .live-dot{margin-inline-start:auto}
+.chat-body{display:flex;flex-direction:column;gap:12px;padding-block:18px;min-height:390px}
+.msg{max-width:88%;padding:12px 16px;border-radius:16px;font-size:.95rem;line-height:1.65;opacity:0;transform:translateY(10px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.msg.show{opacity:1;transform:none}
+.msg-user{align-self:flex-start;background:var(--green-600);border-end-start-radius:4px;display:flex;align-items:center;gap:12px}
+.wave{display:flex;align-items:center;gap:3px;height:20px}
+.wave i{width:3px;border-radius:3px;background:rgba(255,255,255,.85);animation:wave 1s ease-in-out infinite}
+.wave i:nth-child(1){height:40%;animation-delay:-.2s}.wave i:nth-child(2){height:90%;animation-delay:-.4s}.wave i:nth-child(3){height:60%;animation-delay:-.6s}.wave i:nth-child(4){height:100%;animation-delay:-.1s}.wave i:nth-child(5){height:50%;animation-delay:-.3s}
+@keyframes wave{50%{transform:scaleY(.4)}}
+.msg-ai{align-self:flex-end;background:#fff;color:var(--ink);border-end-end-radius:4px;width:88%}
+.msg-ai .rows{margin-top:10px;display:grid;gap:8px}
+.msg-ai .row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 12px;border-radius:10px;background:var(--paper);font-size:.88rem}
+.msg-ai .row b{font-weight:600}
+.msg-ai .row .num{color:var(--green-700);font-weight:600}
+.msg-ai .row .warn{color:#b47900;font-size:.78rem;background:var(--amber-soft);padding:2px 8px;border-radius:999px;margin-inline-start:6px}
+.msg-ai .actions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.msg-ai .actions span{padding:7px 12px;border-radius:9px;font-size:.84rem;font-weight:600;background:var(--green-600);color:#fff}
+.msg-ai .actions span.alt{background:var(--mint);color:var(--green-700)}
+.typing{align-self:flex-end;display:flex;gap:5px;padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.1);opacity:0;transition:opacity .3s}
+.typing.show{opacity:1}
+.typing i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.7);animation:blink 1.2s infinite}
+.typing i:nth-child(2){animation-delay:.2s}.typing i:nth-child(3){animation-delay:.4s}
+@keyframes blink{50%{opacity:.25}}
+.chat-input{display:flex;align-items:center;gap:10px;padding:10px 10px 10px 14px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.5);font-size:.9rem}
+.chat-input .mic{margin-inline-start:auto;width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:var(--amber);color:var(--green-900);font-size:18px}
+.chat-note{margin-top:12px;font-size:.8rem;color:rgba(255,255,255,.5);display:flex;gap:8px;align-items:center}
+.agents{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:32px}
+.agent{padding:16px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);transition:background-color .25s,border-color .25s}
+.agent:hover{background:rgba(255,255,255,.07);border-color:rgba(2,217,188,.35)}
+.agent .icon{font-size:20px;color:var(--aqua)}
+.agent h3{font-size:.98rem;margin-top:8px}
+.agent p{font-size:.86rem;color:rgba(255,255,255,.62);margin-top:2px;line-height:1.6}
+
+/* ===== Odoo ===== */
+.odoo-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:center}
+.connector{position:relative;border-radius:var(--r-xl);padding:clamp(24px,3vw,40px);background:var(--paper);border:1px solid var(--line)}
+.conn-row{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:0}
+.node{width:132px;height:132px;border-radius:28px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;font-weight:700}
+.node img{width:52px;height:52px}
+.node .odoo-word{font-family:var(--font-num);font-size:1.85rem;font-weight:700;color:#714b67;letter-spacing:-.02em;line-height:52px}
+.node small{font-weight:500;color:var(--muted);font-size:.8rem}
+.wires{position:relative;height:96px;display:flex;flex-direction:column;justify-content:space-between;padding-block:14px}
+.wire{position:relative;height:2px;background:repeating-linear-gradient(90deg,var(--line-strong) 0 6px,transparent 6px 12px);overflow:hidden}
+.wire i{position:absolute;top:-3px;width:8px;height:8px;border-radius:50%;background:var(--green-400);box-shadow:0 0 10px var(--aqua);animation:travel 2.8s linear infinite}
+.wire.rev i{background:var(--amber);box-shadow:0 0 10px var(--amber);animation-name:travel-rev}
+.wire:nth-child(2) i{animation-delay:-1s}.wire:nth-child(3) i{animation-delay:-2s}
+@keyframes travel{from{left:-8px}to{left:100%}}
+@keyframes travel-rev{from{left:100%}to{left:-8px}}
+.records{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:28px}
+.record{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:14px;background:#fff;border:1px solid var(--line);font-size:.92rem;font-weight:600}
+.record .icon{font-size:1.15rem;color:var(--green-600)}
+.record small{display:block;font-weight:400;color:var(--muted);font-size:.8rem}
+.tech-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.steps-mini{margin-top:28px;display:grid;gap:0;border-inline-start:2px solid var(--line);padding-inline-start:22px}
+.steps-mini li{position:relative;padding-block:10px}
+.steps-mini li::before{content:attr(data-n);position:absolute;inset-inline-start:-38px;top:12px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#fff;border:2px solid var(--green-500);color:var(--green-600);font-family:var(--font-num);font-size:.8rem;font-weight:700}
+.steps-mini strong{display:block}
+.steps-mini span{color:var(--copy);font-size:.94rem}
+
+/* ===== Industries ===== */
+.industries{background:var(--paper);border-block:1px solid var(--line)}
+.ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ind{position:relative;display:flex;flex-direction:column;padding:28px;border-radius:var(--r-lg);background:#fff;border:1px solid var(--line);transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .3s}
+.ind:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--line-strong)}
+.ind-top{display:flex;justify-content:space-between;align-items:flex-start}
+.ind .ind-ic{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;font-size:24px;background:var(--brand-gradient);color:#fff}
+.ind .ind-n{font-family:var(--font-num);font-weight:600;color:var(--line-strong);font-size:1.5rem}
+.ind h3{font-size:1.15rem;margin-top:20px}
+.ind p{margin-top:8px;color:var(--copy);font-size:.95rem}
+.ind .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.ind .tags span{font-size:.78rem;padding:4px 10px;border-radius:999px;background:var(--mint);color:var(--green-700);font-weight:500}
+
+/* ===== Pricing ===== */
+.price-box{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:0;border-radius:var(--r-xl);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-md)}
+.price-intro{padding:clamp(28px,4vw,52px);background:var(--brand-gradient);color:#fff;position:relative;overflow:hidden}
+.price-intro::after{content:"";position:absolute;width:240px;height:240px;inset-inline-start:-60px;bottom:-80px;border-radius:50%;background:var(--amber);opacity:.9}
+.price-intro::before{content:"";position:absolute;width:84px;height:84px;inset-inline-start:18px;bottom:-4px;border-radius:50%;background:#fff;z-index:1;opacity:.95}
+.price-intro h2{font-size:clamp(1.6rem,1.2rem + 1.4vw,2.3rem);position:relative;z-index:2}
+.price-intro p{margin-top:14px;color:rgba(255,255,255,.88);position:relative;z-index:2;max-width:400px}
+.price-intro .btn{margin-top:28px;position:relative;z-index:2;--bg:#fff;--fg:var(--green-800)}
+.price-steps{padding:clamp(28px,4vw,52px);background:#fff;display:grid;gap:4px;align-content:center}
+.price-step{display:grid;grid-template-columns:auto 1fr;gap:18px;padding-block:18px;border-top:1px solid var(--line)}
+.price-step:first-child{border-top:0}
+.price-step .num{font-size:1.5rem;font-weight:600;color:var(--green-500);line-height:1.2}
+.price-step h3{font-size:1.1rem}
+.price-step p{color:var(--copy);font-size:.95rem;margin-top:2px}
+
+/* ===== FAQ ===== */
+.faq-grid{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:clamp(28px,5vw,80px);align-items:start}
+.faq-grid .section-head{position:sticky;top:calc(var(--header-h) + 32px);margin-bottom:0}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-child{border-top:1px solid var(--line)}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 4px;font-weight:600;font-size:1.08rem;cursor:pointer}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{position:relative;width:32px;height:32px;border-radius:50%;border:1px solid var(--line-strong);flex:none;transition:background-color .25s,border-color .25s,transform .35s var(--ease)}
+.faq summary .pm::before,.faq summary .pm::after{content:"";position:absolute;top:50%;left:50%;width:12px;height:2px;background:var(--green-600);border-radius:2px;transform:translate(-50%,-50%)}
+.faq summary .pm::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .3s var(--ease)}
+.faq details[open] summary .pm{background:var(--green-600);border-color:var(--green-600)}
+.faq details[open] summary .pm::before{background:#fff}
+.faq details[open] summary .pm::after{transform:translate(-50%,-50%) rotate(0);background:#fff}
+.faq summary:hover{color:var(--green-600)}
+.faq .answer{padding:0 4px 22px;color:var(--copy);max-width:640px;animation:panel-in .4s var(--ease)}
+
+/* ===== Final CTA + form ===== */
+.final{background:var(--green-900);color:#fff;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:56px 56px;mask-image:linear-gradient(90deg,transparent,#000 60%);-webkit-mask-image:linear-gradient(90deg,transparent,#000 60%)}
+.final-grid{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:center}
+.final .eyebrow{color:var(--aqua)}
+.final h2{font-size:clamp(1.9rem,1.2rem + 2.6vw,3.1rem);margin-top:14px}
+.final .lead{margin-top:16px;color:rgba(255,255,255,.74);max-width:520px}
+.final-points{display:grid;gap:14px;margin-top:30px}
+.final-points li{display:flex;gap:12px;align-items:flex-start;color:rgba(255,255,255,.85)}
+.final-points .icon{color:var(--aqua);font-size:1.15rem;margin-top:5px;stroke-width:2.4}
+.form{background:#fff;color:var(--ink);border-radius:var(--r-lg);padding:clamp(22px,3vw,34px);box-shadow:var(--shadow-lg)}
+.form h3{font-size:1.25rem}
+.form > p{color:var(--muted);font-size:.92rem;margin-top:4px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+.field label{font-size:.88rem;font-weight:600}
+.field input,.field select{height:50px;padding-inline:14px;border-radius:12px;border:1px solid var(--line-strong);background:var(--paper);transition:border-color .2s,box-shadow .2s,background-color .2s;width:100%}
+.field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23014a3d' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:left 14px center;padding-inline-end:14px;padding-inline-start:40px}
+.field input:focus,.field select:focus{outline:0;border-color:var(--green-500);background:#fff;box-shadow:0 0 0 4px rgba(4,183,154,.16)}
+.field input[aria-invalid="true"]{border-color:var(--danger);box-shadow:0 0 0 4px rgba(217,83,79,.12)}
+.form .btn{width:100%;margin-top:20px}
+.form-note{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:12px;font-size:.82rem;color:var(--muted)}
+.form-success{display:none;text-align:center;padding-block:36px}
+.form-success .ok{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;margin:0 auto 18px;background:var(--mint);color:var(--green-600);font-size:30px}
+.form.is-sent .form-body{display:none}
+.form.is-sent .form-success{display:block;animation:panel-in .5s var(--ease)}
+
+/* ===== Footer ===== */
+.footer{background:var(--green-950);color:rgba(255,255,255,.7);padding-top:64px;font-size:.95rem}
+.footer-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:32px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08)}
+.footer .brand{color:#fff}
+.footer-about p{margin-top:14px;max-width:320px}
+.footer h2{font-size:.95rem;color:#fff;margin-bottom:14px}
+.footer ul{display:grid;gap:10px}
+.footer a:hover{color:#fff}
+.footer-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:24px;font-size:.86rem;color:rgba(255,255,255,.5)}
+
+/* ===== Mobile sticky CTA ===== */
+.mobile-cta{position:fixed;inset-inline:12px;bottom:12px;z-index:40;display:none;align-items:center;gap:12px;padding:10px 10px 10px 16px;border-radius:18px;background:rgba(2,44,37,.94);color:#fff;box-shadow:var(--shadow-lg);backdrop-filter:blur(12px);transform:translateY(140%);transition:transform .45s var(--ease)}
+.mobile-cta.show{transform:none}
+.mobile-cta img{width:30px;height:30px}
+.mobile-cta span{font-size:.88rem;font-weight:600;line-height:1.3}
+.mobile-cta .btn{margin-inline-start:auto}
+
+/* ===== Reveal ===== */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.is-in{opacity:1;transform:none}
+.reveal-d1{transition-delay:.08s}.reveal-d2{transition-delay:.16s}.reveal-d3{transition-delay:.24s}
+.no-js .reveal{opacity:1;transform:none}
+
+/* ===== Responsive ===== */
+@media (max-width:1100px){
+  .nav{display:none}
+  .menu-btn{display:inline-flex}
+  .header-cta{margin-inline-start:auto}
+  .bento{grid-template-columns:repeat(2,1fr)}
+  .card-xl{grid-row:auto}
+  .fc-1{inset-inline-end:0}.fc-2{inset-inline-start:0}
+}
+@media (max-width:900px){
+  .hero-grid,.day-grid,.tab-panel,.reli-grid,.ai-grid,.odoo-wrap,.faq-grid,.final-grid,.price-box,.compare{grid-template-columns:1fr}
+  .hero-visual{min-height:auto;margin-top:12px}
+  .hero .phone-back{display:none}
+  .facts-grid{grid-template-columns:1fr 1fr}
+  .fact:nth-child(3){border-inline-start:0}
+  .fact:nth-child(n+3){border-top:1px solid var(--line)}
+  .day-sticky{display:none}
+  .day-step,.day-step:first-child,.day-step:last-child{min-height:auto;opacity:1;padding-block:28px;border-top:1px solid var(--line)}
+  .day-step:first-child{border-top:0}
+  .day-inline{display:block;margin-top:24px}
+  .day-inline .phone{width:min(260px,70vw);margin-inline:auto}
+  .day-progress{display:none}
+  .faq-grid .section-head{position:static}
+  .header-cta .btn-header{display:none}
+  .mobile-cta{display:flex}
+  .footer{padding-bottom:90px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .footer-about{grid-column:1/-1}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  .bento,.ind-grid,.feature-list,.records,.agents,.form-grid{grid-template-columns:1fr}
+  .card-xl{grid-column:auto}
+  .float-card{max-width:200px;font-size:.78rem;padding:10px 12px}
+  .float-card .badge-ic{width:32px;height:32px;font-size:16px}
+  .fc-1{top:6%;inset-inline-end:-2%}.fc-2{bottom:24%;inset-inline-start:-2%}.fc-3{display:none}
+  .fact{padding:20px 18px}
+  .node{width:96px;height:96px;border-radius:22px}
+  .node img{width:40px;height:40px}.node .odoo-word{font-size:1.4rem;line-height:40px}
+  .tabs{display:flex;width:100%}.tab{flex:1;justify-content:center;padding-inline:10px}
+  .hero-actions .btn{flex:1 1 100%}
+  .brand .latin{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body class="no-js">
+<a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+
+<!-- ===== Icon sprite ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></symbol>
+  <symbol id="i-cash" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 12h.01M18 12h.01"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M10 17h4V5H2v12h3"/><path d="M14 8h4l4 4v5h-3"/><circle cx="7.5" cy="17.5" r="2"/><circle cx="16.5" cy="17.5" r="2"/></symbol>
+  <symbol id="i-sync" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5M3 21v-5h5"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4M8 22h8"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M11 3l1.9 5.1L18 10l-5.1 1.9L11 17l-1.9-5.1L4 10l5.1-1.9z"/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><circle cx="12" cy="13" r="3"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2M7 8v8M11 8v8M14 8v8M17 8v8"/></symbol>
+  <symbol id="i-wifi-off" viewBox="0 0 24 24"><path d="M2 2l20 20M8.5 16.5a5 5 0 0 1 7 0M5 13a10 10 0 0 1 5.2-2.8M19 13a10 10 0 0 0-2.8-1.9M2 8.8a15 15 0 0 1 4.2-2.6M22 8.8A15 15 0 0 0 10.7 5M12 20h.01"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9M4 9v11h16V9"/><path d="M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0M10 20v-5h4v5"/></symbol>
+  <symbol id="i-pill" viewBox="0 0 24 24"><path d="M10.5 20.5a5 5 0 0 1-7-7l10-10a5 5 0 0 1 7 7z"/><path d="m8.5 8.5 7 7"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></symbol>
+  <symbol id="i-boxes" viewBox="0 0 24 24"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2M2 13h20"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><circle cx="18" cy="5" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-device" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.5L21 7H6"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+</svg>
+
+<!-- ===== Header ===== -->
+<header class="site-header" id="header">
+  <div class="container header-inner">
+    <a href="#top" class="brand" aria-label="ميدارا — الصفحة الرئيسية">
+      <img src="assets/img/icon-64.png" width="36" height="36" alt="">
+      <span class="brand-text"><span>ميدارا</span><span class="latin">Midara</span></span>
+    </a>
+    <nav class="nav" aria-label="التنقل الرئيسي">
+      <a href="#day">جولة المنتج</a>
+      <a href="#platform">المنصة</a>
+      <a href="#roles">لكل دور</a>
+      <a href="#ai">الذكاء الاصطناعي</a>
+      <a href="#odoo">التكامل مع Odoo</a>
+      <a href="#industries">القطاعات</a>
+      <a href="#pricing">التكلفة</a>
+    </nav>
+    <div class="header-cta">
+      <a href="#contact" class="btn btn-sm btn-header">اطلب عرضًا مخصصًا</a>
+      <button class="menu-btn" type="button" aria-label="فتح القائمة" aria-expanded="false" aria-controls="drawer"><svg class="icon"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="القائمة">
+  <div class="drawer-backdrop" data-close></div>
+  <div class="drawer-panel">
+    <div class="drawer-top">
+      <span class="brand"><img src="assets/img/icon-64.png" width="36" height="36" alt=""><span>ميدارا</span></span>
+      <button class="close-btn" type="button" aria-label="إغلاق القائمة" data-close><svg class="icon"><use href="#i-x"/></svg></button>
+    </div>
+    <nav aria-label="قائمة الجوال">
+      <a href="#day">جولة المنتج <svg class="icon"><use href="#i-arrow"/></svg></a>
+      <a href="#platform">المنصة <svg class="icon"><use href="#i-arrow"/></svg></a>
+      <a href="#roles">لكل دور <svg class="icon"><use href="#i-arrow"/></svg></a>
+      <a href="#ai">الذكاء الاصطناعي <svg class="icon"><use href="#i-arrow"/></svg></a>
+      <a href="#odoo">التكامل مع Odoo <svg class="icon"><use href="#i-arrow"/></svg></a>
+      <a href="#industries">القطاعات <svg class="icon"><use href="#i-arrow"/></svg></a>
+      <a href="#pricing">التكلفة <svg class="icon"><use href="#i-arrow"/></svg></a>
+      <a href="#faq">الأسئلة الشائعة <svg class="icon"><use href="#i-arrow"/></svg></a>
+    </nav>
+    <a href="#contact" class="btn btn-amber">اطلب عرضًا مخصصًا <svg class="icon"><use href="#i-arrow"/></svg></a>
+  </div>
+</div>
+
+<main id="main">
+<!-- ===== Hero ===== -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="container hero-grid">
+    <div>
+      <span class="pill"><b>جديد</b> مساعد صوتي عربي داخل كل زيارة</span>
+      <h1 id="hero-title">الميدان كله.<br>في منصة واحدة <span class="grad">ذكية.</span></h1>
+      <p class="hero-lead">ميدارا تدير دورة البيع والتنفيذ كاملة — من المناطق والزيارات إلى العميل والطلب والتحصيل والتوزيع والرفوف والتقارير — مع ذكاء اصطناعي ومساعد صوتي عربي في قلب التجربة.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-amber">اطلب عرضًا مخصصًا <svg class="icon"><use href="#i-arrow"/></svg></a>
+        <a href="#day" class="btn btn-ghost-light">شاهد يومًا في الميدان</a>
+      </div>
+      <ul class="hero-checks">
+        <li><svg class="icon"><use href="#i-check"/></svg>يعمل عند ضعف الاتصال</li>
+        <li><svg class="icon"><use href="#i-check"/></svg>مرتبط مباشرة بـ Odoo</li>
+        <li><svg class="icon"><use href="#i-check"/></svg>عربي بالكامل — وبصوتك</li>
+      </ul>
+    </div>
+    <div class="hero-visual" aria-label="واجهة تطبيق ميدارا">
+      <div class="glow-ring"></div>
+      <div class="phone phone-back" aria-hidden="true"><div class="phone-screen"><img src="assets/img/customers.webp" alt="" width="720" height="1558"></div></div>
+      <div class="phone phone-main"><div class="phone-screen"><img src="assets/img/home-overview.webp" width="720" height="1600" alt="الشاشة الرئيسية في تطبيق ميدارا: المحطة التالية في مسار اليوم وشريط الزيارات" fetchpriority="high"></div></div>
+      <div class="float-card fc-1"><span class="badge-ic bg-mint"><svg class="icon"><use href="#i-sync"/></svg></span><div><strong>تمت المزامنة</strong><small>كل عمليات اليوم وصلت إلى Odoo</small></div><span class="live-dot"></span></div>
+      <div class="float-card fc-2"><span class="badge-ic bg-amber"><svg class="icon"><use href="#i-spark"/></svg></span><div><strong>توصية ميدارا</strong><small>أضف «زيت القصيم 1.8 ل» — نفد من الرف</small></div></div>
+      <div class="float-card fc-3"><span class="badge-ic bg-green"><svg class="icon"><use href="#i-cash"/></svg></span><div><small>سند قبض مُرحَّل</small><strong class="num">4,820.50 SAR</strong></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Facts ===== -->
+<section class="facts" aria-label="ميدارا بالأرقام">
+  <div class="container">
+    <div class="facts-grid reveal">
+      <div class="fact"><span class="num"><em>+</em><span data-count="100">100</span></span><p>قدرة تشغيلية في منصة واحدة مترابطة</p></div>
+      <div class="fact"><span class="num" data-count="10">10</span><p>مسارات عمل من الزيارة حتى التحصيل والتسليم</p></div>
+      <div class="fact"><span class="num" data-count="3">3</span><p>واجهات متناسقة: الجوال واللوحي والمكتب</p></div>
+      <div class="fact"><span class="num">1</span><p>دورة بيانات واحدة بين الميدان والمكتب في Odoo</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Before / After ===== -->
+<section class="section" aria-labelledby="pain-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">لماذا ميدارا</span>
+      <h2 class="section-title" id="pain-title">فريقك في الميدان يستحق أكثر من <span class="hl-amber">جدول ومكالمة</span> للمكتب.</h2>
+      <p class="section-lead">كل دقيقة يقضيها المندوب في البحث عن معلومة، هي دقيقة لا يبيع فيها. ميدارا تضع القرار والمعلومة في نفس اللحظة.</p>
+    </div>
+    <div class="compare">
+      <div class="compare-col compare-before reveal">
+        <h3>اليوم في أغلب الفرق <span class="tag">بدون ميدارا</span></h3>
+        <ul>
+          <li><svg class="icon"><use href="#i-x"/></svg><span>المندوب يتصل بالمكتب ليعرف رصيد العميل قبل أن يبيع.</span></li>
+          <li><svg class="icon"><use href="#i-x"/></svg><span>الطلبات على الورق أو في محادثات متفرقة، والأسعار تُراجع لاحقًا.</span></li>
+          <li><svg class="icon"><use href="#i-x"/></svg><span>التحصيل يُطابَق يدويًا في نهاية اليوم — إن لم يتأخر.</span></li>
+          <li><svg class="icon"><use href="#i-x"/></svg><span>المدير يكتشف الزيارة الفائتة بعد أسبوع من تقرير متأخر.</span></li>
+        </ul>
+      </div>
+      <div class="compare-col compare-after reveal reveal-d1">
+        <h3>مع ميدارا <span class="tag">يوم مترابط</span></h3>
+        <ul>
+          <li><svg class="icon"><use href="#i-check"/></svg><span><strong>ملف العميل 360°</strong> — الرصيد والفواتير وحد الائتمان قبل أن تطرق الباب.</span></li>
+          <li><svg class="icon"><use href="#i-check"/></svg><span><strong>الطلب في الزيارة نفسها</strong> بالأسعار والعروض والقواعد التجارية الصحيحة.</span></li>
+          <li><svg class="icon"><use href="#i-check"/></svg><span><strong>سند القبض يُرحَّل فورًا</strong> ويتحدث رصيد العميل في Odoo.</span></li>
+          <li><svg class="icon"><use href="#i-check"/></svg><span><strong>تنبيه بالاستثناء</strong> يصل لمن يستطيع التصرف — في الوقت المناسب.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== A day in the field ===== -->
+<section class="section day" id="day" aria-labelledby="day-title">
+  <div class="container day-grid">
+    <div class="day-steps" data-day>
+      <article class="day-step is-active" data-step="0">
+        <span class="eyebrow">جولة المنتج · يوم في الميدان</span>
+        <h2 class="section-title" id="day-title">ابدأ بالخطوة التالية المفيدة.<br>وانتهِ بتقرير واضح.</h2>
+        <p>تابع يومًا كاملًا لمندوب يستخدم ميدارا — بشاشات حقيقية من التطبيق العربي.</p>
+        <div class="day-progress" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+        <div style="margin-top:40px"><span class="day-time"><svg class="icon"><use href="#i-clock"/></svg><span class="num">08:00</span> صباحًا</span></div>
+        <h3>خطّط يومك في نظرة واحدة</h3>
+        <p>المحطة التالية، شريط زيارات اليوم، وما تبقّى من المسار. زر واحد لبدء الزيارة.</p>
+        <div class="chips"><span class="chip"><svg class="icon"><use href="#i-route"/></svg>مسار اليوم</span><span class="chip"><svg class="icon"><use href="#i-pin"/></svg>العملاء القريبون</span></div>
+        <div class="day-inline"><div class="phone"><div class="phone-screen"><img src="assets/img/home-overview.webp" width="720" height="1600" loading="lazy" alt="خطة اليوم والمحطة التالية"></div></div></div>
+      </article>
+      <article class="day-step" data-step="1">
+        <span class="day-time"><svg class="icon"><use href="#i-clock"/></svg><span class="num">09:30</span> قبل الزيارة</span>
+        <h3>اعرف عميلك قبل أن تطرق الباب</h3>
+        <p>الرصيد المدين، الفواتير المفتوحة، حد الائتمان والمبلغ المتأخر وآخر الحركات — في ملف واحد، دون مكالمة للمكتب.</p>
+        <div class="chips"><span class="chip"><svg class="icon"><use href="#i-users"/></svg>ملف 360°</span><span class="chip"><svg class="icon"><use href="#i-shield"/></svg>حد الائتمان</span></div>
+        <div class="day-inline"><div class="phone"><div class="phone-screen"><img src="assets/img/customer-context.webp" width="720" height="1600" loading="lazy" alt="ملف العميل في ميدارا مع الرصيد وحد الائتمان"></div></div></div>
+      </article>
+      <article class="day-step" data-step="2">
+        <span class="day-time"><svg class="icon"><use href="#i-clock"/></svg><span class="num">09:45</span> أثناء الزيارة</span>
+        <h3>سجّل الطلب في الزيارة نفسها</h3>
+        <p>ابحث بالاسم أو الباركود، والعروض والخصومات تُطبَّق تلقائيًا. الإجمالي شامل الضريبة، ثم تأكيد الطلب وإصدار الفاتورة.</p>
+        <div class="chips"><span class="chip"><svg class="icon"><use href="#i-scan"/></svg>باركود</span><span class="chip"><svg class="icon"><use href="#i-cart"/></svg>عروض وخصومات</span></div>
+        <div class="day-inline"><div class="phone"><div class="phone-screen"><img src="assets/img/order.webp" width="720" height="1558" loading="lazy" alt="شاشة طلب جديد مع الأصناف والإجمالي"></div></div></div>
+      </article>
+      <article class="day-step" data-step="3">
+        <span class="day-time"><svg class="icon"><use href="#i-clock"/></svg><span class="num">10:05</span> قبل المغادرة</span>
+        <h3>حصّل الدفعة في سياقها الكامل</h3>
+        <p>نقدي أو شبكة أو تحويل أو شيك. بعد الترحيل يتحدث رصيد العميل فورًا ويُرسَل السند عبر واتساب.</p>
+        <div class="chips"><span class="chip"><svg class="icon"><use href="#i-cash"/></svg>طرق دفع متعددة</span><span class="chip"><svg class="icon"><use href="#i-doc"/></svg>سند قبض فوري</span></div>
+        <div class="day-inline"><div class="phone"><div class="phone-screen"><img src="assets/img/payment.webp" width="720" height="1558" loading="lazy" alt="شاشة سند قبض مع طرق الدفع"></div></div></div>
+      </article>
+      <article class="day-step" data-step="4">
+        <span class="day-time"><svg class="icon"><use href="#i-clock"/></svg><span class="num">17:00</span> نهاية اليوم</span>
+        <h3>راجع النتائج قبل أن ينتهي اليوم</h3>
+        <p>المبيعات اليومية، أفضل الأصناف، الفواتير المتأخرة والتقارير السريعة — في جيبك، مع مقارنة بالأسبوع والشهر.</p>
+        <div class="chips"><span class="chip"><svg class="icon"><use href="#i-chart"/></svg>تقارير فورية</span><span class="chip"><svg class="icon"><use href="#i-target"/></svg>تقدّم الهدف</span></div>
+        <div class="day-inline"><div class="phone"><div class="phone-screen"><img src="assets/img/mobile-reports.webp" width="720" height="1558" loading="lazy" alt="تقارير الجوال: المبيعات اليومية وأفضل الأصناف"></div></div></div>
+      </article>
+    </div>
+    <div class="day-sticky" aria-hidden="true">
+      <div class="day-stage">
+        <div class="phone"><div class="phone-screen">
+          <img class="on" src="assets/img/home-overview.webp" alt="" width="720" height="1600">
+          <img src="assets/img/customer-context.webp" alt="" width="720" height="1600" loading="lazy">
+          <img src="assets/img/order.webp" alt="" width="720" height="1558" loading="lazy">
+          <img src="assets/img/payment.webp" alt="" width="720" height="1558" loading="lazy">
+          <img src="assets/img/mobile-reports.webp" alt="" width="720" height="1558" loading="lazy">
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Platform bento ===== -->
+<section class="section" id="platform" aria-labelledby="platform-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">نظام تشغيل متكامل للميدان</span>
+      <h2 class="section-title" id="platform-title">أكثر من تطبيق مبيعات. نظام تشغيل كامل للعمل خارج المكتب.</h2>
+      <p class="section-lead">المبيعات الميدانية والتوزيع وتنفيذ منافذ البيع في تجربة عربية واحدة يدعمها الذكاء الاصطناعي.</p>
+    </div>
+    <div class="bento">
+      <article class="card card-xl reveal" data-spot>
+        <span class="card-ic"><svg class="icon"><use href="#i-cart"/></svg></span>
+        <h3>التقاط الطلبات</h3>
+        <p>كتالوجات وقوائم أسعار وعروض وخصومات وقوالب طلبات وإدخال سريع بالباركود — دون أن يتباطأ المندوب.</p>
+        <ul class="list-checks"><li><svg class="icon"><use href="#i-check"/></svg>أسعار حسب العميل والقناة والمنطقة</li><li><svg class="icon"><use href="#i-check"/></svg>إعادة طلب من سجل المشتريات</li></ul>
+        <div class="card-media"><div class="phone"><div class="phone-screen"><img src="assets/img/products.webp" width="720" height="1558" loading="lazy" alt="كتالوج المنتجات في ميدارا"></div></div></div>
+      </article>
+      <article class="card card-xl dark reveal reveal-d1" data-spot>
+        <span class="card-ic"><svg class="icon"><use href="#i-target"/></svg></span>
+        <h3>الأهداف ولوحات المتابعة</h3>
+        <p>المبيعات والتحصيل والتغطية والإنتاجية والذمم وتقدّم الأهداف — لكل مندوب بطاقة أداء واضحة.</p>
+        <ul class="list-checks"><li><svg class="icon"><use href="#i-check"/></svg>ترتيب الفريق ومؤشرات الالتزام</li><li><svg class="icon"><use href="#i-check"/></svg>تقدّم يومي وشهري حسب المنتج والمنطقة</li></ul>
+        <div class="card-media"><div class="phone"><div class="phone-screen"><img src="assets/img/scorecard.webp" width="720" height="1558" loading="lazy" alt="بطاقة أداء المندوب ومؤشراته"></div></div></div>
+      </article>
+      <article class="card reveal" data-spot><span class="card-ic"><svg class="icon"><use href="#i-users"/></svg></span><h3>إدارة العملاء عبر الجوال</h3><p>ملف 360° بالسجل والأرصدة والفرص والإجراء التالي.</p></article>
+      <article class="card reveal reveal-d1" data-spot><span class="card-ic"><svg class="icon"><use href="#i-route"/></svg></span><h3>المسارات والزيارات</h3><p>مناطق وزيارات متكررة ومحطات متعددة وخطة يومية واضحة.</p></article>
+      <article class="card reveal reveal-d2" data-spot><span class="card-ic"><svg class="icon"><use href="#i-cash"/></svg></span><h3>التحصيل</h3><p>فواتير مستحقة ووعود بالسداد ومطابقة وسندات وطرق دفع متعددة.</p></article>
+      <article class="card reveal reveal-d3" data-spot><span class="card-ic"><svg class="icon"><use href="#i-truck"/></svg></span><h3>التسليم والمرتجعات</h3><p>كميات وأسباب وصور وتوقيعات وإثبات تسليم وتسوية يومية.</p></article>
+      <article class="card reveal" data-spot><span class="card-ic"><svg class="icon"><use href="#i-wifi-off"/></svg></span><h3>العمل دون اتصال</h3><p>احفظ العمل الأساسي محليًا وزامنه تلقائيًا عند عودة الاتصال.</p></article>
+      <article class="card reveal reveal-d1" data-spot><span class="card-ic"><svg class="icon"><use href="#i-sliders"/></svg></span><h3>السياسات التجارية</h3><p>حدود ائتمان وأسعار خاصة وعروض ومسارات اعتماد.</p></article>
+      <article class="card reveal reveal-d2" data-spot><span class="card-ic"><svg class="icon"><use href="#i-pin"/></svg></span><h3>الحضور الجغرافي</h3><p>دخول وخروج وGPS وسياج جغرافي ومسافات وسجل رحلات.</p></article>
+      <article class="card reveal reveal-d3" data-spot><span class="card-ic"><svg class="icon"><use href="#i-bell"/></svg></span><h3>التنبيهات وسير العمل</h3><p>زيارات ومهام واعتمادات وائتمان واستثناءات تشغيلية.</p></article>
+    </div>
+    <div class="bento-foot reveal">
+      <p>تحتاج تفاصيل كل مسار عمل؟ نعرضها لك على بيانات وسيناريوهات شركتك.</p>
+      <a href="#contact" class="link-arrow">احجز عرضًا مخصصًا <svg class="icon"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Roles ===== -->
+<section class="section roles" id="roles" aria-labelledby="roles-title">
+  <div class="container" style="position:relative">
+    <div class="section-head reveal">
+      <span class="eyebrow">لكل دور في الفريق</span>
+      <h2 class="section-title" id="roles-title">كل شخص يرى ما يحتاجه ليتخذ القرار.</h2>
+      <p class="section-lead">تطبيق المندوب، مركز قيادة المشرف، ولوحات الإدارة — طبقات متكاملة دون تكرار بيانات أو تشتيت للفريق.</p>
+    </div>
+    <div class="tabs reveal" role="tablist" aria-label="الأدوار">
+      <button class="tab" role="tab" id="tab-rep" aria-controls="panel-rep" aria-selected="true"><svg class="icon"><use href="#i-device"/></svg>المندوب</button>
+      <button class="tab" role="tab" id="tab-sup" aria-controls="panel-sup" aria-selected="false" tabindex="-1"><svg class="icon"><use href="#i-eye"/></svg>المشرف</button>
+      <button class="tab" role="tab" id="tab-mgr" aria-controls="panel-mgr" aria-selected="false" tabindex="-1"><svg class="icon"><use href="#i-chart"/></svg>الإدارة</button>
+    </div>
+    <div class="tab-panel" role="tabpanel" id="panel-rep" aria-labelledby="tab-rep">
+      <div>
+        <h3>يومك واضح من أول زيارة.</h3>
+        <p>كل ما يحتاجه المندوب في تطبيق واحد: الزيارات والعملاء والمنتجات والطلبات والتحصيل والصور والمهام.</p>
+        <ul>
+          <li><span class="bullet"><svg class="icon"><use href="#i-route"/></svg></span><div><strong>خطة اليوم والعميل التالي</strong><span>ترتيب الزيارات والعملاء القريبون من مسارك.</span></div></li>
+          <li><span class="bullet"><svg class="icon"><use href="#i-cart"/></svg></span><div><strong>طلب وتحصيل في الزيارة نفسها</strong><span>دون الرجوع للمكتب أو إعادة إدخال البيانات.</span></div></li>
+          <li><span class="bullet"><svg class="icon"><use href="#i-target"/></svg></span><div><strong>بطاقة أداء شخصية</strong><span>تقدّم الهدف ونسبة التحصيل والالتزام بالمسار.</span></div></li>
+        </ul>
+      </div>
+      <div class="role-phone"><div class="phone"><div class="phone-screen"><img src="assets/img/customers.webp" width="720" height="1558" loading="lazy" alt="قائمة العملاء في تطبيق المندوب"></div></div></div>
+    </div>
+    <div class="tab-panel" role="tabpanel" id="panel-sup" aria-labelledby="tab-sup" hidden>
+      <div>
+        <h3>اعرف أين يحتاجك الفريق الآن.</h3>
+        <p>شاهد التغطية على الخريطة، وضيّق الاختيار حسب المنطقة أو المسار أو الفريق، وانتقل من التغطية الجغرافية إلى تخطيط المسار.</p>
+        <ul>
+          <li><span class="bullet"><svg class="icon"><use href="#i-pin"/></svg></span><div><strong>خريطة العملاء والتغطية</strong><span>فلاتر حسب المنطقة والمسار والفريق والتصنيف.</span></div></li>
+          <li><span class="bullet"><svg class="icon"><use href="#i-route"/></svg></span><div><strong>المخطط مقابل المنفّذ</strong><span>انحرافات المسار والزيارات الفائتة والتأخير.</span></div></li>
+          <li><span class="bullet"><svg class="icon"><use href="#i-sync"/></svg></span><div><strong>توجيه مباشر</strong><span>أعد توزيع العمل وأضف مهامًا يراها المندوب فورًا.</span></div></li>
+        </ul>
+      </div>
+      <figure class="browser" style="margin:0"><div class="browser-bar"><i></i><i></i><i></i><span>midara · customer map</span></div><img src="assets/img/tracking-map.webp" width="1440" height="930" loading="lazy" alt="خريطة العملاء مع فلاتر المنطقة والمسار والفريق"></figure>
+    </div>
+    <div class="tab-panel" role="tabpanel" id="panel-mgr" aria-labelledby="tab-mgr" hidden>
+      <div>
+        <h3>من نشاط الميدان إلى صورة أوضح للأعمال.</h3>
+        <p>راجع المبيعات والمبالغ المفوترة والتحصيلات والطلبات في لوحة واحدة داخل Odoo.</p>
+        <ul>
+          <li><span class="bullet"><svg class="icon"><use href="#i-chart"/></svg></span><div><strong>لوحة أداء موحّدة</strong><span>غيّر الفترة: اليوم، الأسبوع، الشهر، الربع.</span></div></li>
+          <li><span class="bullet"><svg class="icon"><use href="#i-layers"/></svg></span><div><strong>من الإجمالي إلى التفاصيل</strong><span>من الشركة إلى الفرع والمنطقة والمندوب والمستند.</span></div></li>
+          <li><span class="bullet"><svg class="icon"><use href="#i-doc"/></svg></span><div><strong>رسوم بيانية وجداول وتصدير</strong><span>Excel أو PDF حسب الصلاحية.</span></div></li>
+        </ul>
+      </div>
+      <figure class="browser" style="margin:0"><div class="browser-bar"><i></i><i></i><i></i><span>odoo · midara performance</span></div><img src="assets/img/odoo-performance.webp" width="1440" height="930" loading="lazy" alt="لوحة نظرة عامة على الأداء في Odoo: المبيعات والتحصيلات والطلبات"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Reliability ===== -->
+<section class="section" aria-labelledby="reli-title">
+  <div class="container reli-grid">
+    <div>
+      <div class="section-head reveal" style="margin-bottom:40px">
+        <span class="eyebrow">مبنية لظروف الميدان الحقيقية</span>
+        <h2 class="section-title" id="reli-title">الميدان لا ينتظر اتصالًا مثاليًا.</h2>
+        <p class="section-lead">لذلك تبقى التجربة عملية في البيئات الصعبة — وآمنة في كل الظروف.</p>
+      </div>
+      <ul class="feature-list">
+        <li class="reveal"><svg class="icon fl-ic"><use href="#i-wifi-off"/></svg><h3>العمل دون اتصال</h3><p>البيانات الأساسية محفوظة محليًا وتُزامَن تلقائيًا عند عودة الاتصال.</p></li>
+        <li class="reveal reveal-d1"><svg class="icon fl-ic"><use href="#i-sync"/></svg><h3>مزامنة ذكية</h3><p>طوابير ومعالجة تعارضات وإعادة محاولة دون فقدان العمل.</p></li>
+        <li class="reveal"><svg class="icon fl-ic"><use href="#i-pin"/></svg><h3>سياق الموقع</h3><p>GPS وسياج جغرافي وتوقيت يربط الزيارة بالمكان الحقيقي.</p></li>
+        <li class="reveal reveal-d1"><svg class="icon fl-ic"><use href="#i-camera"/></svg><h3>الصور والمرفقات</h3><p>التقط الدليل وارفع المستندات من الزيارة أو الطلب.</p></li>
+        <li class="reveal"><svg class="icon fl-ic"><use href="#i-scan"/></svg><h3>الباركود وQR</h3><p>امسح المنتجات والأصول والمستندات لتقليل الإدخال اليدوي.</p></li>
+        <li class="reveal reveal-d1"><svg class="icon fl-ic"><use href="#i-lock"/></svg><h3>الصلاحيات والتدقيق</h3><p>وصول حسب الشركة والمنطقة والدور، مع سجل للتغييرات الحساسة.</p></li>
+      </ul>
+    </div>
+    <figure class="reli-media reveal reveal-d1">
+      <img src="assets/img/illus-platform.webp" width="1400" height="876" loading="lazy" alt="رسم توضيحي: تطبيق الجوال ونظام المكتب متصلان بأمان عبر المواقع الميدانية">
+      <figcaption><span class="live-dot"></span>كل عملية محفوظة محليًا حتى تصل بأمان</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== AI ===== -->
+<section class="section ai" id="ai" aria-labelledby="ai-title">
+  <div class="container ai-grid">
+    <div>
+      <div class="section-head reveal" style="margin-bottom:0">
+        <span class="eyebrow">ميدارا AI + المساعد الصوتي</span>
+        <h2 class="section-title" id="ai-title">ذكاء يفهم الميدان… ومساعد صوتي يعمل مع الفريق.</h2>
+        <p class="section-lead">ميدارا لا تكتفي بعرض البيانات: تقرأها وتشرحها وتقترح الخطوة التالية، وتتيح لك أن تتحدث مع النظام بالعربية لتصل إلى الإجابة أو الإجراء أسرع.</p>
+      </div>
+      <div class="agents">
+        <div class="agent reveal"><svg class="icon"><use href="#i-clock"/></svg><h3>وكيل الجدولة</h3><p>من تزور ومتى، حسب الفرص والأهداف.</p></div>
+        <div class="agent reveal reveal-d1"><svg class="icon"><use href="#i-route"/></svg><h3>وكيل المسار</h3><p>مسار أقصر وزيارات منتجة أكثر.</p></div>
+        <div class="agent reveal"><svg class="icon"><use href="#i-cart"/></svg><h3>وكيل الطلب</h3><p>سلة مقترحة وأصناف ناقصة وبيع إضافي.</p></div>
+        <div class="agent reveal reveal-d1"><svg class="icon"><use href="#i-cash"/></svg><h3>وكيل التحصيل</h3><p>أولوية حسب المبلغ والتأخير واحتمال الدفع.</p></div>
+        <div class="agent reveal"><svg class="icon"><use href="#i-check"/></svg><h3>وكيل التنفيذ</h3><p>يكتشف المهام الناقصة ويقترح التصحيح.</p></div>
+        <div class="agent reveal reveal-d1"><svg class="icon"><use href="#i-spark"/></svg><h3>مساعد المدير</h3><p>يشرح تغيّر الأداء والعملاء خلفه.</p></div>
+      </div>
+    </div>
+    <div class="reveal reveal-d1">
+      <div class="chat" data-chat>
+        <div class="chat-head"><img src="assets/img/icon-64.png" width="36" height="36" alt=""><div><strong>مساعد ميدارا</strong><small>مساعد الميدان · بالعربية</small></div><span class="live-dot"></span></div>
+        <div class="chat-body" aria-live="polite">
+          <div class="msg msg-user"><span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span>مين العملاء المتأخرين بالسداد في منطقتي اليوم؟</span></div>
+          <div class="typing" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="msg msg-ai">
+            <span>لديك <b>3 عملاء</b> تجاوزوا موعد السداد. رتّبتهم حسب المبلغ واحتمال الدفع:</span>
+            <div class="rows">
+              <div class="row"><b>بقالة الوفاء <span class="warn">قارب الحد</span></b><span class="num">8,200</span></div>
+              <div class="row"><b>سوبرماركت الأمانة</b><span class="num">2,600</span></div>
+              <div class="row"><b>ماركت الصفا</b><span class="num">1,500</span></div>
+            </div>
+            <div class="actions"><span>افتح سند قبض</span><span class="alt">أضفهم لمسار اليوم</span></div>
+          </div>
+        </div>
+        <div class="chat-input"><svg class="icon"><use href="#i-spark"/></svg>اسأل ميدارا عن أي عميل أو صنف…<span class="mic"><svg class="icon"><use href="#i-mic"/></svg></span></div>
+      </div>
+      <p class="chat-note"><svg class="icon"><use href="#i-shield"/></svg>يجيب المساعد فقط من البيانات المسموح للمستخدم بالوصول إليها.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Odoo ===== -->
+<section class="section" id="odoo" aria-labelledby="odoo-title">
+  <div class="container odoo-wrap">
+    <div>
+      <div class="section-head reveal" style="margin-bottom:0">
+        <span class="eyebrow">ميدارا + Odoo</span>
+        <h2 class="section-title" id="odoo-title">الميدان جزء من نظام أعمالك — لا جزيرة منفصلة.</h2>
+        <p class="section-lead">اجعل تطبيق الميدان امتدادًا لـ Odoo: العملاء والمنتجات والأسعار والمخزون والطلبات والتحصيل في دورة بيانات واحدة.</p>
+      </div>
+      <ol class="steps-mini reveal">
+        <li data-n="1"><strong>ارسم مسار العمل</strong><span>ما يبدأ في الميدان وما يحتاج مراجعة أو اعتمادًا في المكتب.</span></li>
+        <li data-n="2"><strong>جهّز البيانات والصلاحيات</strong><span>نطاق الشركة والمستخدمون وتعيين العملاء والمنتجات.</span></li>
+        <li data-n="3"><strong>تحقّق من سيناريو كامل</strong><span>راجع السجلات والحالات الناتجة قبل الإطلاق.</span></li>
+      </ol>
+    </div>
+    <div class="connector reveal reveal-d1">
+      <div class="conn-row" aria-hidden="true">
+        <div class="node"><img src="assets/img/icon-64.png" width="52" height="52" alt=""><span>ميدارا</span><small>الميدان</small></div>
+        <div class="wires"><div class="wire"><i></i></div><div class="wire rev"><i></i></div><div class="wire"><i></i></div></div>
+        <div class="node"><span class="odoo-word">odoo</span><span>Odoo</span><small>المكتب</small></div>
+      </div>
+      <div class="records">
+        <div class="record"><svg class="icon"><use href="#i-users"/></svg><div>العملاء وجهات الاتصال<small>الحسابات والفروع والعناوين</small></div></div>
+        <div class="record"><svg class="icon"><use href="#i-boxes"/></svg><div>المنتجات والأسعار<small>الوحدات وقوائم الأسعار والخصومات</small></div></div>
+        <div class="record"><svg class="icon"><use href="#i-cart"/></svg><div>المبيعات<small>من طلب الميدان إلى دورة المكتب</small></div></div>
+        <div class="record"><svg class="icon"><use href="#i-layers"/></svg><div>المخزون<small>التوفر والحركات والمرتجعات</small></div></div>
+        <div class="record"><svg class="icon"><use href="#i-cash"/></svg><div>المحاسبة والتحصيل<small>الذمم والفواتير والمدفوعات</small></div></div>
+        <div class="record"><svg class="icon"><use href="#i-lock"/></svg><div>المستخدمون والصلاحيات<small>الفرق والشركات والمناطق</small></div></div>
+      </div>
+      <div class="tech-chips">
+        <span class="chip"><svg class="icon"><use href="#i-link"/></svg>REST API</span>
+        <span class="chip"><svg class="icon"><use href="#i-bell"/></svg>Webhooks</span>
+        <span class="chip"><svg class="icon"><use href="#i-sync"/></svg>طوابير وإعادة محاولة</span>
+        <span class="chip"><svg class="icon"><use href="#i-shield"/></svg>OAuth ومفاتيح API</span>
+        <span class="chip"><svg class="icon"><use href="#i-doc"/></svg>سجلات مزامنة واضحة</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Industries ===== -->
+<section class="section industries" id="industries" aria-labelledby="ind-title">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">مصممة حول نشاطك</span>
+      <h2 class="section-title" id="ind-title">نفس المنصة… وسير عمل يناسب كل قطاع.</h2>
+      <p class="section-lead">نماذج ومؤشرات وقواعد تعكس كل منتج وقناة — من التوزيع السريع إلى المبيعات بين الشركات.</p>
+    </div>
+    <div class="ind-grid">
+      <article class="ind reveal"><div class="ind-top"><span class="ind-ic"><svg class="icon"><use href="#i-store"/></svg></span><span class="ind-n num">01</span></div><h3>السلع الاستهلاكية والأغذية</h3><p>توزيع سريع وتنفيذ تنافسي على الرف.</p><div class="tags"><span>المتجر المثالي</span><span>البيع من السيارة</span><span>تنفيذ العروض</span></div></article>
+      <article class="ind reveal reveal-d1"><div class="ind-top"><span class="ind-ic"><svg class="icon"><use href="#i-pill"/></svg></span><span class="ind-n num">02</span></div><h3>الأدوية والمستلزمات الطبية</h3><p>تغطية دقيقة للحسابات والمنتجات والمتابعة.</p><div class="tags"><span>تخطيط الزيارات</span><span>العينات</span><span>الامتثال</span></div></article>
+      <article class="ind reveal reveal-d2"><div class="ind-top"><span class="ind-ic"><svg class="icon"><use href="#i-wrench"/></svg></span><span class="ind-n num">03</span></div><h3>البناء والمعدات وقطع الغيار</h3><p>مبيعات بين الشركات عبر مناطق واسعة.</p><div class="tags"><span>قوائم أسعار</span><span>ضبط الائتمان</span><span>شبكة الوكلاء</span></div></article>
+      <article class="ind reveal"><div class="ind-top"><span class="ind-ic"><svg class="icon"><use href="#i-boxes"/></svg></span><span class="ind-n num">04</span></div><h3>الجملة والتوزيع متعدد القنوات</h3><p>المكتب والموزع والمندوب والعميل في رؤية واحدة.</p><div class="tags"><span>طلبات B2B</span><span>تسوية المسار</span><span>إثبات التسليم</span></div></article>
+      <article class="ind reveal reveal-d1"><div class="ind-top"><span class="ind-ic"><svg class="icon"><use href="#i-briefcase"/></svg></span><span class="ind-n num">05</span></div><h3>المبيعات والخدمات الميدانية</h3><p>إدارة اليوم خارج المكتب حتى دون توزيع منتجات.</p><div class="tags"><span>المواعيد</span><span>النماذج</span><span>التوقيع</span></div></article>
+      <article class="ind reveal reveal-d2"><div class="ind-top"><span class="ind-ic"><svg class="icon"><use href="#i-grid"/></svg></span><span class="ind-n num">06</span></div><h3>قطاعات قابلة للتهيئة</h3><p>العناية الشخصية، الزراعة، السيارات، المنظفات، الاتصالات وغيرها.</p><div class="tags"><span>نماذج مرنة</span><span>مؤشرات خاصة</span><span>سير عمل</span></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Pricing ===== -->
+<section class="section" id="pricing" aria-labelledby="price-title">
+  <div class="container">
+    <div class="price-box reveal">
+      <div class="price-intro">
+        <span class="eyebrow" style="color:#fff">التكلفة</span>
+        <h2 id="price-title" style="margin-top:14px">عرض سعر مبني على فريقك — لا على باقة جاهزة.</h2>
+        <p>أخبرنا عن فريقك ومسارات العمل التي تريد ربطها وبيئة Odoo لديك، ونحدد معك نطاقًا واضحًا وعرضًا مخصصًا.</p>
+        <a href="#contact" class="btn">احصل على عرض مخصص <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="price-steps">
+        <div class="price-step"><span class="num">01</span><div><h3>الفريق والأدوار</h3><p>عدد المستخدمين والصلاحيات التي يحتاجها كل دور.</p></div></div>
+        <div class="price-step"><span class="num">02</span><div><h3>مسارات العمل والربط</h3><p>السيناريوهات الميدانية والمستندات ومتطلبات Odoo ضمن النطاق.</p></div></div>
+        <div class="price-step"><span class="num">03</span><div><h3>التجهيز والتفعيل</h3><p>تجهيز البيانات والإعداد ودعم الإطلاق الذي يحتاجه فريقك.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section" id="faq" aria-labelledby="faq-title" style="padding-top:0">
+  <div class="container faq-grid">
+    <div class="section-head reveal">
+      <span class="eyebrow">أسئلة وإجابات</span>
+      <h2 class="section-title" id="faq-title">قبل أن تتخذ الخطوة التالية.</h2>
+      <p class="section-lead">لم تجد إجابتك؟ <a href="#contact" class="link-arrow" style="display:inline">تحدث معنا مباشرة</a></p>
+    </div>
+    <div class="faq reveal reveal-d1">
+      <details open><summary>هل تعمل ميدارا مع Odoo؟<span class="pm" aria-hidden="true"></span></summary><p class="answer">ميدارا مصممة حول مسارات عمل ميدانية مرتبطة بـ Odoo. يغطي العرض المخصص إصدارك والوحدات المثبتة والبيانات ومتطلبات الصلاحيات.</p></details>
+      <details><summary>هل يستطيع فريقي العمل دون اتصال؟<span class="pm" aria-hidden="true"></span></summary><p class="answer">يختلف العمل دون اتصال حسب العملية والبيانات المجهزة. نراجع معك الحفظ والمزامنة والعمليات التي تتطلب اتصالًا في مسار عملك.</p></details>
+      <details><summary>هل التطبيق متاح باللغة العربية؟<span class="pm" aria-hidden="true"></span></summary><p class="answer">نعم، التطبيق عربي بالكامل مع مساعد صوتي عربي. ونراجع متطلبات اللغة والأجهزة لديك أثناء الإعداد.</p></details>
+      <details><summary>كيف تُحدَّد التكلفة؟<span class="pm" aria-hidden="true"></span></summary><p class="answer">يعتمد النطاق على عدد المستخدمين ومسارات العمل واحتياجات الربط. اطلب عرضًا مبنيًا على هذه المتطلبات.</p></details>
+      <details><summary>ماذا أجهّز قبل العرض؟<span class="pm" aria-hidden="true"></span></summary><p class="answer">أخبرنا عن فريقك الميداني وبيئة Odoo ومسار العمل الذي تريد تحسينه. نستخدم ذلك لتركيز العرض على ما يهمك.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Final CTA ===== -->
+<section class="section final" id="contact" aria-labelledby="final-title">
+  <div class="container final-grid">
+    <div class="reveal">
+      <span class="eyebrow">لنتحدث عن فريقك الميداني</span>
+      <h2 id="final-title">شاهد كيف يبدو يوم عمل مترابط لفريقك.</h2>
+      <p class="lead">عرض مخصص على سيناريوهاتك أنت — لا عرض عام مسجّل.</p>
+      <ul class="final-points">
+        <li><svg class="icon"><use href="#i-check"/></svg><span>جولة على المسارات التي تهم فريقك: زيارات، طلبات، تحصيل، توزيع.</span></li>
+        <li><svg class="icon"><use href="#i-check"/></svg><span>مراجعة بيئة Odoo لديك ومتطلبات الربط والصلاحيات.</span></li>
+        <li><svg class="icon"><use href="#i-check"/></svg><span>نطاق واضح وعرض سعر مبني على احتياجك.</span></li>
+      </ul>
+    </div>
+    <form class="form reveal reveal-d1" data-form novalidate>
+      <div class="form-body">
+        <h3>اطلب عرضًا مخصصًا</h3>
+        <p>أقل من دقيقة. بلا أي التزام.</p>
+        <div class="form-grid">
+          <div class="field"><label for="f-name">الاسم</label><input id="f-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="f-company">الشركة</label><input id="f-company" name="company" autocomplete="organization" required></div>
+          <div class="field full"><label for="f-contact">الجوال أو البريد الإلكتروني</label><input id="f-contact" name="contact" autocomplete="email" inputmode="email" dir="auto" required></div>
+          <div class="field"><label for="f-size">حجم الفريق الميداني</label><select id="f-size" name="size"><option>1 – 10</option><option selected>11 – 50</option><option>51 – 200</option><option>أكثر من 200</option></select></div>
+          <div class="field"><label for="f-odoo">هل تستخدم Odoo؟</label><select id="f-odoo" name="odoo"><option>نعم</option><option>ليس بعد</option><option>نخطط لذلك</option></select></div>
+        </div>
+        <button class="btn btn-amber" type="submit">احجز العرض <svg class="icon"><use href="#i-arrow"/></svg></button>
+        <p class="form-note"><svg class="icon"><use href="#i-lock"/></svg>نستخدم بياناتك فقط للتواصل بخصوص العرض.</p>
+      </div>
+      <div class="form-success" role="status">
+        <div class="ok"><svg class="icon"><use href="#i-check"/></svg></div>
+        <h3>تم استلام طلبك</h3>
+        <p style="color:var(--muted);margin-top:6px">سنتواصل معك لتحديد موعد العرض المخصص.</p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="#top" class="brand"><img src="assets/img/icon-64.png" width="36" height="36" alt=""><span class="brand-text"><span>ميدارا</span><span class="latin">Midara</span></span></a>
+        <p>مبيعاتك الميدانية، مرتبطة بأعمالك في Odoo.</p>
+      </div>
+      <div><h2>اكتشف</h2><ul><li><a href="#day">جولة المنتج</a></li><li><a href="#platform">المنصة</a></li><li><a href="#roles">لكل دور</a></li></ul></div>
+      <div><h2>استكشف</h2><ul><li><a href="#ai">مساعد ميدارا</a></li><li><a href="#odoo">التكامل مع Odoo</a></li><li><a href="#industries">القطاعات</a></li><li><a href="#pricing">التكلفة</a></li></ul></div>
+      <div><h2>لنتواصل</h2><ul><li><a href="#contact">اطلب عرضًا مخصصًا</a></li><li><a href="#faq">الأسئلة الشائعة</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 ميدارا. جميع الحقوق محفوظة.</span><span>عمل ميداني مترابط.</span></div>
+  </div>
+</footer>
+
+<div class="mobile-cta" id="mobile-cta">
+  <img src="assets/img/icon-64.png" width="30" height="30" alt="">
+  <span>جاهز لترى ميدارا<br>على بيانات فريقك؟</span>
+  <a href="#contact" class="btn btn-amber btn-sm">اطلب عرضًا</a>
+</div>
+
+<script>
+(() => {
+  document.body.classList.remove('no-js');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Header state + mobile CTA */
+  const header = document.getElementById('header');
+  const mobileCta = document.getElementById('mobile-cta');
+  const hero = document.querySelector('.hero');
+  const contact = document.getElementById('contact');
+  let contactVisible = false;
+  const onScroll = () => {
+    const y = scrollY;
+    header.classList.toggle('is-solid', y > 24);
+    mobileCta.classList.toggle('show', y > hero.offsetHeight * .8 && !contactVisible);
+  };
+  addEventListener('scroll', onScroll, {passive: true});
+  new IntersectionObserver(([e]) => { contactVisible = e.isIntersecting; onScroll(); }).observe(contact);
+  onScroll();
+
+  /* Active nav link */
+  const navLinks = [...document.querySelectorAll('.nav a')];
+  const navIO = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      navLinks.forEach(a => {
+        if (a.getAttribute('href') === '#' + e.target.id) a.setAttribute('aria-current', 'true');
+        else a.removeAttribute('aria-current');
+      });
+    });
+  }, {rootMargin: '-45% 0px -50% 0px'});
+  navLinks.forEach(a => { const t = document.querySelector(a.getAttribute('href')); if (t) navIO.observe(t); });
+
+  /* Drawer */
+  const drawer = document.getElementById('drawer');
+  const menuBtn = document.querySelector('.menu-btn');
+  const setDrawer = open => {
+    drawer.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    document.documentElement.style.overflow = open ? 'hidden' : '';
+    if (open) drawer.querySelector('.close-btn').focus(); else menuBtn.focus();
+  };
+  menuBtn.addEventListener('click', () => setDrawer(true));
+  drawer.addEventListener('click', e => {
+    if (e.target.closest('[data-close]') || e.target.closest('a')) setDrawer(false);
+  });
+  addEventListener('keydown', e => { if (e.key === 'Escape' && drawer.classList.contains('open')) setDrawer(false); });
+
+  /* Scroll reveal (once) */
+  const revealIO = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-in'); revealIO.unobserve(e.target); } });
+  }, {rootMargin: '0px 0px -8% 0px', threshold: .08});
+  document.querySelectorAll('.reveal, .section-head').forEach(el => revealIO.observe(el));
+
+  /* Counters */
+  const countIO = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      countIO.unobserve(e.target);
+      const el = e.target, end = +el.dataset.count;
+      if (reduced) return;
+      const t0 = performance.now(), dur = 1400;
+      const tick = t => {
+        const p = Math.min(1, (t - t0) / dur);
+        el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      el.textContent = '0';
+      requestAnimationFrame(tick);
+    });
+  }, {threshold: .6});
+  document.querySelectorAll('[data-count]').forEach(el => countIO.observe(el));
+
+  /* Day story: sync sticky phone with the active step */
+  const steps = [...document.querySelectorAll('.day-step')];
+  const shots = [...document.querySelectorAll('.day-stage .phone-screen img')];
+  const bars = [...document.querySelectorAll('.day-progress i')];
+  const setStep = i => {
+    steps.forEach((s, k) => s.classList.toggle('is-active', k === i));
+    shots.forEach((s, k) => s.classList.toggle('on', k === i));
+    bars.forEach((b, k) => b.classList.toggle('on', k <= i));
+  };
+  const stepIO = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) setStep(+e.target.dataset.step); });
+  }, {rootMargin: '-48% 0px -48% 0px'});
+  steps.forEach(s => stepIO.observe(s));
+
+  /* Spotlight cards (fine pointers only) */
+  if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    document.querySelectorAll('[data-spot]').forEach(card => {
+      card.addEventListener('pointermove', e => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
+    });
+  }
+
+  /* Role tabs (WAI-ARIA tabs pattern) */
+  const tabs = [...document.querySelectorAll('[role="tab"]')];
+  const selectTab = (tab, focus) => {
+    tabs.forEach(t => {
+      const on = t === tab;
+      t.setAttribute('aria-selected', String(on));
+      t.tabIndex = on ? 0 : -1;
+      const panel = document.getElementById(t.getAttribute('aria-controls'));
+      panel.hidden = !on;
+      if (on) { panel.classList.remove('entering'); void panel.offsetWidth; panel.classList.add('entering'); }
+    });
+    if (focus) tab.focus();
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => selectTab(t));
+    t.addEventListener('keydown', e => {
+      // RTL: ArrowLeft moves forward
+      const dir = e.key === 'ArrowLeft' ? 1 : e.key === 'ArrowRight' ? -1 : 0;
+      if (!dir) return;
+      e.preventDefault();
+      selectTab(tabs[(i + dir + tabs.length) % tabs.length], true);
+    });
+  });
+
+  /* AI chat demo — plays once when visible */
+  const chat = document.querySelector('[data-chat]');
+  if (chat) {
+    const [user, typing, ai] = chat.querySelectorAll('.msg-user, .typing, .msg-ai');
+    const play = () => {
+      if (reduced) { user.classList.add('show'); ai.classList.add('show'); typing.remove(); return; }
+      setTimeout(() => user.classList.add('show'), 200);
+      setTimeout(() => typing.classList.add('show'), 1100);
+      setTimeout(() => { typing.classList.remove('show'); typing.style.display = 'none'; ai.classList.add('show'); }, 2600);
+    };
+    const chatIO = new IntersectionObserver(([e]) => { if (e.isIntersecting) { chatIO.disconnect(); play(); } }, {threshold: .4});
+    chatIO.observe(chat);
+  }
+
+  /* FAQ: keep one item open at a time */
+  const faqItems = [...document.querySelectorAll('.faq details')];
+  faqItems.forEach(d => d.addEventListener('toggle', () => {
+    if (d.open) faqItems.forEach(o => { if (o !== d) o.open = false; });
+  }));
+
+  /* Form (design prototype: validates, then shows the confirmation state) */
+  const form = document.querySelector('[data-form]');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    let firstBad = null;
+    form.querySelectorAll('input[required]').forEach(input => {
+      const bad = !input.value.trim();
+      input.setAttribute('aria-invalid', String(bad));
+      if (bad && !firstBad) firstBad = input;
+    });
+    if (firstBad) { firstBad.focus(); return; }
+    form.classList.add('is-sent');
+  });
+  form.addEventListener('input', e => { if (e.target.value.trim()) e.target.removeAttribute('aria-invalid'); });
+})();
+</script>
+</body>
+</html>

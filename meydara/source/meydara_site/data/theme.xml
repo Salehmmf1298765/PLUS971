@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo><data noupdate="1">
+ <record id="theme_user_values" model="ir.attachment">
+  <field name="name">user_values.scss</field><field name="type">binary</field>
+  <field name="mimetype">text/scss</field><field name="public">True</field>
+  <field name="website_id" ref="website.default_website"/>
+  <field name="url">/_custom/web.assets_frontend/website/static/src/scss/options/user_values.scss</field>
+  <field name="datas" type="base64" file="meydara_site/static/src/scss/user_values.scss"/>
+ </record>
+ <record id="theme_user_values_asset" model="ir.asset">
+  <field name="name">Midara editable theme defaults</field>
+  <field name="website_id" ref="website.default_website"/>
+  <field name="bundle">web._assets_primary_variables</field>
+  <field name="directive">replace</field>
+  <field name="target">website/static/src/scss/options/user_values.scss</field>
+  <field name="path">/_custom/web.assets_frontend/website/static/src/scss/options/user_values.scss</field>
+ </record>
+</data></odoo>
